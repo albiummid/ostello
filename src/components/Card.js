@@ -5,9 +5,9 @@ import certified from '../images/icons/certified.png'
 
 export default function Card() {
   return (
-    <div className='relative '>
-      <section className=' md:w-[70%] Card flex justify-evenly text-[#414141] p-5 rounded-lg  bg-white md:absolute md:-bottom-[80px] md:mx-auto md:left-1/2 md:transform md:-translate-x-1/2 flex-wrap gap-5  shadow-xl '>
-        <div className='flex justify-center items-center gap-5'>
+    <>
+      <section className=' md:w-[70%] Card flex justify-evenly text-[#414141] p-5 rounded-lg  bg-white  flex-wrap gap-5  shadow-xl mx-auto -mt-[50px] z-[999]'>
+        <div className='flex justify-center items-center gap-5 '>
           <div className='px-2 py-1 flex flex-col items-center justify-center'>
             <p className='text-sm font-bold mb-3'>1 Month</p>
             <div className='flex items-center gap-1'>
@@ -47,6 +47,6 @@ export default function Card() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }

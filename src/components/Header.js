@@ -3,13 +3,16 @@ import React from 'react'
 import { ArrowLeftOutlined, UpOutlined } from '@ant-design/icons'
 import VideoSection from './VideoSection'
 import Card from './Card'
+import time from '../images/icons/time.png'
+import emi from '../images/icons/emi.png'
+import certified from '../images/icons/certified.png'
 import { constants } from '../constants'
 
 export default function Header() {
   const { images, icons } = constants
   return (
-    <div className='overflow-x-hidden  min-h-screen'>
-      <div className=' wrapper w-screen select-none bg-[#7A81DC]  relative '>
+    <div className='overflow-x-hidden mb-10'>
+      <div className=' wrapper w-screen select-none bg-[#7A81DC]'>
         <div className='header_container text-white max-w-7xl mx-auto py-5 px-5 pb-[100px] bg-[#7A81DC]  '>
           <div className='hero_container mt-10 '>
             <div className='flex justify-evenly md:justify-between  gap-3 flex-wrap'>
@@ -79,10 +82,52 @@ export default function Header() {
             </div>
           </div>
         </div>
-        <Card />
       </div>
       <div className='hidden absolute right-10 bottom-7 h-10 w-10 rounded-full bg-white xl:flex justify-center items-center active:opacity-80 shadow-xl'>
         <UpOutlined className='text-sm mb-1' />
+      </div>
+      <div className='max-w-7xl mx-auto'>
+        <section className=' w-[70%] Card flex justify-evenly text-[#414141] p-5 rounded-lg  bg-white  flex-wrap gap-5  shadow-xl mx-auto -mt-[50px] z-[999] my-10'>
+          <div className='flex justify-center items-center gap-5 '>
+            <div className='px-2 py-1 flex flex-col items-center justify-center'>
+              <p className='text-sm font-bold mb-3'>1 Month</p>
+              <div className='flex items-center gap-1'>
+                <img className='w-4' src={time} alt='' />
+                <p className='text-xs font-bold'>Duration</p>
+              </div>
+            </div>
+
+            <div className='px-2 py-1 flex flex-col items-center justify-center'>
+              <p className='text-sm font-bold mb-3'>Authorized Certificate</p>
+              <div className='flex items-center gap-1'>
+                <img className='w-4' src={certified} alt='' />
+                <p className='text-xs font-bold'>Get Certified</p>
+              </div>
+            </div>
+            <div className='px-2 py-1 flex flex-col items-center justify-center'>
+              <p className='text-sm font-bold mb-3'>Rs.150/month</p>
+              <div className='flex items-center gap-1'>
+                <img className='w-4' src={emi} alt='' />
+                <p className='text-xs font-bold'>EMI Options</p>
+              </div>
+            </div>
+          </div>
+          <div className='text-center'>
+            <p className='text-[48px] font-bold text-[#414141]'>Rs. 499</p>
+            <del className='text-red-400 text-[24px]'>Rs.1799</del>
+          </div>
+          <div className='flex flex-col justify-center'>
+            <button className='w-fit px-3 py-1 mx-auto bg-[#7D23E0] rounded-md mb-3 text-white active:opacity-80'>
+              Buy Now
+            </button>
+            <div className='text-xs text-center'>
+              <p>
+                <sup>*</sup>15-Day
+              </p>
+              <p>Money-Back Guarantee</p>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   )

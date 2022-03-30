@@ -29,7 +29,7 @@ export default function CourseOverview() {
     },
   ]
   return (
-    <section className='my-10 course_overview max-w-7xl mx-auto flex md:flex-row flex-col gap-4 justify-between '>
+    <section className=' course_overview max-w-7xl mx-auto flex md:flex-row flex-col gap-4 justify-between '>
       <div className=' md:w-[50%]   text-justify'>
         <h1 className='text-[48px] text-rights mb-4'>Course Overview</h1>
         <p className='mb-3'>
