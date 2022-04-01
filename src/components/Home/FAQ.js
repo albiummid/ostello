@@ -1,5 +1,6 @@
 import { CloseOutlined, PlusOutlined } from '@ant-design/icons'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Container from '../Layout/Container'
 
 export default function FAQ() {
@@ -90,33 +91,49 @@ export default function FAQ() {
     <div>
       <Container>
         <div className='bg-[#F3F5F7] py-10 cursor-pointer '>
-          <h1 className='text-5xl text-center py-10 bg-[#F3F5F7]'>
+          <h1 className=' hidden md:block text-5xl text-center py-20 font-bold bg-[#F3F5F7]'>
             Frequently Asked Questions
           </h1>
-          <div className=' md:w-[70%] mx-auto py-5 '>
+          <h1 className='text-5xl md:hidden text-center py-20 font-bold bg-[#F3F5F7] '>
+            FAQs
+          </h1>
+          <div className=' md:w-[70%] mx-auto py-5 max-w-[1080px]'>
             {data.map((item, idx) => (
               <div
                 key={idx}
                 className='flex flex-col gap-2 my-2'
                 onClick={() => setActiveKey(idx)}
               >
-                <div className='py-4 px-5 flex items-center justify-between bg-[#7A81DC] rounded-xl text-white'>
-                  <p>{item.section}</p>
-                  {activeKey === idx ? <CloseOutlined /> : <PlusOutlined />}
+                <div className='md:p-10 p-5  flex items-center justify-between bg-[#7A81DC] rounded-xl text-xl text-white  '>
+                  <p className='text-2xl'>{item.section}</p>
+                  {activeKey === idx ? (
+                    <CloseOutlined className='mr-5 font-bold ' />
+                  ) : (
+                    <PlusOutlined className='mr-5 font-bold ' />
+                  )}
                 </div>
-                <div className={activeKey === idx ? 'block' : 'hidden'}>
+                <div className={activeKey === idx ? 'block mb-5 ' : 'hidden '}>
                   {item.faqs.map((item, i) => (
                     <div
                       key={i + 100}
-                      className='ring-2 rounded-xl my-2 py-4 px-5'
+                      className='ring-2 ring-[#7A81DC] rounded-xl mb-4 py-4 px-5 text-[#616161]  text-xl '
                     >
-                      <p className='font-bold'>{item.question}</p>
-                      <p className='text-sm'> {item.answer}</p>
+                      <p className='font-bold md:pl-10 mb-5'>{item.question}</p>
+                      <p className=' md:pl-10'> {item.answer}</p>
                     </div>
                   ))}
                 </div>
               </div>
             ))}
+            <div className=' flex items-center md:gap-4 md:justify-end justify-center flex-col md:flex-row '>
+              <p className='text-lg'>Or visit our help center to know more</p>
+              <Link
+                to='/'
+                className='font-bold text-[#0026AE] underline text-lg'
+              >
+                Help Center
+              </Link>
+            </div>
           </div>
         </div>
       </Container>
