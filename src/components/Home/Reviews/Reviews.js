@@ -1,9 +1,10 @@
 import { StarFilled, StarOutlined } from '@ant-design/icons'
-import { Box, Modal } from '@mui/material'
-import { Input, Progress, Rate } from 'antd'
+import { Box } from '@mui/material'
+import { Progress, Rate } from 'antd'
 import React, { useState } from 'react'
 import { constants } from '../../../constants'
 import Container from '../../Layout/Container'
+import Modal from '../../Utils/Modal'
 
 export default function Reviews() {
   const [isSelected, setIsSelected] = useState(0)
@@ -86,7 +87,7 @@ export default function Reviews() {
               <div className='text-center flex justify-center items-center flex-col'>
                 <p className='text-7xl my-0  font-bold '>3.9</p>
                 <Rate value={5} />
-                <p>Institute Rating</p>
+                <p className='text-xl font-bold'>Institute Rating</p>
               </div>
 
               <div className=' items-center gap-3'>
@@ -100,7 +101,9 @@ export default function Reviews() {
                     <div className=' '>
                       <Rate value={5 - i} />
                     </div>
-                    <p className='w-[50px] '>{item.percentage} %</p>
+                    <p className='w-[50px] text-lg font-bold '>
+                      {item.percentage}%
+                    </p>
                   </div>
                 ))}
               </div>
@@ -128,16 +131,8 @@ export default function Reviews() {
                 Write a Review
               </p>
               <div>
-                <Modal
-                  open={open}
-                  onClose={() => setOpen(false)}
-                  aria-labelledby='modal-modal-title'
-                  aria-describedby='modal-modal-description'
-                >
-                  <Box
-                    sx={style}
-                    className='w-[344px] md:w-[724px] md:p-10 p-5  rounded-md'
-                  >
+                <Modal open={open} setOpen={setOpen}>
+                  <div className=''>
                     <p className='text-xl'>Add Review</p>
                     <div className='flex gap-2 py-5 text-[#D7D7D7] select-none'>
                       {[1, 2, 3, 4, 5].map((item, i) => (
@@ -183,7 +178,7 @@ export default function Reviews() {
                         Add Review
                       </button>
                     </div>
-                  </Box>
+                  </div>
                 </Modal>
               </div>
             </div>
