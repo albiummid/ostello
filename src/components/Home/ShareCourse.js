@@ -4,7 +4,7 @@ import Container from '../Layout/Container'
 export default function ShareCourse() {
   return (
     <>
-      <div className='shareBG flex justify-between items-center max-w-7xl mx-auto '>
+      <div className='shareBG flex justify-between items-center mx- '>
         <div className='text-white w-[50%] text-3xl mx-auto flex-col '>
           <h1 className=''>Share this course and</h1>
           <h1>receive exciting offers.</h1>

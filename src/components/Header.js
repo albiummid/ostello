@@ -7,13 +7,14 @@ import time from '../images/icons/time.png'
 import emi from '../images/icons/emi.png'
 import certified from '../images/icons/certified.png'
 import { constants } from '../constants'
+import { Affix } from 'antd'
 
 export default function Header() {
   const { images, icons } = constants
   return (
     <div className='overflow-x-hidden mb-10'>
       <div className=' wrapper w-screen select-none bg-[#7A81DC]'>
-        <div className='header_container text-white max-w-7xl mx-auto py-5 px-5 pb-[100px] bg-[#7A81DC]  '>
+        <div className='header_container text-white  py-5 px-5 pb-[100px] bg-[#7A81DC]  '>
           <div className='hero_container mt-10 '>
             <div className='flex justify-evenly md:justify-between  gap-3 flex-wrap'>
               <div className='md:w-[50%] mx-auto'>
@@ -83,11 +84,8 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className='hidden absolute right-10 bottom-7 h-10 w-10 rounded-full bg-white xl:flex justify-center items-center active:opacity-80 shadow-xl'>
-        <UpOutlined className='text-sm mb-1' />
-      </div>
       <div className='max-w-7xl mx-auto'>
-        <section className=' w-[70%] Card flex justify-evenly text-[#414141] p-5 rounded-lg  bg-white  flex-wrap gap-5  shadow-xl mx-auto -mt-[50px] z-[999] my-10'>
+        <section className=' w-[70%] Card flex justify-evenly text-[#414141] p-5 rounded-lg  bg-white  flex-wrap gap-5  shadow-xl mx-auto -mt-[70px] z-[999] my-10'>
           <div className='flex justify-center items-center gap-5 '>
             <div className='px-2 py-1 flex flex-col items-center justify-center'>
               <p className='text-sm font-bold mb-3'>1 Month</p>

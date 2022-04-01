@@ -24,17 +24,17 @@ export default function Navbar() {
   ]
   return (
     <div className='bg-[#7A81DC]'>
-      <nav className='flex gap-[10px] items-center justify-between py-2 px-2  text-white max-w-7xl mx-auto'>
-        <img className='w-[150px]' src={logo} alt='' />
+      <nav className='flex gap-[10px] items-center justify-between py-2 px-10  text-white '>
+        <img className='w-[230px]' src={logo} alt='' />
         <div className='md:flex gap-[25px] hidden '>
           {links.map((item, i) => (
-            <p className='text-md cursor-pointer' key={i}>
+            <p className='text-xl cursor-pointer' key={i}>
               {item.title}
             </p>
           ))}
         </div>
-        <button className='bg-white font-bold text-[#7D23E0] px-6 py-2 rounded-md active:opacity-80'>
-          Login
+        <button className='bg-[#ffffff] w-fit font-bold text-[#7D23E0] px-8 py-3 text-lg rounded-md active:opacity-80'>
+          Buy Now
         </button>
       </nav>
     </div>

@@ -105,9 +105,9 @@ export default function Footer() {
   ]
 
   return (
-    <div className='bg-[#1C1C1C]   '>
+    <div className='bg-[#1C1C1C] '>
       <>
-        <div className='text-white flex justify-around p-10 max-w-7xl mx-auto'>
+        <div className='text-white flex justify-around p-10 max-w-7xl mx-auto z-[99999]'>
           <div className=' '>
             <div className='flex gap-2 items-center mb-2'>
               <img

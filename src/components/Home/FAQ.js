@@ -89,7 +89,7 @@ export default function FAQ() {
   return (
     <div>
       <Container>
-        <div className='bg-[#F3F5F7] py-10'>
+        <div className='bg-[#F3F5F7] py-10 cursor-pointer '>
           <h1 className='text-5xl text-center py-10 bg-[#F3F5F7]'>
             Frequently Asked Questions
           </h1>
@@ -101,7 +101,7 @@ export default function FAQ() {
                 onClick={() => setActiveKey(idx)}
               >
                 <div className='py-4 px-5 flex items-center justify-between bg-[#7A81DC] rounded-xl text-white'>
-                  <p className=''>{item.section}</p>
+                  <p>{item.section}</p>
                   {activeKey === idx ? <CloseOutlined /> : <PlusOutlined />}
                 </div>
                 <div className={activeKey === idx ? 'block' : 'hidden'}>

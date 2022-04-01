@@ -1,13 +1,17 @@
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
+import 'antd/dist/antd.css'
+import Layout from './components/Layout/Layout'
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route path='/' element={<Home />} />
+          </Routes>
+        </Layout>
       </BrowserRouter>
     </>
   )
