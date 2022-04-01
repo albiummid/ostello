@@ -9,8 +9,8 @@ export default function PageWrapper({ children }) {
         <>{children}</>
         <Affix offsetBottom={10}>
           <BackTop>
-            <div className=' absolute  bottom-10  h-[90px] w-[90px]  rounded-full bg-white flex justify-center items-center active:opacity-80 shadow-sm shadow-slate-400  '>
-              <UpOutlined className='text-3xl font-bold mb-3 cursor-pointer text-[#7D23E0]' />
+            <div className=' -right-10 absolute  -bottom-10 md:bottom-10 h-[40px] w-[40px] md:h-[90px] md:w-[90px]  rounded-full bg-white flex justify-center items-center active:opacity-80 shadow-sm shadow-slate-400  '>
+              <UpOutlined className='md:text-3xl text-2xl font-bold mb-3 cursor-pointer text-[#7D23E0]' />
             </div>
           </BackTop>
         </Affix>
