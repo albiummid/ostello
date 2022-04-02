@@ -24,16 +24,26 @@ export default function Objectives() {
   ]
   return (
     <Container>
-      <div className='learning_objectives'>
-        <h1 className='text-3xl text-center pt-10 text-white font-bold'>
+      <div className='learning_objectives  '>
+        <h1 className='md:text-5xl text-3xl pt-10 text-center md:pt-20 my-auto font-bold text-white '>
           Learning Objectives
         </h1>
       </div>
-      <div className='flex gap-10 justify-center h-[200px] '>
+      <div
+        className=' md:flex md:gap-10 justify-center flex-wrap md:flex-nowrap text-[#
+#414141] h-[400px] grid grid-cols-2  md:-mt-[160px] place-items-center -mt-[100px] '
+      >
         {objectives.map((item, i) => (
-          <div className='p-5 w-[200px] rounded-xl z-50 -mt-[80px] bg-white shadow-xl h-[170px]'>
-            <img className=' w-[50px] mx-auto mb-4' src={item.icons} alt='' />
-            <p className='text-center text-sm'>{item.title}</p>
+          <div
+            key={i}
+            className='p-5 w-[154px] md:w-[320px] rounded-xl   bg-white shadow-xl  md:h-[300px] h-[135px] flex flex-col items-center justify-center md:gap-10  '
+          >
+            <img
+              className=' w-[40px] md:w-[94px] mx-auto mb-4'
+              src={item.icons}
+              alt=''
+            />
+            <p className='text-center md:text-lg  w-[16ch] '>{item.title}</p>
           </div>
         ))}
       </div>

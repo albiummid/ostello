@@ -28,14 +28,14 @@
 }
 
 .learning_objectives {
-  height: 226px;
+  height: 326px;
   background: url('./images/courseObjectiveBG.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .offerBG {
-  height: 350px;
+  height: 693px;
   background: url('./images/offerBG.svg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,4 +45,13 @@
   background: url('./images/offerBG.svg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (max-width: 600px) {
+  .learning_objectives {
+    height: 182px;
+  }
+  .offerBG {
+    height: 270px;
+  }
 }

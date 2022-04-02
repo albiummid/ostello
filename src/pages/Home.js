@@ -23,8 +23,8 @@ export default function Home() {
           <CourseOutlines />
           <Faculty />
           <OfferSection />
-          <FAQ />
           <Reviews />
+          <FAQ />
           <Courses />
           <ShareCourse />
           <Platforms />

@@ -66,53 +66,48 @@ export default function Reviews() {
     }
     return classes
   }
-  const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    bgcolor: 'background.paper',
-    boxShadow: 24,
-  }
   const { icons } = constants
 
   return (
-    <div className='my-10'>
+    <div className='my-20 mx-5'>
       <Container>
         <h1 className='text-5xl text-center my-10'>Reviews</h1>
         <div>
-          <div className='flex justify-around '>
+          <div className='flex justify-between gap-10 flex-col md:flex-row  '>
             <div className='flex  gap-3 items-center'>
               {/* Review Statistics */}
               <div className='text-center flex justify-center items-center flex-col'>
-                <p className='text-7xl my-0  font-bold '>3.9</p>
-                <Rate value={5} />
-                <p className='text-xl font-bold'>Institute Rating</p>
+                <p className='md:text-7xl text-3xl my-0 font-medium  md:font-bold '>
+                  3.9
+                </p>
+                <Rate className='text-sm lg:text-xl' value={5} />
+                <p className='md:text-xl text-lg font-bold'>Institute Rating</p>
               </div>
 
               <div className=' items-center gap-3'>
                 {progresses.map((item, i) => (
                   <div className='flex items-center gap-2'>
                     <Progress
-                      className='md:w-[500px]'
+                      className='md:w-[500px] text-xs md:text-lg w-[166px]'
                       percent={item.percentage}
                       showInfo={false}
                     />
                     <div className=' '>
-                      <Rate value={5 - i} />
+                      <Rate className='text-sm' value={5 - i} />
                     </div>
-                    <p className='w-[50px] text-lg font-bold '>
+                    <p className='w-[50px] text-lg font-bold hidden md:block '>
                       {item.percentage}%
                     </p>
                   </div>
                 ))}
               </div>
             </div>
+
             <div className='p-5 rounded-lg shadow-md flex flex-col gap-2'>
-              <p className='text-2xl text-center my-2 font-bold'>
+              <p className='text-2xl text-center my-2 font-medium'>
                 Rate your experience
               </p>
-              <div className='flex gap-2 py-5 text-[#D7D7D7] select-none'>
+              <div className='flex justify-center gap-2 py-5 text-[#D7D7D7] select-none'>
                 {[1, 2, 3, 4, 5].map((item, i) => (
                   <div
                     key={i}
@@ -125,7 +120,7 @@ export default function Reviews() {
                 ))}
               </div>
               <p
-                className={`text-lg ml-4 font-bold text-[#7D23E0] cursor-pointer  `}
+                className={`text-lg ml-4 font-medium text-[#7D23E0] cursor-pointer  `}
                 onClick={() => setOpen(true)}
               >
                 Write a Review

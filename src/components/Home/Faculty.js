@@ -32,24 +32,27 @@ export default function Faculty() {
     <div className='pt-10 '>
       <Container>
         <h1 className='text-4xl font-bold text-center py-10'>Faculty</h1>
-        <div className='flex gap-10 justify-center py-5'>
+        <div className='flex  md:gap-10 md:justify-center  items-center  py-10 overflow-x-scroll no-scrollbar'>
           {faculties.map((item, i) => (
-            <div key={i} className='p-5 w-[300px] shadow-2xl rounded-2xl '>
+            <div
+              key={i}
+              className='md:p-10 p-5 md:only:py-12 w-[300px] md:w-[376px] mx-10 shadow-2xl shrink-0 rounded-2xl '
+            >
               <div className='mb-8 text-center '>
                 <img
                   className='h-[150px] w-[150px] mx-auto rounded-full my-2'
                   src={item.img}
                   alt=''
                 />
-                <p className='font-bold'>{item.name}</p>
-                <small
-                  className='text-[
+                <p className='font-bold text-xl'>{item.name}</p>
+                <p
+                  className='text-md  text-gray-400 text-[
 #A4A4A4]'
                 >
                   {item.degree}
-                </small>
+                </p>
               </div>
-              <p>{item.details}</p>
+              <p className='text-lg'>{item.details}</p>
             </div>
           ))}
         </div>
