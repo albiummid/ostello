@@ -25,9 +25,9 @@ export default function Navbar() {
   ]
   return (
     <div className='bg-[#7A81DC] '>
-      <nav className='flex gap-[10px] items-center justify-between py-4  text-white mb-3 md:mb-0 px-10 md:px-20 '>
+      <nav className='flex gap-[10px] items-center justify-between py-4  text-white mb-3 md:mb-0 px-10 lg:px-20 xl:px-40 '>
         <img className='md:w-[230px] w-[132px]' src={logo} alt='' />
-        <div className='md:flex items-center justify-start   hidden select-none '>
+        <div className='md:flex items-center justify-between   hidden select-none w-[60%]'>
           {links.map((item, i) => (
             <Link
               to='/'

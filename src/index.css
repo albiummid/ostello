@@ -24,7 +24,7 @@
 .videoPlayer {
   background: url('./images/v-image.png');
   background-repeat: no-repeat;
-  background-size: fit;
+  background-size: cover;
 }
 
 .learning_objectives {

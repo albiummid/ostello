@@ -90,7 +90,7 @@ export default function FAQ() {
   return (
     <div>
       <Container>
-        <div className='bg-[#F3F5F7] py-10 cursor-pointer '>
+        <div className='bg-[#F3F5F7] py-10 cursor-pointer px-5 md:px-'>
           <h1 className=' hidden md:block text-5xl text-center py-20 font-bold bg-[#F3F5F7]'>
             Frequently Asked Questions
           </h1>

@@ -1,6 +1,7 @@
 import { StarFilled, StarOutlined } from '@ant-design/icons'
-import { Box } from '@mui/material'
+import { Box, LinearProgress } from '@mui/material'
 import { Progress, Rate } from 'antd'
+import { Circle, Line } from 'rc-progress'
 import React, { useState } from 'react'
 import { constants } from '../../../constants'
 import Container from '../../Layout/Container'
@@ -71,10 +72,10 @@ export default function Reviews() {
   return (
     <div className='my-20 mx-5'>
       <Container>
-        <h1 className='text-5xl text-center my-10'>Reviews</h1>
+        <h1 className='text-5xl text-center my-10 font-medium'>Reviews</h1>
         <div>
-          <div className='flex justify-between gap-10 flex-col md:flex-row  '>
-            <div className='flex  gap-3 items-center'>
+          <div className='flex justify-around gap-10 flex-col lg:flex-row  '>
+            <div className='flex  lg:gap-5 gap-3 items-center justify-around'>
               {/* Review Statistics */}
               <div className='text-center flex justify-center items-center flex-col'>
                 <p className='md:text-7xl text-3xl my-0 font-medium  md:font-bold '>
@@ -84,16 +85,26 @@ export default function Reviews() {
                 <p className='md:text-xl text-lg font-bold'>Institute Rating</p>
               </div>
 
-              <div className=' items-center gap-3'>
+              <div className=''>
                 {progresses.map((item, i) => (
-                  <div className='flex items-center gap-2'>
+                  <div className='flex items-center gap-2 my-1'>
                     <Progress
-                      className='md:w-[500px] text-xs md:text-lg w-[166px]'
+                      strokeColor='#7D23E0'
+                      strokeWidth={10}
+                      className='md:w-[500px] text-xs lg:text-lg w-[120px] hidden md:block'
                       percent={item.percentage}
                       showInfo={false}
                     />
+                    <Progress
+                      strokeColor='#7D23E0'
+                      strokeWidth={5}
+                      className='md:w-[500px] text-xs lg:text-lg w-[120px] md:hidden'
+                      percent={item.percentage}
+                      showInfo={false}
+                    />
+
                     <div className=' '>
-                      <Rate className='text-sm' value={5 - i} />
+                      <Rate className='text-xs md:text-lg ' value={5 - i} />
                     </div>
                     <p className='w-[50px] text-lg font-bold hidden md:block '>
                       {item.percentage}%

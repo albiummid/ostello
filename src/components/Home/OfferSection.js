@@ -6,11 +6,9 @@ export default function OfferSection() {
     <div>
       <Container>
         <div className='offerBG p-3 text-white py-10 flex flex-col justify-center'>
-          <div className='md:text-5xl text-xl'>
-            <h1 className=' text-white font-bold text-center'>
-              Register early to get
-            </h1>
-            <h1 className=' text-white font-bold text-center'>
+          <div className='md:text-5xl text-lg font-medium'>
+            <h1 className=' text-white  text-center'>Register early to get</h1>
+            <h1 className=' text-white  text-center'>
               Rs. 1000 worth of coupons
             </h1>
           </div>

@@ -73,8 +73,8 @@ export default function CourseOutlines() {
                   </p>
                 </div>
                 <div className='md:flex gap-2 items-center  hidden'>
-                  <p className='text-sm'>{item.lectureCount} lectures</p>.
-                  <p className='text-sm'>{item.lectureHours} hours</p>
+                  <p className='text-md'>{item.lectureCount} lectures</p>.
+                  <p className='text-md'>{item.lectureHours} hours</p>
                 </div>
               </div>
 
