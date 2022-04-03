@@ -20,7 +20,6 @@
     font-family: 'DM Sans', sans-serif;
   }
 }
-
 .videoPlayer {
   background: url('./images/v-image.png');
   background-repeat: no-repeat;
@@ -41,10 +40,11 @@
   background-size: cover;
 }
 .shareBG {
-  height: 300px;
+  height: 326px;
   background: url('./images/offerBG.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top;
 }
 
 @media (max-width: 600px) {

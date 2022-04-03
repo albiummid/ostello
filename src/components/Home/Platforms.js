@@ -1,7 +1,5 @@
-import { data } from 'autoprefixer'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Container from '../Layout/Container'
 
 export default function Platforms() {
   const platforms = [
@@ -152,11 +150,11 @@ export default function Platforms() {
   ]
   return (
     <>
-      <div className='md:flex gap-5 justify-around p-10 bg-[#F3F5F7] hidden '>
+      <div className='lg:flex gap-5 justify-around py-20 px-10 bg-[#F3F5F7] hidden '>
         {platforms.map((item, i) => (
           <div key={i}>
-            <p className='font-bold text-lg my-5'>{item.name}</p>
-            <div className='flex flex-col'>
+            <p className='font-bold text-4xl my-5'>{item.name}</p>
+            <div className='flex flex-col text-3xl'>
               {item.categories.map((category, idx) => (
                 <Link to={category.url} key={idx}>
                   {category.title}

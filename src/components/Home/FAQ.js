@@ -88,13 +88,13 @@ export default function FAQ() {
     },
   ]
   return (
-    <div>
+    <div name='FAQ'>
       <Container>
-        <div className='bg-[#F3F5F7] py-10 cursor-pointer px-5 md:px-'>
-          <h1 className=' hidden md:block text-5xl text-center py-20 font-bold bg-[#F3F5F7]'>
+        <div className='bg-[#F3F5F7] lg:py-20 py-10 cursor-pointer px-5'>
+          <h1 className=' hidden md:block text-5xl text-center py-10 pb-20 font-bold bg-[#F3F5F7]'>
             Frequently Asked Questions
           </h1>
-          <h1 className='text-5xl md:hidden text-center py-20 font-bold bg-[#F3F5F7] '>
+          <h1 className='lg:text-5xl text-4xl md:hidden text-center py-10 font-medium  bg-[#F3F5F7] '>
             FAQs
           </h1>
           <div className=' md:w-[70%] mx-auto py-5 max-w-[1080px]'>
@@ -126,7 +126,7 @@ export default function FAQ() {
               </div>
             ))}
             <div className=' flex items-center md:gap-4 md:justify-end justify-center flex-col md:flex-row '>
-              <p className='text-lg'>Or visit our help center to know more</p>
+              <p className='text-xl'>Or visit our help center to know more</p>
               <Link
                 to='/'
                 className='font-bold text-[#0026AE] underline text-lg'

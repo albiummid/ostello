@@ -105,21 +105,21 @@ export default function Footer() {
   ]
 
   return (
-    <div className='bg-[#1C1C1C] '>
+    <div name='Footer' className='bg-[#1C1C1C] '>
       <>
-        <div className='text-white flex justify-center md:flex-row flex-col   md:gap-20 p-10 z-[99999]'>
-          <div className=' '>
+        <div className='text-white flex justify-center md:flex-row flex-col   md:gap-20 pt-10  z-[99999]'>
+          <div className='px-5'>
             <div className='flex gap-2 items-center mb-2'>
               <img
-                className='w-[60px] cursor-pointer '
+                className='w-[70px] cursor-pointer '
                 src={images.ostelloLogo}
                 alt=''
               />
               <p className='text-3xl text-white font-bold'>OSTELLO</p>
             </div>
-            <div className='md:flex gap-5 items-center hidden'>
+            <div className='md:flex gap-5 items-center hidden justify-center my-5 '>
               {socialLinks.map((item, i) => (
-                <div o className='' key={i}>
+                <div className='' key={i}>
                   <a href={item.link} target='_blank' rel='noreferrer'>
                     <img
                       className='w-[30px] cursor-pointer'
@@ -131,13 +131,15 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className='grid md:grid-cols-4 grid-col-1 md:gap-20 divide-y '>
+          <div className='grid md:grid-cols-4 grid-col-1 md:gap-20 divide-y divide-gray-500 md:divide-y-0  '>
             {footerLinks.map((item, i) => (
-              <div key={i} className='mb-5'>
-                <p className='font-bold mb-2 mt-5 text-lg'>{item.header}</p>
+              <div key={i} className='mb-5 px-5'>
+                <p className='font-medium mb-2 lg:mb-4 mt-5 text-2xl lg:text-2xl '>
+                  {item.header}
+                </p>
                 <div className='flex-col'>
                   {item.links.map((link, i) => (
-                    <Link className='block' key={i * 7} to={link.url}>
+                    <Link className='block text-xl' key={i * 7} to={link.url}>
                       {link.title}
                     </Link>
                   ))}
@@ -148,12 +150,12 @@ export default function Footer() {
         </div>
       </>
 
-      <div className='flex gap-5 items-center justify-center md:hidden'>
+      <div className='flex gap-5 items-center justify-center md:hidden my-5 '>
         {socialLinks.map((item, i) => (
           <div o className='' key={i}>
             <a href={item.link} target='_blank' rel='noreferrer'>
               <img
-                className='w-[20px] cursor-pointer'
+                className='w-[30px] cursor-pointer'
                 src={item.img}
                 alt={item.title}
               />
@@ -162,7 +164,7 @@ export default function Footer() {
         ))}
       </div>
 
-      <footer className='text-white text-center font-medium text-sm md:text-lg py-2'>
+      <footer className='text-white text-center font-medium text-lg py-6'>
         2022 &copy; Ostello India Private Limited{' '}
       </footer>
     </div>

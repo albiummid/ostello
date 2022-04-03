@@ -29,14 +29,14 @@ export default function Faculty() {
     },
   ]
   return (
-    <div className='pt-10 '>
+    <section name='Faculty' className='py-20 '>
       <Container>
         <h1 className='text-4xl font-bold text-center py-10'>Faculty</h1>
         <div className='flex  md:gap-10 md:justify-center  items-center  py-10 overflow-x-scroll no-scrollbar'>
           {faculties.map((item, i) => (
             <div
               key={i}
-              className='md:p-10 p-5 md:only:py-12 w-[300px] md:w-[376px] mx-10 shadow-2xl shrink-0 rounded-2xl '
+              className='md:p-10 p-5 md:only:py-12 w-[300px] md:w-[376px] lg:mx-10 mx-2 shadow-2xl shrink-0 rounded-2xl '
             >
               <div className='mb-8 text-center '>
                 <img
@@ -63,6 +63,6 @@ export default function Faculty() {
           <div className='bg-[#7D23E0] opacity-40 h-2 w-[20px] rounded-xl'></div>
         </div>
       </Container>
-    </div>
+    </section>
   )
 }

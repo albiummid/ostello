@@ -9,28 +9,39 @@ import {
 import React from 'react'
 import { constants } from '../../../constants'
 import courseImg from '../../../images/courseImg.png'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import toast from 'react-hot-toast'
 
 export default function CourseCard() {
   const { icons } = constants
   return (
     <div className='md:w-[476px] w-[100%] relative shadow-lg rounded-3xl'>
-      <img src={courseImg} className='w-[100%] ' alt='' />
+      <div className='relative'>
+        <img src={courseImg} className='w-[100%]  ' alt='' />
+        <div className='flex items-center justify-center  gap-1 px-2 py-1 text-md text-white  font-bold bg-yellow-400 rounded-lg md:hidden absolute right-5 bottom-[10px] '>
+          <p>3.0</p>
+          <StarFilled />
+        </div>
+      </div>
       <div className=' w-[50px] h-[50px] rounded-full shadow-sm absolute right-5 top-5 bg-white flex items-center justify-center cursor-pointer '>
         <HeartOutlined className='text-gray-600 text-3xl mb-1' />
       </div>
-      <div className='flex items-center justify-center  gap-1 px-2 py-1 text-md text-white  font-bold bg-yellow-400 rounded-lg md:hidden absolute right-5 top-[140px] '>
-        <p>3.0</p>
-        <StarFilled />
-      </div>
+
       <div className='p-6 flex flex-col gap-3'>
         <div className=' flex items-center justify-between '>
           <div>
             <p className='text-2xl  text-[#767676]'>XYZ Design Academy</p>
             <p className='text-lg font-bold'>UX Design Program</p>
           </div>
-          <div className='p-2 w-[50px] h-[50px]   rounded-full bg-white shadow-lg text-[#767676] justify-center items-center flex cursor-pointer '>
-            <ShareAltOutlined className='text-2xl mb-1 mr-1' />
-          </div>
+
+          <CopyToClipboard
+            text='course-shared-link'
+            onCopy={() => toast.success('Link has been copied to clipboard')}
+          >
+            <div className='p-2 w-[50px] h-[50px]   rounded-full bg-white shadow-lg text-[#767676] justify-center items-center flex cursor-pointer '>
+              <ShareAltOutlined className='text-2xl mb-1 mr-1' />
+            </div>
+          </CopyToClipboard>
         </div>
 
         <div className='flex justify-between md:flex-col '>
@@ -60,7 +71,7 @@ export default function CourseCard() {
           <div className='flex justify-between items-center '>
             <div>
               <p className='md:text-3xl text-xl font-bold'>Rs. 599</p>
-              <p className='md:text-xl text-red-400 text-right'>
+              <p className='md:text-xl text-red-400 text-right md:text-left'>
                 <del>Rs.1500</del>
               </p>
             </div>

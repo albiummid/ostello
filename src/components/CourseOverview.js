@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import stats from '../images/icons/statistics.png'
 import connection from '../images/icons/connecion.png'
-import message from '../images/icons/message.png'
+import message from '../images/icons/message.svg'
 import poster from '../images/icons/poster.png'
 import like from '../images/icons/like.png'
 
@@ -30,9 +30,12 @@ export default function CourseOverview() {
     },
   ]
   return (
-    <section className=' course_overview flex lg:flex-row flex-col gap-4 justify-between lg:px-40 px-5 pb-[200px] items-center'>
+    <section
+      name='Overview'
+      className=' course_overview flex lg:flex-row flex-col gap-4 justify-between lg:px-40 px-5 py-32 items-center'
+    >
       <div className=' lg:w-[50%] text-[#414141]  text-justify'>
-        <h1 className='lg:text-5xl text-4xl  text-rights font-medium mb-10'>
+        <h1 className='lg:text-5xl text-3xl  text-rights font-medium lg:mb-10 mb-5'>
           Course Overview
         </h1>
         <div className={'text-lg  text-justify lg:block hidden'}>
@@ -57,7 +60,7 @@ export default function CourseOverview() {
             cost effective.
           </p>
         </div>
-        <div className='text-lg font-medium lg:hidden'>
+        <div className='text-lg font-medium lg:hidden my-10'>
           <p>
             With over 20 hours of training, quizzes and practical steps you can
             follow - this is one of the most comprehensive digital marketing
@@ -89,12 +92,12 @@ export default function CourseOverview() {
           </p>
         </div>
       </div>
-      <div className='p-10 ring-2 ring-[#7178D3] rounded-xl h-fit font-medium'>
-        <h1 className='text-[32px] pb-2'>Key Highlights</h1>
+      <div className='lg:p-10 p-5 ring-2 ring-[#7178D3] rounded-xl h-fit font-medium'>
+        <h1 className='text-[32px] pb-5'>Key Highlights</h1>
         <div className=''>
           {keyPoints.map((item, i) => (
-            <div key={i} className='flex gap-5 my-2'>
-              <img className='w-4 h-4' src={item.icon} alt='' />
+            <div key={i} className='flex items-start gap-8 my-2'>
+              <img className='w-6 h-6' src={item.icon} alt='' />
               <p className='text-lg'>{item.title}</p>
             </div>
           ))}

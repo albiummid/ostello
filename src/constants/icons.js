@@ -1,7 +1,7 @@
 import arrowRight from '../images/icons/arrow-r-sm.png'
 import heart from '../images/icons/heart.png'
 import star from '../images/icons/star.png'
-import location from '../images/icons/location.png'
+import location from '../images/icons/location.svg'
 import calculation from '../images/icons/calculation.svg'
 import barGraph from '../images/icons/bar graph.svg'
 import siteMap from '../images/icons/sitemap.svg'

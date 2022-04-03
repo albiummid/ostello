@@ -49,7 +49,7 @@ export default function CourseOutlines() {
     },
   ]
   return (
-    <div className='bg-[gradient(180deg, rgba(122, 129, 220, 0.1) 0%, rgba(196, 196, 196, 0) 68.86%)] px-5'>
+    <section name='Syllabus' className='lg:py-20 py-10 px-5'>
       <Container>
         <h1 className='my-10 text-3xl md:text-5xl text-center font-bold'>
           What's in the course
@@ -93,6 +93,6 @@ export default function CourseOutlines() {
           ))}
         </div>
       </Container>
-    </div>
+    </section>
   )
 }
