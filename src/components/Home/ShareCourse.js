@@ -10,7 +10,7 @@ export default function ShareCourse() {
         <h1 className='text-white font-medium text-center lg:ml-20 text-3xl lg:hidden'>
           Share this course and receive exciting offers
         </h1>
-        <button className='px-10 py-4 text-lg lg:text-2xl w-fit mx-auto text-[#7D23E0]  bg-[#ffff] rounded-lg font-medium active:opacity-80'>
+        <button className='px-8 py-4 text-xl lg:text-2xl w-fit mx-auto text-[#7D23E0]  bg-[#ffff] rounded-lg font-medium active:opacity-80'>
           Sign up and Refer
         </button>
       </div>

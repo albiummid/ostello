@@ -6,7 +6,7 @@ import { Toaster } from 'react-hot-toast'
 
 export default function Layout({ children }) {
   return (
-    <div className='relative'>
+    <div className='relative '>
       <Toaster position='bottom-center' reverseOrder={false} />
       <Navbar />
       <PageWrapper>{children}</PageWrapper>

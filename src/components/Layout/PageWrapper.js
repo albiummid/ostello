@@ -5,7 +5,7 @@ import React from 'react'
 export default function PageWrapper({ children }) {
   return (
     <>
-      <div className='z-[9999999]'>
+      <div className=''>
         <>{children}</>
         <Affix offsetBottom={10}>
           <BackTop>

@@ -17,10 +17,10 @@ import toast from 'react-hot-toast'
 export default function Header() {
   const { icons } = constants
   return (
-    <div className=' '>
+    <div name='Header' className=' '>
       <div className=' wrapper select-none mb-10 px-5 bg-[#7A81DC]'>
         <div className='header_container text-white  py-5  pb-[200px] md:pb-[180px] '>
-          <div className='hero_container mt-10 lg:px-20  '>
+          <div className='hero_container  lg:px-20  '>
             <div className='flex items-center'>
               <div className='lg:w-[50%] mx-auto '>
                 <div className='flex justify-between flex-wrap'>
@@ -76,7 +76,7 @@ export default function Header() {
                         </p>
                       </div>
                     </section>
-                    <div className='md:hidden w-fit  flex justify-center'>
+                    <div className='xl:hidden w-fit  flex justify-center'>
                       <VideoSection />
                     </div>
 
@@ -111,7 +111,7 @@ export default function Header() {
                 </div>
               </div>
 
-              <div className='md:block hidden mx-10'>
+              <div className='xl:block hidden mx-10'>
                 <VideoSection />
               </div>
             </div>

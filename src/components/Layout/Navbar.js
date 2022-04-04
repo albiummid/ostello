@@ -1,6 +1,5 @@
 import { Affix } from 'antd'
 import React, { useState } from 'react'
-import { useLocation } from 'react-router-dom'
 import { Link } from 'react-scroll/modules'
 import logo from '../../images/logo.svg'
 import logoWH from '../../images/logoWhiteBG.svg'
@@ -30,10 +29,10 @@ export default function Navbar() {
     },
   ]
   return (
-    <div name='' className=' '>
+    <div name=''>
       <Affix offsetTop={0} className='' onChange={(e) => setIsAffixed(e)}>
         <nav
-          className={`flex gap-[10px] items-center justify-between py-4  pb-3 md:mb-0 px-5 lg:px-20 xl:px-40  ${
+          className={`flex gap-5 items-center justify-between py-4  pb-3 md:mb-0 px-5 lg:px-10 xl:px-20 2xl:px-40  ${
             isAffixed ? 'bg-white hidden md:flex items-center ' : 'bg-[#7A81DC]'
           }`}
         >
@@ -43,14 +42,14 @@ export default function Navbar() {
             alt=''
           />
 
-          <div className='md:flex items-center justify-between  hidden select-none w-[60%]'>
+          <div className='md:flex items-center w-full justify-around  hidden select-none '>
             {links.map((item, i) => (
               <div className='flex flex-col justify-center items-center py-2  '>
                 <Link
                   to={item.title}
                   smooth={true}
                   spy={true}
-                  className={`cursor-pointer text-xl  active:text-[#7D23E0] ${
+                  className={`cursor-pointer text-xl xl:text-xl md:text-lg  active:text-[#7D23E0] ${
                     i === activeSection
                       ? ' text-[#7D23E0]'
                       : isAffixed
@@ -59,7 +58,10 @@ export default function Navbar() {
                   }`}
                   activeClass=''
                   key={i}
-                  onSetActive={() => setActiveSection(i)}
+                  onSetActive={(e) => {
+                    setActiveSection(i)
+                    console.log(e)
+                  }}
                 >
                   {item.title}
                 </Link>
@@ -76,7 +78,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className={`  font-medium  xl:px-3 px-6 py-1  md:py-3  md:text-lg xl:text-2xl text-md rounded-md active:opacity-80 md:w-[110px] xl:w-[190px] ${
+            className={`  font-semibold  xl:px-3 px-6 py-2  md:py-3  md:text-lg xl:text-2xl text-lg rounded-md active:opacity-80 md:w-[110px] xl:w-[190px] ${
               isAffixed
                 ? 'bg-[#7D23E0] text-[#ffffff]'
                 : 'text-[#7D23E0] bg-[#ffffff]'
@@ -94,7 +96,7 @@ export default function Navbar() {
       >
         <div
           className={
-            ' gap-[25px] flex text-lg lg:text-lg  font-medium md:hidden overflow-x-scroll md:text-2xl  select-none no-scrollbar px-2  ' +
+            ' gap-[25px] flex text-lg lg:text-lg sm:justify-around font-medium md:hidden overflow-x-scroll md:text-2xl  select-none no-scrollbar px-5  ' +
             (isAffixed && 'bg-white ')
           }
         >
