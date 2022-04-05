@@ -30,14 +30,14 @@ export default function Objectives() {
             Learning Objectives
           </h1>
         </div>
-        <div className=' grid grid-cols-2 md:grid-cols-4 gap-5 mx-5'>
+        <div className=' grid grid-cols-2 md:flex md:justify-center  gap-5   mx-5 justify-between -mt-20 md:mx-20'>
           {objectives.map((item, i) => (
             <div
               key={i}
-              className='bg-white   rounded-xl  shadow-xl   flex flex-col items-center justify-center  h-[135px] p-2'
+              className='bg-white  md:w-[300px]   rounded-xl  shadow-xl   flex flex-col items-center justify-center md:gap-5 gap-2 md:mx-auto p-5 '
             >
-              <img className=' w-10 ' src={item.icons} alt='' />
-              <p className='text-center text-md lg:text-lg  '>{item.title}</p>
+              <img className=' w-10 md:w-20 ' src={item.icons} alt='' />
+              <p className='text-center text-sm lg:text-lg  '>{item.title}</p>
             </div>
           ))}
         </div>
