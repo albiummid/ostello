@@ -102,7 +102,7 @@ export default function FAQ() {
               <div
                 key={idx}
                 className='flex flex-col gap-2 my-2'
-                onClick={() => setActiveKey(idx)}
+                onClick={() => setActiveKey(idx === activeKey ? null : idx)}
               >
                 <div className='md:p-10 p-5  flex items-center justify-between bg-[#7A81DC] rounded-xl text-xl text-white  '>
                   <p className='text-2xl'>{item.section}</p>

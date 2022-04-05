@@ -118,10 +118,10 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className=''>
-        <section className=' xl:w-[1347px] Card flex justify-evenly text-[#414141] p-10 rounded-3xl md:flex-row flex-col  bg-white  flex-wrap gap-5  shadow-xl md:mx-auto md:-mt-[130px] -mt-[150px] z-[999] my-10 mx-5 px-5'>
+      <div className=' mx-10'>
+        <section className=' xl:max-w-[1347px]  Card flex justify-evenly text-[#414141] p-10 md:p-5 rounded-3xl md:flex-row flex-col sm:mx-auto  bg-white mx-auto   lg:gap-5  shadow-xl  md:-mt-[130px] -mt-[150px] z-[999] my-10 '>
           <div className='px-2 py-1 flex flex-col items-center font-medium justify-center  '>
-            <p className='text-2xl  mb-3'>1 Month</p>
+            <p className='text-xl lg:text-2xl  mb-3'>1 Month</p>
             <div className='flex items-center gap-1'>
               <img className='w-4' src={time} alt='' />
               <p className='text-lg '>Duration</p>
@@ -131,7 +131,7 @@ export default function Header() {
           <div className=' md:hidden border-2 my-3 border-[#7A81DC] md:border-none border-dashed border-t-0 border-l-0 border-r-0  h-2 w-[100%] ' />
 
           <div className='px-2 py-1 flex flex-col items-center text-center font-medium   justify-center '>
-            <p className='text-2xl  mb-3'>Authorized Certificate</p>
+            <p className='text-xl lg:text-2xl  mb-3'>Authorized Certificate</p>
             <div className='flex items-center gap-1'>
               <img className='w-4' src={certified} alt='' />
               <p className='text-lg '>Get Certified</p>
@@ -141,27 +141,26 @@ export default function Header() {
           <div className=' md:hidden border-2 my-3 border-[#7A81DC] md:border-none border-dashed border-t-0 border-l-0 border-r-0  h-2 w-[100%] ' />
 
           <div className='px-2 py-1 flex font-medium flex-col items-center   justify-center '>
-            <p className='text-2xl  mb-3'>Rs.150/month</p>
+            <p className='text-xl lg:text-2xl  mb-3'>Rs.150/month</p>
             <div className='flex items-center gap-1'>
               <img className='w-4' src={emi} alt='' />
               <p className='text-lg '>EMI Options</p>
             </div>
 
-            <div className=' md:hidden border-2 mt-10 border-[#7A81DC] md:border-none border-dashed border-t-0 border-l-0 border-r-0  h-2 w-[100%]  ' />
+            <div className=' md:hidden border-2 my-3 border-[#7A81DC] md:border-none border-dashed border-t-0 border-l-0 border-r-0  h-2 w-[100%]  ' />
           </div>
-          <div className='text-center'>
-            <p className='text-[48px] font-bold text-[#414141]'>Rs. 499</p>
-            <del className='text-red-400 text-[24px]'>Rs.1799</del>
+          <div className='text-center flex items-center flex-col my-auto '>
+            <p className='text-3xl font-bold text-[#414141]'>Rs. 499</p>
+            <del className='text-red-400 text-xl'>Rs.1799</del>
           </div>
-          <div className='flex flex-col justify-center'>
-            <button className=' px-10 py-3 mx-auto bg-[#7D23E0] rounded-md mb-3 text-white active:opacity-80 text-3xl '>
+          <div className='flex flex-col justify-center my-5'>
+            <button className=' px-10 py-3 mx-auto bg-[#7D23E0] rounded-md mb-3 text-white active:opacity-80 text-xl lg:text-2xl '>
               Buy Now
             </button>
             <div className='text-md text-center flex md-block justify-center gap-2 md-text-sm'>
               <p>
-                <sup>*</sup>15-Day
+                <sup>*</sup>15-Day Money-Back Guarantee
               </p>
-              <p>Money-Back Guarantee</p>
             </div>
           </div>
         </section>

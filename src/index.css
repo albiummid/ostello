@@ -31,7 +31,6 @@
 }
 
 .learning_objectives {
-  height: 326px;
   background: url('./images/courseObjectiveBG.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,9 +50,6 @@
 }
 
 @media (max-width: 600px) {
-  .learning_objectives {
-    height: 182px;
-  }
   .offerBG {
     height: 270px;
   }

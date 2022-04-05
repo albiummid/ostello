@@ -25,23 +25,19 @@ export default function Objectives() {
   return (
     <section name='Objectives' className='py-10'>
       <Container>
-        <div className='learning_objectives  '>
-          <h1 className='lg:text-5xl text-3xl pt-10 text-center lg:pt-20  font-medium text-white px-5 lg:px-20'>
+        <div className='  learning_objectives lg:h-[300px] h-[200px] '>
+          <h1 className='lg:text-5xl text-3xl pt-10 text-center lg:pt-20  font-medium text-white mx-5 lg:px-20'>
             Learning Objectives
           </h1>
         </div>
-        <div className=' flex lg:gap-14 justify-center flex-wrap gap-5 lg:flex-nowrap text-[#414141] -mt-[60px] lg:-mt-32'>
+        <div className=' grid grid-cols-2 gap-5 mx-5'>
           {objectives.map((item, i) => (
             <div
               key={i}
-              className='p-5 lg:px-10 w-[154px] lg:w-[320px] rounded-xl bg-white shadow-xl  lg:h-[298px] h-[135px] flex flex-col items-center justify-center lg:gap-5 '
+              className='bg-white   rounded-xl  shadow-xl   flex flex-col items-center justify-center  h-[135px] p-2'
             >
-              <img
-                className=' w-[40px] lg:w-[94px] mx-auto mb-4'
-                src={item.icons}
-                alt=''
-              />
-              <p className='text-center lg:text-lg  w-[16ch] '>{item.title}</p>
+              <img className=' w-10 ' src={item.icons} alt='' />
+              <p className='text-center text-md lg:text-lg  '>{item.title}</p>
             </div>
           ))}
         </div>

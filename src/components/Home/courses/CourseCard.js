@@ -1,18 +1,19 @@
 import {
   ArrowRightOutlined,
-  HeartFilled,
   HeartOutlined,
+  HeartTwoTone,
   RiseOutlined,
   ShareAltOutlined,
   StarFilled,
 } from '@ant-design/icons'
-import React from 'react'
+import React, { useState } from 'react'
 import { constants } from '../../../constants'
 import courseImg from '../../../images/courseImg.png'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import toast from 'react-hot-toast'
 
 export default function CourseCard() {
+  const [isActiveHeart, setHeart] = useState(false)
   const { icons } = constants
   return (
     <div className='md:w-[476px] w-[100%] relative shadow-lg rounded-3xl'>
@@ -23,8 +24,18 @@ export default function CourseCard() {
           <StarFilled />
         </div>
       </div>
-      <div className=' w-[50px] h-[50px] rounded-full shadow-sm absolute right-5 top-5 bg-white flex items-center justify-center cursor-pointer '>
-        <HeartOutlined className='text-gray-600 text-3xl mb-1' />
+      <div
+        className=' w-[50px] h-[50px] rounded-full shadow-sm absolute right-5 top-5 bg-white flex items-center justify-center cursor-pointer '
+        onClick={() => setHeart(!isActiveHeart)}
+      >
+        {isActiveHeart ? (
+          <HeartTwoTone
+            twoToneColor={'red'}
+            className='text-gray-600 text-3xl mb-1'
+          />
+        ) : (
+          <HeartOutlined className='text-gray-600 text-3xl mb-1' />
+        )}
       </div>
 
       <div className='p-6 flex flex-col gap-3'>

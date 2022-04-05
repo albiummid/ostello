@@ -49,7 +49,7 @@ export default function Navbar() {
                   to={item.title}
                   smooth={true}
                   spy={true}
-                  className={`cursor-pointer text-xl xl:text-xl md:text-lg  active:text-[#7D23E0] ${
+                  className={`cursor-pointer text-md xl:text-xl   active:text-[#7D23E0] ${
                     i === activeSection
                       ? ' text-[#7D23E0]'
                       : isAffixed

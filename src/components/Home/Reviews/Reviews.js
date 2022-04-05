@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 import { constants } from '../../../constants'
 import Container from '../../Layout/Container'
 import Modal from '../../Utils/Modal'
+import ReviewCard from './ReviewCard'
 
 export default function Reviews() {
   const [isSelected, setIsSelected] = useState(0)
@@ -70,39 +71,39 @@ export default function Reviews() {
   const { icons } = constants
 
   return (
-    <section name='Reviews' className='py-20'>
+    <section name='Reviews' className='py-20   '>
       <Container>
         <h1 className='lg:text-5xl text-4xl text-center my-10 font-medium'>
           Reviews
         </h1>
         <div>
-          <div className='flex justify-around gap-10 flex-col lg:flex-row  '>
-            <div className='flex  lg:gap-5 items-center justify-around w-[375px] lg:w-fit mx-auto lg:mx-0'>
+          <div className=' flex justify-center items-center flex-col md:flex-row md:justify-around'>
+            <div className='flex items-center  md:gap-5  '>
               {/* Review Statistics */}
-              <div className='text-center flex justify-center items-center flex-col w-[120px] md:w-[150px]'>
-                <p className='md:text-7xl text-4xl my-0 font-medium  md:font-bold '>
+              <div className='text-center flex justify-center items-center flex-col min-w-[150px] my-5 '>
+                <p className='md:text-5xl text-4xl my-0 font-medium  md:font-bold '>
                   3.9
                 </p>
                 <Rate className='text-sm lg:text-xl' value={5} />
-                <p className='md:text-xl text-lg font-bold m-0 p-0'>
+                <p className='md:text-xl text-md font-bold m-0 p-0'>
                   Course Rating
                 </p>
               </div>
 
               <div className=''>
                 {progresses.map((item, i) => (
-                  <div className='flex items-center gap-2 my-1'>
+                  <div className='flex items-center  my-1'>
                     <Progress
                       strokeColor='#7D23E0'
                       strokeWidth={10}
-                      className='md:w-[500px] text-xs lg:text-lg w-[120px] hidden md:block'
+                      className='text-xs lg:text-lg sm:w-[400px]   hidden xl:block'
                       percent={item.percentage}
                       showInfo={false}
                     />
                     <Progress
                       strokeColor='#7D23E0'
                       strokeWidth={5}
-                      className='md:w-[500px] text-xs lg:text-lg w-[120px] md:hidden'
+                      className=' text-xs lg:text-lg w-40  xl:hidden'
                       percent={item.percentage}
                       showInfo={false}
                     />
@@ -113,7 +114,7 @@ export default function Reviews() {
                         value={5 - i}
                       />
                     </div>
-                    <p className='w-[50px] text-lg font-bold hidden md:block '>
+                    <p className='w-[50px] text-lg font-bold hidden lg:block ml-3'>
                       {item.percentage}%
                     </p>
                   </div>
@@ -121,7 +122,7 @@ export default function Reviews() {
               </div>
             </div>
 
-            <div className='px-10 py-5 rounded-lg shadow-md flex flex-col gap-2'>
+            <div className='px-10 py-5 rounded-lg shadow-md flex flex-col gap-2  '>
               <p className='text-2xl text-center my-2 font-medium'>
                 Rate your experience
               </p>
@@ -196,6 +197,10 @@ export default function Reviews() {
               </div>
             </div>
           </div>
+          {/* <div>
+            <ReviewCard />
+            <ReviewCard />
+          </div> */}
         </div>
       </Container>
     </section>

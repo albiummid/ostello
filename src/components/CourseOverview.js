@@ -32,13 +32,13 @@ export default function CourseOverview() {
   return (
     <section
       name='Overview'
-      className=' course_overview flex lg:flex-row flex-col gap-4 justify-between lg:px-40 px-5 py-32 items-center'
+      className=' course_overview flex  flex-col gap-10 justify-between  md:px-20  lg:flex-row px-5 py-32 items-center max-w-3xl mx-auto md:max-w-full'
     >
       <div className=' lg:w-[50%] text-[#414141]  text-justify'>
         <h1 className='lg:text-5xl text-3xl  text-rights font-medium lg:mb-10 mb-5'>
           Course Overview
         </h1>
-        <div className={'text-lg  text-justify lg:block hidden'}>
+        <div className={'text-lg  text-justify lg:block hidden '}>
           <p className='mb-3'>
             With over 20 hours of training, quizzes and practical steps you can
             follow - this is one of the most comprehensive digital marketing

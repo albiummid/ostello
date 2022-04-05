@@ -11,7 +11,7 @@ export default function VideoSection() {
         <div className='relative  bg-[#7A81DC] '>
           <img
             src={videoImage}
-            className=' w-full object-contain  xl:h-[400px] md:w-full h-full'
+            className=' w-full   xl:h-[400px] md:w-full h-full'
             alt=''
           />
           <PlayCircleFilled className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-7xl  text-5xl cursor-pointer active:opacity-75' />
