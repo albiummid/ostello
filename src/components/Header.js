@@ -18,20 +18,20 @@ export default function Header() {
   const { icons } = constants
   return (
     <div name='Header' className=' '>
-      <div className=' wrapper select-none mb-10 px-5 bg-[#7A81DC]'>
+      <div className=' wrapper select-none mb-10 bg-[#7A81DC]'>
         <div className='header_container text-white  py-5  pb-[200px] md:pb-[180px] '>
-          <div className='hero_container  lg:px-20  '>
-            <div className='flex items-center'>
-              <div className='lg:w-[50%] mx-auto '>
+          <div className='hero_container  lg:px-20 md:px-5 flex justify-center items-center '>
+            <div className='grid xl:grid-cols-2  gap-10  mx-auto'>
+              <div className=' w-full'>
                 <div className='flex justify-between flex-wrap'>
-                  <div className='w-[100%] '>
+                  <div className='w-full'>
                     <div className='h-6 w-6 hidden md:h-[42px] md:w-[42px] rounded-full ring-2 ring-white md:flex justify-center items-center cursor-pointer mb-6 font-bold '>
                       <ArrowLeftOutlined className='font-bold ' />
                     </div>
                   </div>
                   <div className=''>
                     <section className='intro flex  flex-col'>
-                      <div className='flex justify-between flex-wrap gap-2 flex-col md:flex-row items-center '>
+                      <div className='flex justify-between flex-wrap gap-2 flex-col md:flex-row items-center md:w-full'>
                         <p className='md:text-4xl text-2xl  text-center md:text-left border-t-0 border-l-0 border-r-0 border-2 border-dashed w-[100%] md:w-fit  pb-4'>
                           XYZ Design Academy
                         </p>
@@ -44,18 +44,18 @@ export default function Header() {
                         </div>
                       </div>
 
-                      <div className='flex justify-center md:justify-start gap-2 items-start  mt-3 mb-5'>
+                      <div className='flex justify-center md:justify-start gap-2 items-start  mt-3 '>
                         <img
                           className='w-10 h-8 mt-2'
                           src={icons.location}
                           alt=''
                         />
-                        <p className='md:text-lg text-md  md:w-[36ch] w-[30ch]'>
-                          273/2, Shahabad Mohammadpur, Vasant Kunj, New
+                        <p className='md:text-lg text-md  '>
+                          273/2, Shahabad Mohammadpur, Vasant <br /> Kunj, New
                           Delhi-110061
                         </p>
                       </div>
-                      <div className='w-fit mx-auto px-3 py-1 border border-white rounded-md flex gap-2 h-fit justify-center items-center cursor-pointer active:opacity-75 md:hidden'>
+                      <div className='w-fit mx-auto px-3 py-1 border border-white rounded-md flex gap-2 h-fit justify-center items-center cursor-pointer active:opacity-75 md:hidden my-5'>
                         <p className='text-lg'>More Info</p>
 
                         <div className='w-[20px] h-[20px] flex justify-center items-center ring-1 ring-white rounded-full'>
@@ -64,19 +64,19 @@ export default function Header() {
                       </div>
                     </section>
 
-                    <section className='Heading flex justify-center mt-10'>
+                    <section className='Heading flex justify-center md:justify-start md:mt-10'>
                       <div className=' '>
-                        <p className='md:text-[56px] font-medium text-center md:text-left  leading-tight md:w-[20ch] mx-auto mb-2 text-3xl'>
-                          The Complete Digital Marketing Course
+                        <p className='md:text-[56px] font-medium text-center  md:text-left  leading-tight  sm:mx-auto mb-2 text-3xl '>
+                          The Complete Digital <br /> Marketing Course
                         </p>
-                        <p className='md:text-xl text-center md:text-left text-md  md:mx-0 md:w-[60ch] px-5  '>
-                          Master Digital Marketing Strategy, Social Media
+                        <p className='md:text-xl text-center md:text-left text-md   '>
+                          Master Digital Marketing Strategy, Social Media <br />
                           Marketing,SEO,YouTube,Email,Facebook Marketing
                           Analytics & More!
                         </p>
                       </div>
                     </section>
-                    <div className='xl:hidden w-fit  flex justify-center'>
+                    <div className='xl:hidden w-fit mx-5 md:mx-0  flex justify-center'>
                       <VideoSection />
                     </div>
 
@@ -111,7 +111,7 @@ export default function Header() {
                 </div>
               </div>
 
-              <div className='xl:block hidden mx-10'>
+              <div className='xl:block hidden '>
                 <VideoSection />
               </div>
             </div>
