@@ -30,7 +30,7 @@ export default function Objectives() {
             Learning Objectives
           </h1>
         </div>
-        <div className=' grid grid-cols-2 gap-5 mx-5'>
+        <div className=' grid grid-cols-2 md:grid-cols-4 gap-5 mx-5'>
           {objectives.map((item, i) => (
             <div
               key={i}
