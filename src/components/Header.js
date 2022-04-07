@@ -119,7 +119,7 @@ export default function Header() {
         </div>
       </div>
       <div className=' mx-10'>
-        <section className=' xl:max-w-[1347px]  Card flex justify-evenly text-[#414141] p-10 md:p-5 rounded-3xl md:flex-row flex-col sm:mx-auto  bg-white mx-auto   lg:gap-5  shadow-xl  md:-mt-[130px] -mt-[150px] z-[999] my-10 '>
+        <section className=' xl:max-w-[1347px]  Card flex justify-evenly text-[#414141] p-10 md:p-5 rounded-3xl md:flex-row flex-col sm:mx-auto  bg-white mx-auto   lg:gap-5  shadow-xl  md:-mt-[130px] -mt-[150px] my-10 '>
           <div className='px-2 py-1 flex flex-col items-center font-medium justify-center  '>
             <p className='text-xl lg:text-2xl  mb-3'>1 Month</p>
             <div className='flex items-center gap-1'>

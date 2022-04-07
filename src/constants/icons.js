@@ -15,6 +15,7 @@ import user from '../images/icons/user.svg'
 import money from '../images/icons/money.svg'
 import stopwatch from '../images/icons/stopwatch.svg'
 import share from '../images/icons/share.png'
+import hamberger from '../images/icons/hamberger.svg'
 export const icons = {
   arrowRight,
   heart,
@@ -33,4 +34,5 @@ export const icons = {
   user,
   money,
   stopwatch,
+  hamberger,
 }
