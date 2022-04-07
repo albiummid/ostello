@@ -10,7 +10,7 @@ import React, { useState } from 'react'
 
 export default function BottomBar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const activeUrl = '/'
+  const [activeUrl, setActiveUrl] = useState('/')
   const navIconClasses = `
     
    text-xl
@@ -56,11 +56,12 @@ export default function BottomBar() {
   return (
     <div className='sm:hidden'>
       <Affix offsetBottom={0} className=' '>
-        <div className='bg-white  flex justify-around'>
+        <div className='bg-white  flex justify-around py-1'>
           {bottomNavs.map((item, i) => (
             <div
+              onClick={() => setActiveUrl(item.url)}
               key={i}
-              className={` flex items-center justify-center flex-col mx-2 font-medium  ${
+              className={` flex items-center justify-center flex-col mx-2 font-medium cursor-pointer  ${
                 activeUrl === item.url ? 'text-[#7D23E0]' : 'text-gray-400'
               } ${item.title === 'Account' && !isLoggedIn && 'hidden'} ${
                 item.title === 'Login' && isLoggedIn && 'hidden'
