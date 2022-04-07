@@ -126,10 +126,10 @@ export default function Navbar() {
 
           <div className={isAffixed ? 'bg-white  ' : 'bg-[#7A81DC]'}>
             <nav
-              className={`relative container mx-auto flex gap-5 items-center justify-between py-2 md:mb-0 px-5 sm:px-0 md:flex  `}
+              className={`relative container mx-auto flex gap-5 items-center justify-between py-2 px-5  md:flex `}
             >
               <img
-                className={`xl:w-80 sm:w-40 hidden sm:block `}
+                className={`w-32 md:w-40 xl:w-60 hidden sm:block `}
                 src={isAffixed ? logoWH : logo}
                 alt=''
               />
@@ -147,7 +147,7 @@ export default function Navbar() {
                       to={item.title}
                       smooth={true}
                       spy={true}
-                      className={`cursor-pointer text-xl xl:text-2xl   active:text-[#7D23E0] ${
+                      className={`cursor-pointer text-sm lg:text-xl xl:text-2xl   active:text-[#7D23E0] mx-2 ${
                         i === activeSection
                           ? ' text-[#7D23E0]'
                           : isAffixed
