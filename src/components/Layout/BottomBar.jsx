@@ -6,15 +6,40 @@ import {
   UserOutlined,
 } from '@ant-design/icons'
 import { Affix } from 'antd'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function BottomBar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [activeUrl, setActiveUrl] = useState('/')
   const navIconClasses = `
-    
    text-xl
   `
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [visibleBar, setVisibleBar] = useState(true)
+  const handleScroll = () => {
+    const position = window.pageYOffset
+    setScrollPosition((prev) => {
+      if (prev <= position && position > 100) {
+        setVisibleBar(false)
+      }
+      if (prev >= position) {
+        setVisibleBar(true)
+      }
+
+      return position
+    })
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  // console.log(scrollPosition, 'isVIsible?', visibleBar)
+
   const bottomNavs = [
     {
       title: 'Home',
@@ -54,7 +79,11 @@ export default function BottomBar() {
   ]
 
   return (
-    <div className='sm:hidden'>
+    <div
+      className={`transition-all delay-300 ease-in-out${
+        visibleBar ? 'block md:hidden' : 'hidden'
+      }`}
+    >
       <Affix offsetBottom={0} className=' '>
         <div className='bg-white  flex justify-around py-1'>
           {bottomNavs.map((item, i) => (

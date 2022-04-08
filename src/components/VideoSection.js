@@ -7,7 +7,7 @@ export default function VideoSection() {
   const { icons } = constants
   return (
     <>
-      <div className='video_container py-5 flex flex-col gap-2 justify-center items-center '>
+      <div className='video_container py-5 grid grid-cols-1 gap-5 place-items-center '>
         <div className='relative  bg-[#7A81DC]  '>
           <img
             src={videoImage}

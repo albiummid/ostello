@@ -2,7 +2,7 @@ import { Box } from '@mui/system'
 import React from 'react'
 import { Modal } from '@mui/material'
 
-export default function ModalComp({ children, open, setOpen, className }) {
+export default function ModalWrapper({ children, open, setOpen, className }) {
   const style = {
     position: 'absolute',
     top: '50%',

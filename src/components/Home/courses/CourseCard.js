@@ -17,7 +17,7 @@ export default function CourseCard() {
   const [isActiveHeart, setHeart] = useState(false)
   const { icons } = constants
   return (
-    <div className='lg:w-[380px] w-[100%] relative shadow-lg rounded-3xl'>
+    <div className='md:w-[400px] w-[350px] relative shadow-lg rounded-3xl'>
       <div className='relative'>
         <img src={courseImg} className='w-[100%] rounded-2xl  ' alt='' />
         <div className='flex items-center justify-center  gap-1 px-2 text-md text-white  font-bold bg-yellow-400 rounded-lg md:hidden absolute right-5 bottom-[10px] '>
@@ -79,7 +79,7 @@ export default function CourseCard() {
                 </div>
               </div>
             </div>
-            <div className='md:flex items-center justify-center  gap-1 px-2  text-2xl text-white  font-bold bg-yellow-400 rounded-lg hidden '>
+            <div className='md:flex items-center justify-center  gap-1 px-2  lg:text-xl text-white  font-bold bg-yellow-400 rounded-lg hidden '>
               <p>3.0</p>
               <StarFilled />
             </div>

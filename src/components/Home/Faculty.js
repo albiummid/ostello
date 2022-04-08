@@ -29,8 +29,8 @@ export default function Faculty() {
     },
   ]
   return (
-    <section name='Faculty' className='py-20 '>
-      <Container>
+    <section name='Faculty' className=''>
+      <Container className={'container mx-auto'}>
         <h1 className='text-4xl font-bold text-center py-10'>Faculty</h1>
         <div className='flex  md:gap-10 md:justify-center  items-center  py-10 overflow-x-scroll no-scrollbar'>
           {faculties.map((item, i) => (
@@ -38,21 +38,16 @@ export default function Faculty() {
               key={i}
               className='md:p-10 p-5 md:only:py-12 w-[300px] md:w-[376px] lg:mx-10 mx-2 shadow-2xl shrink-0 rounded-2xl '
             >
-              <div className='mb-8 text-center '>
+              <div className='mb-2 md:mb-8 text-center '>
                 <img
                   className='h-[150px] w-[150px] mx-auto rounded-full my-2'
                   src={item.img}
                   alt=''
                 />
                 <p className='font-bold text-xl'>{item.name}</p>
-                <p
-                  className='text-md  text-gray-400 text-[
-#A4A4A4]'
-                >
-                  {item.degree}
-                </p>
+                <p className='text-md text-[#A4A4A4]'>{item.degree}</p>
               </div>
-              <p className='text-lg'>{item.details}</p>
+              <p className='text-lg text-center'>{item.details}</p>
             </div>
           ))}
         </div>

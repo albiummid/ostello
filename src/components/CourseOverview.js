@@ -32,7 +32,7 @@ export default function CourseOverview() {
   return (
     <section
       name='Overview'
-      className=' course_overview flex  flex-col gap-10 justify-between  md:px-20  lg:flex-row px-5 py-32 items-center max-w-3xl mx-auto md:max-w-full'
+      className=' course_overview flex  flex-col space-y-10 justify-between  md:px-20  lg:flex-row px-5 py-32 items-center max-w-3xl mx-auto md:max-w-full'
     >
       <div className=' lg:w-[50%] text-[#414141]  text-justify'>
         <h1 className='lg:text-5xl text-3xl  text-rights font-medium lg:mb-10 mb-5'>
@@ -96,7 +96,7 @@ export default function CourseOverview() {
         <h1 className='text-[32px] pb-5'>Key Highlights</h1>
         <div className=''>
           {keyPoints.map((item, i) => (
-            <div key={i} className='flex items-start gap-8 my-2'>
+            <div key={i} className='flex items-start space-x-4 my-2'>
               <img className='w-6 h-6' src={item.icon} alt='' />
               <p className='text-lg'>{item.title}</p>
             </div>

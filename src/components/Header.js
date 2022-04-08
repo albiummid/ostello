@@ -84,7 +84,7 @@ export default function Header() {
                       : prev === 'hybrid' && 'online'
                   )
                 }
-                className='flex items-center font-bold gap-2 my-1'
+                className='flex items-center font-bold space-x-2 my-1'
               >
                 <img
                   src={
@@ -109,9 +109,9 @@ export default function Header() {
 
             <section className='statistics mt-10'>
               <div className='flex justify-between items-center'>
-                <div className='info flex items-center gap-5 '>
-                  <div className='rating flex justify-center items-center gap-1 bg-[#FFD130] px-2  md:w-[86px] md:text-2xl text-xl rounded-lg font-bold'>
-                    <p>3.0</p>
+                <div className='info flex items-center space-x-5 '>
+                  <div className=' rating flex space-x-2 justify-center items-center bg-[#FFD130] px-2  md:w-[86px] md:text-2xl text-xl rounded-lg font-bold'>
+                    <p className=''>3.0</p>
                     <StarFilled />
                   </div>
                   <p className='lg:text-xl text-lg'>
@@ -151,7 +151,7 @@ export default function Header() {
                       <div className='flex justify-between gap-3'>
                         {socialLinks.map((item, i) => (
                           <a
-                            className='block ring-1 ring-[#7D23E0] p-3 rounded-xl'
+                            className='block ring-1 ring-gray-400 p-3 rounded-xl'
                             href={item.url}
                             key={i}
                           >
@@ -171,7 +171,7 @@ export default function Header() {
                         <input
                           type='text  '
                           value={'https://ostello.com/digital_marketing_course'}
-                          className='w-full px-2 py-1 ring-1  ring-[#7D23E0]outline-none border-none outline-none active:outline-none active:border-none'
+                          className='w-full px-2 py-1 ring-1  ring-gray-400 outline-none border-none  active:outline-none active:border-none'
                         />
                         <CopyToClipboard
                           text='https://ostello.com/digital_marketing_course'

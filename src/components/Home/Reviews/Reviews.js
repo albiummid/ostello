@@ -163,7 +163,7 @@ export default function Reviews() {
                           onClick={() => setOpen(false)}
                         />
                       </div>
-                      <div className='flex gap-2 py-5 text-[#D7D7D7] select-none  justify-center'>
+                      <div className='flex gap-2 py-5 text-[#D7D7D7] select-none  justify-center md:justify-start'>
                         {[1, 2, 3, 4, 5].map((item, i) => (
                           <div
                             key={i}

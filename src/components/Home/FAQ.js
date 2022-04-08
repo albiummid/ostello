@@ -1,9 +1,10 @@
 import { CloseOutlined, PlusOutlined } from '@ant-design/icons'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../Layout/Container'
 
 export default function FAQ() {
+  const activeTab = useRef({})
   const [activeKey, setActiveKey] = useState(0)
   const data = [
     {
@@ -87,6 +88,8 @@ export default function FAQ() {
       ],
     },
   ]
+  // const executeScroll = () => activeTab.current.scrollIntoView()
+  // Scrolling to the node should be added
   return (
     <div name='FAQ'>
       <Container>
@@ -101,8 +104,12 @@ export default function FAQ() {
             {data.map((item, idx) => (
               <div
                 key={idx}
+                ref={activeTab}
                 className='flex flex-col gap-2 my-2'
-                onClick={() => setActiveKey(idx === activeKey ? null : idx)}
+                onClick={() => {
+                  setActiveKey(idx === activeKey ? null : idx)
+                  // executeScroll()
+                }}
               >
                 <div className='md:p-10 p-5  flex items-center justify-between bg-[#7A81DC] rounded-xl text-xl text-white  '>
                   <p className='text-2xl'>{item.section}</p>

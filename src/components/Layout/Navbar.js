@@ -101,7 +101,6 @@ export default function Navbar() {
                       key={i}
                       onSetActive={(e) => {
                         setActiveSection(i)
-                        console.log(e)
                       }}
                     >
                       {item.title}
@@ -158,7 +157,6 @@ export default function Navbar() {
                       key={i}
                       onSetActive={(e) => {
                         setActiveSection(i)
-                        console.log(e)
                       }}
                     >
                       {item.title}

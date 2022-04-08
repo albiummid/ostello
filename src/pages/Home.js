@@ -9,7 +9,6 @@ import Objectives from '../components/Home/Objectives'
 import OfferSection from '../components/Home/OfferSection'
 import Platforms from '../components/Home/Platforms'
 import ReferCourse from '../components/Home/ReferCourse'
-
 import Reviews from '../components/Home/Reviews/Reviews'
 import ShareCourse from '../components/Home/ShareCourse'
 import PageWrapper from '../components/Layout/PageWrapper'
