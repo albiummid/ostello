@@ -17,7 +17,7 @@ export default function CourseCard() {
   const [isActiveHeart, setHeart] = useState(false)
   const { icons } = constants
   return (
-    <div className='lg:w-[476px] w-[100%] relative shadow-lg rounded-3xl'>
+    <div className='lg:w-[380px] w-[100%] relative shadow-lg rounded-3xl'>
       <div className='relative'>
         <img src={courseImg} className='w-[100%] rounded-2xl  ' alt='' />
         <div className='flex items-center justify-center  gap-1 px-2 text-md text-white  font-bold bg-yellow-400 rounded-lg md:hidden absolute right-5 bottom-[10px] '>
@@ -29,12 +29,12 @@ export default function CourseCard() {
         {isActiveHeart ? (
           <HeartFilled
             onClick={() => setHeart(!isActiveHeart)}
-            className={`flex text-xl  w-8 h-8 md:h-12 md:w-12 rounded-full shadow-sm absolute right-5 top-5  items-center justify-center cursor-pointer  text-red-500 ring-2 ring-white md:text-3xl `}
+            className={`flex text-xl  w-8 h-8 md:h-10 md:w-10 rounded-full shadow-sm absolute right-5 top-5  items-center justify-center cursor-pointer  text-red-500 ring-2 ring-white md:text-2xl `}
           />
         ) : (
           <HeartOutlined
             onClick={() => setHeart(!isActiveHeart)}
-            className={`flex items-center text-xl  text-white   w-8 h-8 md:h-12 md:w-12 rounded-full shadow-sm absolute right-5 top-5   justify-center cursor-pointer   ring-2 ring-white md:text-3xl`}
+            className={`flex items-center text-xl  text-white   w-8 h-8 md:h-10 md:w-10 rounded-full shadow-sm absolute right-5 top-5   justify-center cursor-pointer   ring-2 ring-white md:text-2xl`}
           />
         )}
       </div>

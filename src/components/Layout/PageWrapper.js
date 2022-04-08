@@ -5,7 +5,7 @@ import React from 'react'
 export default function PageWrapper({ children }) {
   return (
     <>
-      <div className=''>
+      <div className='bg-[#FFFFFF]'>
         <>{children}</>
         <Affix offsetBottom={10}>
           <BackTop>

@@ -109,7 +109,7 @@ export default function Footer() {
     <div className='bg-[#1C1C1C] py-10 '>
       <>
         <div className=' container mx-auto text-white'>
-          <div className='grid md:flex  grid-col-1 justify-around     '>
+          <div className='grid md:flex  grid-col-1 md:justify-around     '>
             <div className='flex flex-col '>
               <img
                 className={`w-40 lg:w-60 mr-auto ml-10 md:m-0`}
@@ -149,7 +149,7 @@ export default function Footer() {
                 </div>
               </div>
             ))}
-            <div className='grid-cols-1 divide-solid divide-y divide-gray-600 sm:divide-none w-screen  sm:hidden'>
+            <div className='grid-cols-1 divide-solid divide-y divide-gray-600 md:divide-none w-screen  sm:hidden'>
               {footerLinks.map((item, i) => (
                 <div key={i} className='mb-5 pl-10 '>
                   <p className='font-bold mb-2  mt-5 text-lg  '>

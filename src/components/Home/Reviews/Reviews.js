@@ -1,4 +1,8 @@
-import { StarFilled, StarOutlined } from '@ant-design/icons'
+import {
+  CloseCircleOutlined,
+  StarFilled,
+  StarOutlined,
+} from '@ant-design/icons'
 import { Box, LinearProgress } from '@mui/material'
 import { Progress, Rate } from 'antd'
 import { Circle, Line } from 'rc-progress'
@@ -11,6 +15,7 @@ import ReviewCard from './ReviewCard'
 export default function Reviews() {
   const [isSelected, setIsSelected] = useState(0)
   const [open, setOpen] = useState(false)
+  const [activeModal, setActiveModal] = useState(0)
 
   const progresses = [
     {
@@ -77,7 +82,7 @@ export default function Reviews() {
           Reviews
         </h1>
         <div>
-          <div className=' flex justify-center items-center flex-col md:flex-row md:justify-around'>
+          <div className=' flex justify-center items-center flex-col md:flex-row md:justify-around gap-5'>
             <div className='flex items-center justify-center gap-2 md:gap-5  '>
               {/* Review Statistics */}
               <div className='text-center flex justify-center items-center flex-col md:min-w-[150px] my-5 '>
@@ -122,7 +127,7 @@ export default function Reviews() {
               </div>
             </div>
 
-            <div className='md:px-10 px-4 py-5 rounded-lg shadow-md flex flex-col gap-2  '>
+            <div className='md:px-10 px-4 py-5 rounded-lg shadow-md flex flex-col gap-2 bg-white '>
               <p className='text-2xl text-center my-2 font-medium'>
                 Rate your experience
               </p>
@@ -140,59 +145,86 @@ export default function Reviews() {
               </div>
               <p
                 className={`text-lg ml-4 font-medium text-[#7D23E0] cursor-pointer  `}
-                onClick={() => setOpen(true)}
+                onClick={() => {
+                  setOpen(true)
+                  setActiveModal(1)
+                }}
               >
                 Write a Review
               </p>
               <div>
                 <Modal open={open} setOpen={setOpen}>
-                  <div className=''>
-                    <p className='text-xl'>Add Review</p>
-                    <div className='flex gap-2 py-5 text-[#D7D7D7] select-none'>
-                      {[1, 2, 3, 4, 5].map((item, i) => (
-                        <div
-                          key={i}
-                          className={reviewClassHandler(item)}
-                          onClick={() => setIsSelected(item)}
-                        >
-                          <p className='text-lg font-bold'>{item}</p>
-                          <StarFilled className='text-lg mb-1' />
-                        </div>
-                      ))}
-                    </div>
+                  {activeModal === 1 ? (
+                    <div className=' bg-white p-4 rounded-lg'>
+                      <div className='flex justify-between text-2xl items-center'>
+                        <span className=''>Add Review</span>
+                        <CloseCircleOutlined
+                          className='cursor-pointer'
+                          onClick={() => setOpen(false)}
+                        />
+                      </div>
+                      <div className='flex gap-2 py-5 text-[#D7D7D7] select-none  justify-center'>
+                        {[1, 2, 3, 4, 5].map((item, i) => (
+                          <div
+                            key={i}
+                            className={reviewClassHandler(item)}
+                            onClick={() => setIsSelected(item)}
+                          >
+                            <p className='text-lg font-bold'>{item}</p>
+                            <StarFilled className='text-lg mb-1' />
+                          </div>
+                        ))}
+                      </div>
 
-                    <div className='flex flex-col gap-2 '>
-                      <p>Add Photos/videos</p>
-                      <div
-                        className='
+                      <div className='flex flex-col gap-2 '>
+                        <p>Add Photos/videos</p>
+                        <div
+                          className='
                     w-[100%] h-[154px] md:h-[277px] border border-gray-400 flex items-center justify-center rounded-md cursor-pointer
                     '
-                      >
-                        <img
-                          className='w-[30px] h-[30px] '
-                          src={icons.imgProto}
-                          alt=''
-                        />
+                        >
+                          <img
+                            className='w-[30px] h-[30px] '
+                            src={icons.imgProto}
+                            alt=''
+                          />
+                        </div>
+                        <div className='flex h-[93px] p-2 gap-2 border border-gray-400 rounded-md'>
+                          <img
+                            className='w-[25px] h-[25px] '
+                            src={icons.user}
+                            alt=''
+                          />
+                          <textarea
+                            placeholder='Write your Review'
+                            className='border-none outline-none active:outline-none active:border-none w-full resize-none'
+                          />
+                        </div>
+                        <button
+                          onClick={() => setActiveModal(2)}
+                          className='font-lg px-2 py-1 ml-auto  text-white bg-[#7D23E0] rounded-sm active:opacity-75'
+                        >
+                          Add Review
+                        </button>
                       </div>
-                      <div className='flex h-[93px] p-2 gap-2 border border-gray-400 rounded-md'>
-                        <img
-                          className='w-[25px] h-[25px] '
-                          src={icons.user}
-                          alt=''
-                        />
-                        <textarea
-                          placeholder='Write your Review'
-                          className='border-none outline-none active:outline-none active:border-none w-full resize-none'
-                        />
-                      </div>
+                    </div>
+                  ) : activeModal === 2 ? (
+                    <div className='bg-white  flex flex-col items-center md:gap-10 gap-5 md:w-[400px] mx-auto  p-8 rounded-xl'>
+                      <p className='md:text-3xl text-xl text-center'>
+                        <span className='text-[#7D23E0]'>Thanks</span> for
+                        giving your opinion. It matters to us!
+                      </p>
                       <button
-                        onClick={() => setOpen(false)}
-                        className='font-lg px-2 py-1 ml-auto  text-white bg-[#7D23E0] rounded-sm active:opacity-75'
+                        className='bg-[#7D23E0] text-white md:text-xl text-lg rounded-md px-5 py-1'
+                        onClick={() => {
+                          setOpen(false)
+                          setActiveModal(0)
+                        }}
                       >
-                        Add Review
+                        Close
                       </button>
                     </div>
-                  </div>
+                  ) : null}
                 </Modal>
               </div>
             </div>

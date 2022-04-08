@@ -16,7 +16,18 @@ import money from '../images/icons/money.svg'
 import stopwatch from '../images/icons/stopwatch.svg'
 import share from '../images/icons/share.png'
 import hamberger from '../images/icons/hamberger.svg'
+import whatsappViolet from '../images/icons/whatsappViolet.svg'
+import fbViolet from '../images/icons/fbViolet.svg'
+import linkedinViolet from '../images/icons/linkedinViolet.svg'
+import twitterViolet from '../images/icons/twitterViolet.svg'
+import instaViolet from '../images/icons/instaViolet.svg'
+
 export const icons = {
+  whatsappViolet,
+  fbViolet,
+  linkedinViolet,
+  twitterViolet,
+  instaViolet,
   arrowRight,
   heart,
   share,
