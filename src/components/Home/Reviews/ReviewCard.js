@@ -39,7 +39,7 @@ export default function ReviewCard() {
           <Rate value={5} className=' self-start' />
         </div>
       </div>
-      <div className='flex flex-col gap-2 my-2'>
+      <div className='flex flex-col space-y-2 my-2'>
         <p className='text-lg'>
           This course is definitely above expectations so far. I didn't expect
           to get so much insight into the briefing and the communication between
@@ -47,7 +47,7 @@ export default function ReviewCard() {
         </p>
         <p className='text-xl text-[#7D23E0]'>Show More</p>
       </div>
-      <div className='flex items-center no-scrollbar gap-2 overflow-x-scroll'>
+      <div className='flex items-center no-scrollbar space-x-2 overflow-x-scroll'>
         {contents.map((item, i) => (
           <div>
             <img src={item.thumbnail} alt='' />
@@ -55,7 +55,7 @@ export default function ReviewCard() {
         ))}
       </div>
       <div className='flex justify-between'>
-        <div className='flex justify-center gap-10'>
+        <div className='flex justify-center space-x-10'>
           <div>
             <LikeOutlined />
             <span>Upvote</span>

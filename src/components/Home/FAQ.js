@@ -105,7 +105,7 @@ export default function FAQ() {
               <div
                 key={idx}
                 ref={activeTab}
-                className='flex flex-col gap-2 my-2'
+                className='flex flex-col space-y-2 my-2'
                 onClick={() => {
                   setActiveKey(idx === activeKey ? null : idx)
                   // executeScroll()
@@ -132,7 +132,7 @@ export default function FAQ() {
                 </div>
               </div>
             ))}
-            <div className=' flex items-center md:gap-4 md:justify-end justify-center flex-col md:flex-row '>
+            <div className=' flex items-center md:space-x-4 md:justify-end justify-center flex-col md:flex-row '>
               <p className='text-xl'>Or visit our help center to know more</p>
               <Link
                 to='/'

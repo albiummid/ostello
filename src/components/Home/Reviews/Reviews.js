@@ -37,7 +37,7 @@ export default function Reviews() {
 
   const reviewClassHandler = (item) => {
     let classes =
-      'shadow-lg px-2  w-fit h-fit  flex items-center gap-1 justify-center rounded-lg cursor-pointer border border-[#D7D7D7] '
+      'shadow-lg px-2  w-fit h-fit  flex items-center space-x-1 justify-center rounded-lg cursor-pointer border border-[#D7D7D7] '
     if (isSelected === 1 && item === 1) {
       classes += 'text-white bg-red-500'
     } else if (isSelected === 2 && item <= 2) {
@@ -82,8 +82,8 @@ export default function Reviews() {
           Reviews
         </h1>
         <div>
-          <div className=' flex justify-center items-center flex-col md:flex-row md:justify-around gap-5'>
-            <div className='flex items-center justify-center gap-2 md:gap-5  '>
+          <div className=' flex justify-center items-center flex-col md:flex-row md:justify-around md:space-x-5 space-y-5'>
+            <div className='flex items-center justify-center space-x-2 md:space-x-5  '>
               {/* Review Statistics */}
               <div className='text-center flex justify-center items-center flex-col md:min-w-[150px] my-5 '>
                 <p className='md:text-5xl text-3xl my-0 font-medium  md:font-bold '>
@@ -127,11 +127,11 @@ export default function Reviews() {
               </div>
             </div>
 
-            <div className='md:px-10 px-4 py-5 rounded-lg shadow-md flex flex-col gap-2 bg-white '>
+            <div className='md:px-10 px-4 py-5 rounded-lg shadow-md flex flex-col space-y-2 bg-white '>
               <p className='text-2xl text-center my-2 font-medium'>
                 Rate your experience
               </p>
-              <div className='flex justify-center gap-2 py-5 text-[#D7D7D7] select-none'>
+              <div className='flex justify-center space-x-2 py-5 text-[#D7D7D7] select-none'>
                 {[1, 2, 3, 4, 5].map((item, i) => (
                   <div
                     key={i}
@@ -163,7 +163,7 @@ export default function Reviews() {
                           onClick={() => setOpen(false)}
                         />
                       </div>
-                      <div className='flex gap-2 py-5 text-[#D7D7D7] select-none  justify-center md:justify-start'>
+                      <div className='flex space-x-2 py-5 text-[#D7D7D7] select-none  justify-center md:justify-start'>
                         {[1, 2, 3, 4, 5].map((item, i) => (
                           <div
                             key={i}
@@ -176,7 +176,7 @@ export default function Reviews() {
                         ))}
                       </div>
 
-                      <div className='flex flex-col gap-2 '>
+                      <div className='flex flex-col space-y-2 '>
                         <p>Add Photos/videos</p>
                         <div
                           className='
@@ -189,7 +189,7 @@ export default function Reviews() {
                             alt=''
                           />
                         </div>
-                        <div className='flex h-[93px] p-2 gap-2 border border-gray-400 rounded-md'>
+                        <div className='flex h-[93px] p-2 space-x-2 border border-gray-400 rounded-md'>
                           <img
                             className='w-[25px] h-[25px] '
                             src={icons.user}
@@ -209,7 +209,7 @@ export default function Reviews() {
                       </div>
                     </div>
                   ) : activeModal === 2 ? (
-                    <div className='bg-white  flex flex-col items-center md:gap-10 gap-5 md:w-[400px] mx-auto  p-8 rounded-xl'>
+                    <div className='bg-white  flex flex-col items-center md:space-x-10 space-y-5 md:w-[400px] mx-auto  p-8 rounded-xl'>
                       <p className='md:text-3xl text-xl text-center'>
                         <span className='text-[#7D23E0]'>Thanks</span> for
                         giving your opinion. It matters to us!

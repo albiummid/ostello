@@ -150,7 +150,7 @@ export default function Platforms() {
   ]
   return (
     <>
-      <div className='lg:flex gap-5 justify-around py-20 px-10 bg-[#F3F5F7] hidden '>
+      <div className='lg:flex space-x-5 justify-around py-20 px-10 bg-[#F3F5F7] hidden '>
         {platforms.map((item, i) => (
           <div key={i}>
             <p className='font-bold md:text-4xl text-xl my-5'>{item.name}</p>

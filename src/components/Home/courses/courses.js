@@ -14,7 +14,7 @@ export default function Courses() {
             <RightOutlined className='text-[#7D23E0] text-lg' />
           </button>
         </div>
-        <div className='flex  md:justify-between  my-16 lg:my-20 flex-col justify-center items-center lg:flex-row gap-5 md:gap-12'>
+        <div className='flex  md:justify-between  my-16 lg:my-20 flex-col justify-center items-center lg:flex-row space-y-5 md:space-x-12'>
           <CourseCard />
           <CourseCard />
           <CourseCard />
@@ -34,7 +34,7 @@ export default function Courses() {
             <RightOutlined className='text-[#7D23E0] text-lg' />
           </button>
         </div>
-        <div className='flex justify-between my-16 lg:my-20 flex-col items-center lg:flex-row gap-5 md:gap-12'>
+        <div className='flex justify-between my-16 lg:my-20 flex-col items-center lg:flex-row space-y-5 md:space-x-12'>
           <CourseCard />
           <CourseCard />
           <CourseCard />

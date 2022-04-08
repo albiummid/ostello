@@ -38,7 +38,7 @@ export default function BottomBar() {
     }
   }, [])
 
-  // console.log(scrollPosition, 'isVIsible?', visibleBar)
+  console.log(scrollPosition, 'isVIsible?', visibleBar)
 
   const bottomNavs = [
     {
@@ -79,11 +79,7 @@ export default function BottomBar() {
   ]
 
   return (
-    <div
-      className={`transition-all delay-300 ease-in-out${
-        visibleBar ? 'block md:hidden' : 'hidden'
-      }`}
-    >
+    <div className={`md:hidden ${visibleBar ? '' : 'hidden'}`}>
       <Affix offsetBottom={0} className=' '>
         <div className='bg-white  flex justify-around py-1'>
           {bottomNavs.map((item, i) => (

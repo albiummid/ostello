@@ -62,7 +62,7 @@ export default function CourseOutlines() {
               onClick={() => setActiveKey(i === activeKey ? null : i)}
             >
               <div className='bg-[#7A81DC] flex justify-between rounded-md cursor-pointer active:opacity-75 px-3 py-4   '>
-                <div className='flex gap-2 justify-center items-center ml-2 text-lg md:text-xl  '>
+                <div className='flex space-x-2 justify-center items-center ml-2 text-lg md:text-xl  '>
                   {activeKey === i ? (
                     <UpOutlined className='' />
                   ) : (
@@ -72,7 +72,7 @@ export default function CourseOutlines() {
                     Part {i + 1} - {item.title}
                   </p>
                 </div>
-                <div className='md:flex gap-2 items-center  hidden'>
+                <div className='md:flex space-x-2 items-center  hidden'>
                   <p className='text-md'>{item.lectureCount} lectures</p>.
                   <p className='text-md'>{item.lectureHours} hours</p>
                 </div>

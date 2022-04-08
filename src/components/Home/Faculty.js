@@ -32,7 +32,7 @@ export default function Faculty() {
     <section name='Faculty' className=''>
       <Container className={'container mx-auto'}>
         <h1 className='text-4xl font-bold text-center py-10'>Faculty</h1>
-        <div className='flex  md:gap-10 md:justify-center  items-center  py-10 overflow-x-scroll no-scrollbar'>
+        <div className='flex  md:space-x-10 md:justify-center  items-center  py-10 overflow-x-scroll no-scrollbar'>
           {faculties.map((item, i) => (
             <div
               key={i}
@@ -51,7 +51,7 @@ export default function Faculty() {
             </div>
           ))}
         </div>
-        <div className='flex gap-2 justify-center items-center my-10 cursor-pointer '>
+        <div className='flex space-x-2 justify-center items-center my-10 cursor-pointer '>
           <div className='bg-[#7D23E0] h-2 w-[80px] rounded-xl'></div>
           <div className='bg-[#7D23E0] opacity-40 h-2 w-[20px] rounded-xl'></div>
           <div className='bg-[#7D23E0] opacity-40 h-2 w-[20px] rounded-xl'></div>

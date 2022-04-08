@@ -2,7 +2,7 @@ import React from 'react'
 export default function ReferCourse() {
   return (
     <>
-      <div className='shareBG flex lg:justify-between lg:items-center flex-col justify-center gap-10 lg:flex-row '>
+      <div className='shareBG flex lg:justify-between lg:items-center flex-col justify-center space-y-10 md:space-x-10 lg:flex-row '>
         <h1 className='text-white font-medium  text-2xl lg:text-5xl lg:w-[30ch] lg:mx-auto text-center lg:text-left '>
           Refer someone you know and receive exciting offers
         </h1>

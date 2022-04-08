@@ -48,7 +48,7 @@ export default function ShareCourse() {
   return (
     <>
       <ModalWrapper open={open} setOpen={setOpen}>
-        <div className='bg-white flex flex-col gap-5  p-5 max-w-[400px] mx-auto rounded-lg'>
+        <div className='bg-white flex flex-col space-y-5  p-5 max-w-[400px] mx-auto rounded-lg'>
           <div className='flex justify-between text-2xl items-center'>
             <span className=''>Referral</span>
             <CloseCircleOutlined
@@ -56,7 +56,7 @@ export default function ShareCourse() {
               onClick={() => setOpen(false)}
             />
           </div>
-          <div className='flex justify-between gap-3'>
+          <div className='flex justify-between space-x-3'>
             {socialLinks.map((item, i) => (
               <a
                 className='block ring-1 ring-gray-400 p-3 rounded-xl'
@@ -89,7 +89,7 @@ export default function ShareCourse() {
           </div>
         </div>
       </ModalWrapper>
-      <div className='shareBG flex lg:justify-between lg:items-center flex-col justify-center gap-10 lg:flex-row '>
+      <div className='shareBG flex lg:justify-between lg:items-center flex-col justify-center space-y-10 lg:space-x-10 lg:flex-row '>
         <div className='text-white w-[50%] lg:ml-60 mx-auto hidden font-medium lg:block'>
           <h1 className='text-white  text-5xl mb-5'>Share this course and</h1>
           <h1 className='text-white text-5xl'>receive exciting offers.</h1>

@@ -116,7 +116,7 @@ export default function Footer() {
                 src={logo}
                 alt=''
               />
-              <div className='md:flex gap-5 items-center hidden my-3   '>
+              <div className='md:flex space-x-5 items-center hidden my-3   '>
                 {socialLinks.map((item, i) => (
                   <div className='' key={i}>
                     <a href={item.link} target='_blank' rel='noreferrer'>
@@ -173,7 +173,7 @@ export default function Footer() {
         </div>
       </>
 
-      <div className='flex gap-5 items-center justify-center md:hidden my-2 mt-10 '>
+      <div className='flex space-x-5 items-center justify-center md:hidden my-2 mt-10 '>
         {socialLinks.map((item, i) => (
           <div className='' key={i}>
             <a href={item.link} target='_blank' rel='noreferrer'>

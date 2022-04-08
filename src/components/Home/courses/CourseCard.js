@@ -17,10 +17,10 @@ export default function CourseCard() {
   const [isActiveHeart, setHeart] = useState(false)
   const { icons } = constants
   return (
-    <div className='md:w-[400px] w-[350px] relative shadow-lg rounded-3xl'>
+    <div className='md:w-[400px] max-w-[350px] relative shadow-lg rounded-3xl'>
       <div className='relative'>
         <img src={courseImg} className='w-[100%] rounded-2xl  ' alt='' />
-        <div className='flex items-center justify-center  gap-1 px-2 text-md text-white  font-bold bg-yellow-400 rounded-lg md:hidden absolute right-5 bottom-[10px] '>
+        <div className='flex items-center justify-center  space-x-1 px-2 text-md text-white  font-bold bg-yellow-400 rounded-lg md:hidden absolute right-5 bottom-[10px] '>
           <p>3.0</p>
           <StarFilled />
         </div>
@@ -39,7 +39,7 @@ export default function CourseCard() {
         )}
       </div>
 
-      <div className=' relative p-6 flex flex-col gap-3 bg-[#fffff]'>
+      <div className=' relative p-6 flex flex-col space-y-3 bg-[#fffff]'>
         <div className=' flex  justify-between '>
           <div>
             <p className='md:text-2xl text-lg  text-[#767676]'>
@@ -58,28 +58,28 @@ export default function CourseCard() {
           </CopyToClipboard>
         </div>
 
-        <div className='flex justify-between md:flex-col gap-5 '>
+        <div className='flex justify-between md:flex-col space-x-5 md:space-x-0 md:space-y-5'>
           <div className='flex items-end justify-between '>
             <div>
-              <div className='flex flex-col gap-2 font-medium text-[#767676]'>
-                <div className='flex  items-center gap-2'>
+              <div className='flex flex-col space-y-2 font-medium text-[#767676]'>
+                <div className='flex  items-center space-x-2'>
                   <img className='-mx-1' src={icons.stopwatch} alt='' />
                   <p className='text-md font-bold'>3 months</p>
                 </div>
-                <div className='md:flex items-center gap-2 hidden '>
+                <div className='md:flex items-center space-x-2 hidden '>
                   <RiseOutlined className='text-white bg-[#7D23E0] rounded-full p-[1px]' />
 
                   <p className='text-md font-bold'>
                     80+ Students joined recently
                   </p>
                 </div>
-                <div className='flex items-center gap-2'>
+                <div className='flex items-center space-x-2'>
                   <img src={icons.money} alt='' />
                   <p className='text-md font-bold'>EMI Available</p>
                 </div>
               </div>
             </div>
-            <div className='md:flex items-center justify-center  gap-1 px-2  lg:text-xl text-white  font-bold bg-yellow-400 rounded-lg hidden '>
+            <div className='md:flex items-center justify-center  space-x-1 px-2  lg:text-xl text-white  font-bold bg-yellow-400 rounded-lg hidden '>
               <p>3.0</p>
               <StarFilled />
             </div>
@@ -92,7 +92,7 @@ export default function CourseCard() {
                 <del>Rs.1500</del>
               </p>
             </div>
-            <div className='md:flex gap-2 items-center text-lg font-bold cursor-pointer active:opacity-75 select-none hidden'>
+            <div className='md:flex space-x-2 items-center text-lg font-bold cursor-pointer active:opacity-75 select-none hidden'>
               <p>View Details</p>
 
               <ArrowRightOutlined className='h-7 w-7 flex items-center justify-center rounded-full ring-2 ring-[#7D23E0] text-[#7D23E0] text-lg font-bold ' />

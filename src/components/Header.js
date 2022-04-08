@@ -118,7 +118,7 @@ export default function Header() {
                     669,534 students enrolled
                   </p>
                 </div>
-                <div className='actions flex gap-5 md:text-2xl'>
+                <div className='actions flex space-x-5 md:text-2xl'>
                   {isActiveHeart ? (
                     <HeartFilled
                       onClick={() => setHeart(!isActiveHeart)}
@@ -140,7 +140,7 @@ export default function Header() {
                   />
 
                   <ModalWrapper open={open} setOpen={setOpen}>
-                    <div className='bg-white flex flex-col gap-5  p-5 max-w-[400px] mx-auto rounded-lg'>
+                    <div className='bg-white flex flex-col space-y-5  p-5 max-w-[400px] mx-auto rounded-lg'>
                       <div className='flex justify-between text-2xl items-center'>
                         <span className=''>Share</span>
                         <CloseCircleOutlined
@@ -148,7 +148,7 @@ export default function Header() {
                           onClick={() => setOpen(false)}
                         />
                       </div>
-                      <div className='flex justify-between gap-3'>
+                      <div className='flex justify-between space-x-3'>
                         {socialLinks.map((item, i) => (
                           <a
                             className='block ring-1 ring-gray-400 p-3 rounded-xl'
@@ -194,7 +194,7 @@ export default function Header() {
                 <p className='md:text-4xl text-2xl   md:text-left '>
                   XYZ Design Academy
                 </p>
-                <div className='flex gap-2  '>
+                <div className='flex space-x-2  '>
                   <img className=' h-6 mt-2' src={icons.location} alt='' />
                   <p className=' text-md sm:text-lg  '>
                     273/2, Shahabad Mohammadpur,
@@ -202,7 +202,7 @@ export default function Header() {
                   </p>
                 </div>
               </div>
-              <div className=' w-fit  px-3 py-1 border border-white rounded-md flex gap-2 h-fit justify-center items-center cursor-pointer active:opacity-75 my-5 md'>
+              <div className=' w-fit  px-3 py-1 border border-white rounded-md flex space-x-2 h-fit justify-center items-center cursor-pointer active:opacity-75 my-5 md'>
                 <p className='text-lg'>View Institute</p>
 
                 <div className=''>
@@ -213,10 +213,10 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <section className=' xl:max-w-[1347px]  Card flex justify-evenly text-[#414141] p-10 md:p-5 rounded-3xl lg:flex-row flex-col sm:mx-auto  bg-white mx-5   lg:gap-5  shadow-xl -mt-[80px] mb-10 xl:mx-auto md:mx-10  '>
+      <section className=' xl:max-w-[1347px]  Card flex justify-evenly text-[#414141] p-10 md:p-5 rounded-3xl lg:flex-row flex-col sm:mx-auto  bg-white mx-5   lg:space-x-5  shadow-xl -mt-[80px] mb-10 xl:mx-auto md:mx-10  '>
         <div className='px-2 py-1 flex flex-col items-center font-medium justify-center  '>
           <p className='text-xl lg:text-2xl font-bold  mb-3'>1 Month</p>
-          <div className='flex items-center gap-1'>
+          <div className='flex items-center space-x-1'>
             <img className='w-4' src={time} alt='' />
             <p className='text-lg '>Duration</p>
           </div>
@@ -228,7 +228,7 @@ export default function Header() {
           <p className='text-xl lg:text-2xl font-bold  mb-3'>
             Authorized Certificate
           </p>
-          <div className='flex items-center gap-1'>
+          <div className='flex items-center space-x-1'>
             <img className='w-4' src={certified} alt='' />
             <p className='text-lg  '>Get Certified</p>
           </div>
@@ -238,7 +238,7 @@ export default function Header() {
 
         <div className='px-2 py-1 flex font-medium flex-col items-center   justify-center '>
           <p className='text-xl lg:text-2xl font-bold  mb-3'>Rs.150/month</p>
-          <div className='flex items-center gap-1'>
+          <div className='flex items-center space-x-1'>
             <img className='w-4' src={emi} alt='' />
             <p className='text-lg '>EMI Options</p>
           </div>
@@ -253,7 +253,7 @@ export default function Header() {
           <button className=' px-10 py-3 mx-auto bg-[#7D23E0] rounded-md mb-3 text-white active:opacity-80 text-xl lg:text-2xl '>
             Buy Now
           </button>
-          <div className='text-md text-center flex md-block justify-center gap-2 md-text-sm'>
+          <div className='text-md text-center flex md-block justify-center space-x-2 md-text-sm'>
             <p>
               <sup>*</sup>15-Day Money-Back Guarantee
             </p>

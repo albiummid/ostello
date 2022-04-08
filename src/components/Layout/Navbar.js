@@ -76,7 +76,7 @@ export default function Navbar() {
               <div className='ml-5 '>
                 {links.map((item, i) => (
                   <div
-                    className={`flex   gap-5  items-center py-2 cursor-pointer text-lg font-medium my-2  active:text-[#7D23E0] `}
+                    className={`flex   space-x-5  items-center py-2 cursor-pointer text-lg font-medium my-2  active:text-[#7D23E0] `}
                   >
                     <span
                       className={`${
@@ -110,7 +110,7 @@ export default function Navbar() {
               </div>
               <div>
                 <div
-                  className={`flex ml-5   gap-5  items-center py-2 cursor-pointer text-lg  my-5  active:text-[#7D23E0]`}
+                  className={`flex ml-5   space-x-5  items-center py-2 cursor-pointer text-lg  my-5  active:text-[#7D23E0]`}
                 >
                   <span className='text-[#414141]'>
                     <ImportOutlined className={iconStyle} />
@@ -125,7 +125,7 @@ export default function Navbar() {
 
           <div className={isAffixed ? 'bg-white  ' : 'bg-[#7A81DC]'}>
             <nav
-              className={`relative container mx-auto flex gap-5 items-center justify-between py-2 px-5  md:flex `}
+              className={`relative container mx-auto flex space-x-5 items-center justify-between py-2 px-5  md:flex `}
             >
               <img
                 className={`w-32 md:w-40 xl:w-60 hidden sm:block `}
