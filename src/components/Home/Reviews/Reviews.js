@@ -82,8 +82,8 @@ export default function Reviews() {
           Reviews
         </h1>
         <div className=''>
-          <div className=' flex justify-center items-center flex-col md:flex-row md:justify-around md:space-x-5 space-y-5 '>
-            <div className='flex items-center justify-center space-x-5 md:space-x-5  '>
+          <div className=' flex justify-center items-center flex-col md:flex-row md:justify-between md:space-x-5 space-y-5 '>
+            <div className='flex items-center space-x-5 md:space-x-5  '>
               {/* Review Statistics */}
               <div className='text-center flex justify-center items-center flex-col md:min-w-[150px] my-5 '>
                 <p className='md:text-5xl text-3xl my-0 font-medium  md:font-bold '>
@@ -97,18 +97,18 @@ export default function Reviews() {
 
               <div className='"md:w-full w-[50%]'>
                 {progresses.map((item, i) => (
-                  <div className='flex items-center my-1'>
+                  <div className='flex items-center gap-2 my-1'>
                     <Progress
                       strokeColor='#7D23E0'
                       strokeWidth={10}
-                      className='text-xs lg:text-lg sm:w-[400px]   hidden xl:block'
+                      className='text-xs lg:text-lg w-[800px]   hidden md:block'
                       percent={item.percentage}
                       showInfo={false}
                     />
                     <Progress
                       strokeColor='#7D23E0'
                       strokeWidth={5}
-                      className=' text-xs lg:text-lg w-40  xl:hidden'
+                      className=' text-xs lg:text-lg w-40  md:hidden'
                       percent={item.percentage}
                       showInfo={false}
                     />

@@ -59,7 +59,7 @@ export default function Navbar() {
       <Affix offsetTop={0} onChange={(e) => setIsAffixed(e)} className=''>
         <div
           className={
-            isAffixed ? 'py-4 relative bg-white ' : 'py-4 bg-[#7A81DC] relative'
+            isAffixed ? 'py-2 relative bg-white ' : 'py-2 bg-[#7A81DC] relative'
           }
         >
           <>
