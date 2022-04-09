@@ -19,7 +19,7 @@ export default function BottomBar() {
   const handleScroll = () => {
     const position = window.pageYOffset
     setScrollPosition((prev) => {
-      if (prev <= position && position > 100) {
+      if (prev <= position) {
         setVisibleBar(false)
       }
       if (prev >= position) {

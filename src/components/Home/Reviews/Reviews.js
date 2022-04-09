@@ -83,7 +83,7 @@ export default function Reviews() {
         </h1>
         <div className=''>
           {/* flex justify-center items-center flex-col md:flex-row  md:justify-between md:space-x-5 space-y-5 */}
-          <div className='  flex justify-between items-center flex-col md:flex-row mx-10'>
+          <div className='  flex justify-between items-center flex-col md:flex-row space-y-10 mx-10'>
             <div className='flex items-center gap-2 '>
               {/* Review Statistics */}
               <div className='text-center flex md:justify-center items-center flex-col justify-between  my-5 '>
