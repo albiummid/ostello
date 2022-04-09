@@ -96,7 +96,7 @@ export default function ReferCourse() {
             'flex md:justify-between md:items-center flex-col justify-center items-center space-y-10  md:flex-row lg:px-20 h-full'
           }
         >
-          <h1 className='text-white font-medium text-center  md:text-4xl text-2xl '>
+          <h1 className='text-white font-medium text-center md:text-left  md:text-4xl text-xl '>
             Refer someone you know and <br /> receive exciting offers.
           </h1>
           <button

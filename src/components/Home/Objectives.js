@@ -31,11 +31,11 @@ export default function Objectives() {
           </h1>
         </div>
         <Container>
-          <div className=' grid grid-cols-2 md:flex md:justify-between  gap-5   mx-5 justify-between -mt-20 '>
+          <div className=' grid grid-cols-2 md:flex md:justify-between  gap-5 md:gap-10 mx-5 justify-between -mt-20 '>
             {objectives.map((item, i) => (
               <div
                 key={i}
-                className='bg-white  md:w-[300px]   rounded-xl  shadow-xl   flex flex-col items-center justify-center md:space-x-5 space-y-2 md:mx-auto  py-4 px-2 md:p-5 '
+                className='bg-white  md:w-[300px]   rounded-xl  shadow-xl   flex flex-col items-center justify-center  space-y-2 md:mx-auto  py-4 px-2 md:px-5  '
               >
                 <img className=' w-10 md:w-20 ' src={item.icons} alt='' />
                 <p className='text-center text-sm lg:text-lg  '>{item.title}</p>

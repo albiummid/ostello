@@ -82,26 +82,27 @@ export default function Reviews() {
           Reviews
         </h1>
         <div className=''>
-          <div className=' flex justify-center items-center flex-col md:flex-row md:justify-between md:space-x-5 space-y-5 '>
-            <div className='flex space-x-2 '>
+          {/* flex justify-center items-center flex-col md:flex-row  md:justify-between md:space-x-5 space-y-5 */}
+          <div className='  flex justify-between items-center flex-col md:flex-row mx-10'>
+            <div className='flex items-center gap-2 '>
               {/* Review Statistics */}
-              <div className='text-center flex md:justify-center items-center flex-col  my-5 '>
-                <p className='md:text-5xl text-3xl my-0 font-medium  md:font-bold '>
+              <div className='text-center flex md:justify-center items-center flex-col justify-between  my-5 '>
+                <p className='md:text-5xl text-2xl my-0 font-medium  md:font-bold '>
                   3.9
                 </p>
                 <Rate className='text-sm lg:text-xl' value={5} />
-                <p className='md:text-xl text-md font-bold m-0 p-0'>
+                <p className='md:text-xl text-md w-[105px] md:w-[150px] font-bold m-0 p-0 '>
                   Course Rating
                 </p>
               </div>
 
-              <div className='md:w-full'>
+              <div className=''>
                 {progresses.map((item, i) => (
                   <div className='flex items-center gap-2 my-1'>
                     <Progress
                       strokeColor='#7D23E0'
                       strokeWidth={10}
-                      className='text-xs lg:text-lg w-[800px]   hidden md:block'
+                      className='text-xs lg:text-lg w-[300px]   hidden md:block'
                       percent={item.percentage}
                       showInfo={false}
                     />
@@ -123,7 +124,7 @@ export default function Reviews() {
               </div>
             </div>
 
-            <div className='md:px-10 px-2 py-4 rounded-lg shadow-md flex flex-col space-y-2 bg-white mx-2 '>
+            <div className=' px-4 py-4 rounded-lg shadow-md flex flex-col  bg-white  '>
               <p className='text-2xl text-center my-2 font-medium'>
                 Rate your experience
               </p>

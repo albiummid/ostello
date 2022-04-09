@@ -91,9 +91,9 @@ export default function FAQ() {
   // const executeScroll = () => activeTab.current.scrollIntoView()
   // Scrolling to the node should be added
   return (
-    <div name='FAQ'>
+    <div name='FAQ' className='bg-[#F3F5F7]'>
       <Container>
-        <div className='bg-[#F3F5F7] lg:py-20 py-10 cursor-pointer px-5'>
+        <div className=' lg:py-20 py-10 cursor-pointer px-5'>
           <h1 className=' hidden md:block text-5xl text-center py-10 pb-20 font-bold bg-[#F3F5F7]'>
             Frequently Asked Questions
           </h1>
@@ -112,7 +112,7 @@ export default function FAQ() {
                 }}
               >
                 <div className='md:p-10 p-5  flex items-center justify-between bg-[#7A81DC] rounded-xl text-xl text-white  '>
-                  <p className='text-2xl'>{item.section}</p>
+                  <p className='md:text-2xl text-xl'>{item.section}</p>
                   {activeKey === idx ? (
                     <CloseOutlined className='mr-5 font-bold ' />
                   ) : (
