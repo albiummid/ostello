@@ -116,12 +116,12 @@ export default function Footer() {
                 src={logo}
                 alt=''
               />
-              <div className='md:flex space-x-5 items-center hidden my-3   '>
+              <div className='md:flex space-x-5 items-center justify-center hidden my-3   '>
                 {socialLinks.map((item, i) => (
                   <div className='' key={i}>
                     <a href={item.link} target='_blank' rel='noreferrer'>
                       <img
-                        className='w-6 lg:w-10 cursor-pointer'
+                        className='w-8 cursor-pointer'
                         src={item.img}
                         alt={item.title}
                       />

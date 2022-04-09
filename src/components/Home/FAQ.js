@@ -5,7 +5,7 @@ import Container from '../Layout/Container'
 
 export default function FAQ() {
   const activeTab = useRef({})
-  const [activeKey, setActiveKey] = useState(0)
+  const [activeKey, setActiveKey] = useState(null)
   const data = [
     {
       section: 'Payment',

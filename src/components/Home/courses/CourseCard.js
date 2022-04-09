@@ -87,15 +87,20 @@ export default function CourseCard() {
 
           <div className='flex justify-between items-center '>
             <div>
-              <p className='md:text-3xl text-xl font-bold'>Rs. 599</p>
-              <p className='md:text-xl text-red-400 text-right md:text-left'>
+              <p
+                className=' text-2xl
+               font-semibold'
+              >
+                Rs. 599
+              </p>
+              <p className='text-md text-red-400 text-right md:text-left font-bold'>
                 <del>Rs.1500</del>
               </p>
             </div>
-            <div className='md:flex space-x-2 items-center text-lg font-bold cursor-pointer active:opacity-75 select-none hidden'>
+            <div className='md:flex space-x-2 items-center text-md font-bold cursor-pointer active:opacity-75 select-none hidden'>
               <p>View Details</p>
 
-              <ArrowRightOutlined className='h-7 w-7 flex items-center justify-center rounded-full ring-2 ring-[#7D23E0] text-[#7D23E0] text-lg font-bold ' />
+              <ArrowRightOutlined className='h-5 w-5 flex items-center justify-center rounded-full ring-2 ring-[#7D23E0] text-[#7D23E0] text-md font-bold ' />
             </div>
           </div>
         </div>

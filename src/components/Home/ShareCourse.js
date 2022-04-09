@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { constants } from '../../constants'
 import ModalWrapper from '../Utils/Modal'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import Container from '../Layout/Container'
 export default function ShareCourse() {
   const [open, setOpen] = useState(false)
   const { icons } = constants
@@ -89,20 +90,22 @@ export default function ShareCourse() {
           </div>
         </div>
       </ModalWrapper>
-      <div className='shareBG flex lg:justify-between lg:items-center flex-col justify-center space-y-10 lg:space-x-10 lg:flex-row '>
-        <div className='text-white w-[50%] lg:ml-60 mx-auto hidden font-medium lg:block'>
-          <h1 className='text-white  text-5xl mb-5'>Share this course and</h1>
-          <h1 className='text-white text-5xl'>receive exciting offers.</h1>
-        </div>
-        <h1 className='text-white font-medium text-center lg:ml-20 text-3xl lg:hidden'>
-          Share this course and receive exciting offers
-        </h1>
-        <button
-          onClick={() => setOpen(true)}
-          className='px-8 py-4 text-xl lg:text-2xl w-fit mx-auto text-[#7D23E0]  bg-[#ffff] rounded-lg font-medium active:opacity-80'
+      <div className='shareBG '>
+        <Container
+          className={
+            'flex md:justify-between md:items-center flex-col justify-center items-center space-y-10  md:flex-row md:px-20 h-full'
+          }
         >
-          Sign up and Refer
-        </button>
+          <h1 className='text-white font-medium text-center  md:text-4xl text-2xl '>
+            Share this course and <br /> receive exciting offers
+          </h1>
+          <button
+            onClick={() => setOpen(true)}
+            className='px-6 py-2 text-xl lg:text-2xl w-fit  text-[#7D23E0]  bg-[#ffff] rounded-lg font-medium active:opacity-80'
+          >
+            Sign up and Refer
+          </button>
+        </Container>
       </div>
     </>
   )

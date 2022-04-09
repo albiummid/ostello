@@ -38,7 +38,7 @@ export default function BottomBar() {
     }
   }, [])
 
-  console.log(scrollPosition, 'isVIsible?', visibleBar)
+  // console.log(scrollPosition, 'isVIsible?', visibleBar)
 
   const bottomNavs = [
     {

@@ -49,16 +49,20 @@ export default function CourseOutlines() {
     },
   ]
   return (
-    <section name='Syllabus' className='lg:py-20 py-10 px-5'>
-      <Container>
+    <>
+      <Container
+        onClick={() => console.log('albi')}
+        name='Syllabus'
+        className={'py-20'}
+      >
         <h1 className='my-10 text-3xl md:text-5xl text-center font-bold'>
           What's in the course
         </h1>
-        <div className=' mx-auto'>
+        <div className=' px-5'>
           {outlines.map((item, i) => (
             <div
               key={i}
-              className='lg:w-[1080px] my-2 text-white mx-auto '
+              className='lg:w-[1000px] my-2 text-white mx-auto '
               onClick={() => setActiveKey(i === activeKey ? null : i)}
             >
               <div className='bg-[#7A81DC] flex justify-between rounded-md cursor-pointer active:opacity-75 px-3 py-4   '>
@@ -93,6 +97,6 @@ export default function CourseOutlines() {
           ))}
         </div>
       </Container>
-    </section>
+    </>
   )
 }

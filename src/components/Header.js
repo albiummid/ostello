@@ -67,8 +67,8 @@ export default function Header() {
 
   return (
     <div name='Header' className=' '>
-      <div className='bg-[#7A81DC]'>
-        <div className=' px-5 container mx-auto  text-white lg:flex flex-row-reverse justify-between md:py-20'>
+      <div className='bg-[#7A81DC] lg:px-20'>
+        <div className=' px-3 md:px-0  container mx-auto  text-white lg:flex flex-row-reverse justify-between md:py-20'>
           <section className=' '>
             <VideoSection />
           </section>
@@ -98,7 +98,7 @@ export default function Header() {
                 />
                 <p className=' uppercase md:text-xl '>{courseMode} Course</p>
               </div>
-              <p className=' text-3xl md:text-5xl font-bold '>
+              <p className=' text-3xl md:text-5xl font-semibold '>
                 The Complete Digital <br /> Marketing Course
               </p>
               <p className='text-md mt-3 md:text-lg'>
@@ -107,91 +107,95 @@ export default function Header() {
               </p>
             </section>
 
-            <section className='statistics mt-10'>
-              <div className='flex justify-between items-center'>
-                <div className='info flex items-center space-x-5 '>
-                  <div className=' rating flex space-x-2 justify-center items-center bg-[#FFD130] px-2  md:w-[86px] md:text-2xl text-xl rounded-lg font-bold'>
-                    <p className=''>3.0</p>
-                    <StarFilled />
-                  </div>
-                  <p className='lg:text-xl text-lg'>
-                    669,534 students enrolled
-                  </p>
-                </div>
-                <div className='actions flex space-x-5 md:text-2xl'>
-                  {isActiveHeart ? (
-                    <HeartFilled
-                      onClick={() => setHeart(!isActiveHeart)}
-                      className={`flex text-xl  w-8 h-8 md:h-10 md:w-10 rounded-full shadow-sm  items-center justify-center cursor-pointer  text-red-500 ring-2 ring-white md:text-2xl `}
-                    />
-                  ) : (
-                    <HeartOutlined
-                      onClick={() => {
-                        setHeart(!isActiveHeart)
-                        toast.success('Added to Wishlist')
-                      }}
-                      className={`flex items-center text-xl  text-white   w-8 h-8 md:h-10 md:w-10 rounded-full shadow-sm justify-center cursor-pointer   ring-2 ring-white md:text-2xl`}
-                    />
-                  )}
-
-                  <ShareAltOutlined
-                    onClick={() => setOpen(true)}
-                    className='active:opacity-80 flex items-center text-xl  text-white   w-8 h-8 md:h-10 md:w-10 rounded-full shadow-sm justify-center cursor-pointer   ring-2 ring-white md:text-2xl r'
-                  />
-
-                  <ModalWrapper open={open} setOpen={setOpen}>
-                    <div className='bg-white flex flex-col space-y-5  p-5 max-w-[400px] mx-auto rounded-lg'>
-                      <div className='flex justify-between text-2xl items-center'>
-                        <span className=''>Share</span>
-                        <CloseCircleOutlined
-                          className='cursor-pointer'
-                          onClick={() => setOpen(false)}
-                        />
-                      </div>
-                      <div className='flex justify-between space-x-3'>
-                        {socialLinks.map((item, i) => (
-                          <a
-                            className='block ring-1 ring-gray-400 p-3 rounded-xl'
-                            href={item.url}
-                            key={i}
-                          >
-                            <img className='w-10' src={item.icon} alt='' />
-                          </a>
-                        ))}
-                      </div>
-
-                      <div className=' flex justify-center w-full relative'>
-                        <p
-                          className={`absolute px-3 py-1  -top-10 right-0 bg-gray-300 rounded-lg ${
-                            isCopied ? 'block' : 'hidden'
-                          }`}
-                        >
-                          Copied
-                        </p>
-                        <input
-                          type='text  '
-                          value={'https://ostello.com/digital_marketing_course'}
-                          className='w-full px-2 py-1 ring-1  ring-gray-400 outline-none border-none  active:outline-none active:border-none'
-                        />
-                        <CopyToClipboard
-                          text='https://ostello.com/digital_marketing_course'
-                          onCopy={() => setIsCopied(true)}
-                        >
-                          <button className='bg-[#7D23E0] text-white px-2 ring-1 ring-[#7D23E0] active:opacity-75 rounded-sm rounded-l-none'>
-                            COPY
-                          </button>
-                        </CopyToClipboard>
-                      </div>
+            <section className='statistics mt-10 md:mb-8 mb-4'>
+              <>
+                <div className='info flex items-center sm:justify-between  space-x-5 '>
+                  <div className='flex space-x-2 items-center'>
+                    <div className=' rating flex md:space-x-2 justify-between items-center bg-[#FFD130] px-2 py-1 md:w-[86px] md:text-2xl text-sm rounded-md font-bold'>
+                      <p className=''>3.0</p>
+                      <StarFilled />
                     </div>
-                  </ModalWrapper>
+                    <p className='lg:text-xl text-sm'>
+                      669,534 students enrolled
+                    </p>
+                  </div>
+                  <div className='actions flex space-x-5 md:text-2xl'>
+                    {isActiveHeart ? (
+                      <HeartFilled
+                        onClick={() => setHeart(!isActiveHeart)}
+                        className={`flex text-xl  w-6 h-6 md:h-10 md:w-10 rounded-full shadow-sm  items-center justify-center cursor-pointer  text-red-500 md:ring-2 ring-1 ring-white md:text-2xl `}
+                      />
+                    ) : (
+                      <HeartOutlined
+                        onClick={() => {
+                          setHeart(!isActiveHeart)
+                          toast.success('Added to Wishlist')
+                        }}
+                        className={`flex items-center text-sm  text-white   w-6 h-6 md:h-10 md:w-10 rounded-full shadow-sm justify-center cursor-pointer   md:ring-2 ring-1 ring-white md:text-2xl`}
+                      />
+                    )}
+
+                    <ShareAltOutlined
+                      onClick={() => setOpen(true)}
+                      className='active:opacity-80 flex items-center text-sm  text-white   w-6 h-6 md:h-10 md:w-10 rounded-full shadow-sm justify-center cursor-pointer   md:ring-2 ring-1 ring-white md:text-2xl r'
+                    />
+
+                    <ModalWrapper open={open} setOpen={setOpen}>
+                      <div className='bg-white flex flex-col space-y-5  p-5 max-w-[400px] mx-auto rounded-lg'>
+                        <div className='flex justify-between text-2xl items-center'>
+                          <span className=''>Share</span>
+                          <CloseCircleOutlined
+                            className='cursor-pointer'
+                            onClick={() => setOpen(false)}
+                          />
+                        </div>
+                        <div className='flex justify-between space-x-3'>
+                          {socialLinks.map((item, i) => (
+                            <a
+                              className='block ring-1 ring-gray-400 p-3 rounded-xl'
+                              href={item.url}
+                              key={i}
+                            >
+                              <img className='w-10' src={item.icon} alt='' />
+                            </a>
+                          ))}
+                        </div>
+
+                        <div className=' flex justify-center w-full relative'>
+                          <p
+                            className={`absolute px-3 py-1  -top-10 right-0 bg-gray-300 rounded-lg ${
+                              isCopied ? 'block' : 'hidden'
+                            }`}
+                          >
+                            Copied
+                          </p>
+                          <input
+                            type='text  '
+                            value={
+                              'https://ostello.com/digital_marketing_course'
+                            }
+                            className='w-full px-2 py-1 ring-1  ring-gray-400 outline-none border-none  active:outline-none active:border-none'
+                          />
+                          <CopyToClipboard
+                            text='https://ostello.com/digital_marketing_course'
+                            onCopy={() => setIsCopied(true)}
+                          >
+                            <button className='bg-[#7D23E0] text-white px-2 ring-1 ring-[#7D23E0] active:opacity-75 rounded-sm rounded-l-none'>
+                              COPY
+                            </button>
+                          </CopyToClipboard>
+                        </div>
+                      </div>
+                    </ModalWrapper>
+                  </div>
                 </div>
-              </div>
+              </>
             </section>
             <div className='border-b-0 border-l-0 border-r-0 border-2 border-dashed w-full my-5 hidden md:block' />
             <section className='  md:flex justify-between pb-[100px] '>
-              <div>
-                <div className='border-b-0 border-l-0 border-r-0 border-2 border-dashed w-full my-5  md:hidden' />
-                <p className='md:text-4xl text-2xl   md:text-left '>
+              <div className=' flex flex-col gap-2'>
+                <div className='border-b-0 border-l-0 border-r-0 border-2 border-dashed w-full my-2  md:hidden' />
+                <p className='md:text-3xl text-2xl   md:text-left'>
                   XYZ Design Academy
                 </p>
                 <div className='flex space-x-2  '>
@@ -205,9 +209,7 @@ export default function Header() {
               <div className=' w-fit  px-3 py-1 border border-white rounded-md flex space-x-2 h-fit justify-center items-center cursor-pointer active:opacity-75 my-5 md'>
                 <p className='text-lg'>View Institute</p>
 
-                <div className=''>
-                  <ArrowRightOutlined className='text-md w-[20px] h-[20px] flex justify-center items-center ring-2 ring-white rounded-full' />
-                </div>
+                <ArrowRightOutlined className='text-md w-[20px] h-[20px] flex justify-center items-center ring-1 ring-white rounded-full' />
               </div>
             </section>
           </div>

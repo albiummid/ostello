@@ -4,6 +4,7 @@ import connection from '../images/icons/connecion.png'
 import message from '../images/icons/message.svg'
 import poster from '../images/icons/poster.png'
 import like from '../images/icons/like.png'
+import Container from './Layout/Container'
 
 export default function CourseOverview() {
   const [readMore, setReadMore] = useState(false)
@@ -30,15 +31,15 @@ export default function CourseOverview() {
     },
   ]
   return (
-    <section
+    <Container
       name='Overview'
-      className=' course_overview flex  flex-col space-y-10 justify-between  md:px-20  lg:flex-row px-5 py-32 items-center max-w-3xl mx-auto md:max-w-full'
+      className=' container mx-auto course_overview flex  flex-col space-y-10 justify-between   lg:flex-row px-5 py-32 items-center text-[#414141]'
     >
-      <div className=' lg:w-[50%] text-[#414141]  text-justify'>
-        <h1 className='lg:text-5xl text-3xl  text-rights font-medium lg:mb-10 mb-5'>
+      <div className=' lg:w-[50%]   text-justify'>
+        <h1 className='lg:text-5xl text-3xl  text-rights font-semibold lg:mb-10 mb-5'>
           Course Overview
         </h1>
-        <div className={'text-lg  text-justify lg:block hidden '}>
+        <div className={'text-xl  text-justify lg:block hidden '}>
           <p className='mb-3'>
             With over 20 hours of training, quizzes and practical steps you can
             follow - this is one of the most comprehensive digital marketing
@@ -92,17 +93,17 @@ export default function CourseOverview() {
           </p>
         </div>
       </div>
-      <div className='lg:p-10 p-5 ring-2 ring-[#7178D3] rounded-xl h-fit font-medium'>
+      <div className='lg:px-10 py-5 p-5 ring-2 ring-[#7178D3] rounded-xl h-fit font-medium'>
         <h1 className='text-[32px] pb-5'>Key Highlights</h1>
-        <div className=''>
+        <div className='space-y-5'>
           {keyPoints.map((item, i) => (
-            <div key={i} className='flex items-start space-x-4 my-2'>
+            <div key={i} className='flex items-center space-x-5 my-2'>
               <img className='w-6 h-6' src={item.icon} alt='' />
-              <p className='text-lg'>{item.title}</p>
+              <p className='md:text-lg'>{item.title}</p>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </Container>
   )
 }

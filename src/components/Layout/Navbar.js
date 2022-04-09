@@ -55,10 +55,12 @@ export default function Navbar() {
   ]
 
   return (
-    <div>
+    <div className=''>
       <Affix offsetTop={0} onChange={(e) => setIsAffixed(e)} className=''>
         <div
-          className={isAffixed ? 'relative bg-white ' : 'bg-[#7A81DC] relative'}
+          className={
+            isAffixed ? 'py-4 relative bg-white ' : 'py-4 bg-[#7A81DC] relative'
+          }
         >
           <>
             <div
@@ -125,7 +127,7 @@ export default function Navbar() {
 
           <div className={isAffixed ? 'bg-white  ' : 'bg-[#7A81DC]'}>
             <nav
-              className={`relative container mx-auto flex space-x-5 items-center justify-between py-2 px-5  md:flex `}
+              className={`relative container mx-auto flex md:space-x-5 items-center justify-between py-2 px-5  md:flex `}
             >
               <img
                 className={`w-32 md:w-40 xl:w-60 hidden sm:block `}
@@ -174,7 +176,7 @@ export default function Navbar() {
               </div>
 
               <button
-                className={`  font-semibold  xl:px-10 px-4 py-1  xl:py-3  md:text-lg xl:text-2xl text-lg rounded-md active:opacity-80 md:w-[110px] xl:w-[190px] ${
+                className={`  font-medium   md:text-2xl px-8 py-2  text-lg rounded-md active:opacity-80 ${
                   isAffixed
                     ? 'bg-[#7D23E0] text-[#ffffff]'
                     : 'text-[#7D23E0] bg-[#ffffff]'

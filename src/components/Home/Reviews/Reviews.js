@@ -81,9 +81,9 @@ export default function Reviews() {
         <h1 className='lg:text-5xl text-4xl text-center my-10 font-medium'>
           Reviews
         </h1>
-        <div>
-          <div className=' flex justify-center items-center flex-col md:flex-row md:justify-around md:space-x-5 space-y-5'>
-            <div className='flex items-center justify-center space-x-2 md:space-x-5  '>
+        <div className=''>
+          <div className=' flex justify-center items-center flex-col md:flex-row md:justify-around md:space-x-5 space-y-5 '>
+            <div className='flex items-center justify-center space-x-5 md:space-x-5  '>
               {/* Review Statistics */}
               <div className='text-center flex justify-center items-center flex-col md:min-w-[150px] my-5 '>
                 <p className='md:text-5xl text-3xl my-0 font-medium  md:font-bold '>

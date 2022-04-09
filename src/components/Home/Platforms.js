@@ -153,8 +153,8 @@ export default function Platforms() {
       <div className='lg:flex space-x-5 justify-around py-20 px-10 bg-[#F3F5F7] hidden '>
         {platforms.map((item, i) => (
           <div key={i}>
-            <p className='font-bold md:text-4xl text-xl my-5'>{item.name}</p>
-            <div className='flex flex-col text-3xl'>
+            <p className='font-bold md:text-3xl text-xl my-5'>{item.name}</p>
+            <div className='flex flex-col text-2xl'>
               {item.categories.map((category, idx) => (
                 <Link to={category.url} key={idx}>
                   {category.title}

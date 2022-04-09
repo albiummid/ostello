@@ -15,14 +15,14 @@ export default function VideoSection() {
             alt=''
           />
           <PlayCircleFilled className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:text-7xl  text-5xl cursor-pointer active:opacity-75' />
-          <div className=' group absolute top-[35px] right-[35px] p-3 bg-white flex rounded-lg gap-2 transition-all ease-in-out duration-300  cursor-pointer'>
+          <div className=' group absolute top-5 right-5 md:top-10 md:right-10 p-3 bg-white flex rounded-lg gap-2 transition-all ease-in-out duration-300  cursor-pointer'>
             <img src={icons.imgProto} className='' alt='' />
             <p className='text-[#414141] hidden group-hover:block   '>
               See more
             </p>
           </div>
         </div>
-        <div className=' flex gap-2 justify content-center items-center'>
+        <div className=' flex space-x-2 justify content-center items-center'>
           <div className='h-2 w-[80px] bg-white rounded-lg'></div>
           <div className='h-2 w-[30px] bg-[#FFFFFF] rounded-lg' />
           <div className='h-2 w-[30px] bg-[#FFFFFF] rounded-lg' />
