@@ -176,7 +176,7 @@ export default function Navbar() {
               </div>
 
               <button
-                className={`  font-medium   md:text-2xl px-8 py-2  text-lg rounded-md active:opacity-80 ${
+                className={`  font-medium   md:text-2xl md:px-8 px-4 md:py-2 py-1  text-lg rounded-md active:opacity-80 ${
                   isAffixed
                     ? 'bg-[#7D23E0] text-[#ffffff]'
                     : 'text-[#7D23E0] bg-[#ffffff]'
