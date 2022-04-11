@@ -33,9 +33,9 @@ export default function CourseOverview() {
   return (
     <Container
       name='Overview'
-      className=' container mx-auto course_overview flex  flex-col space-y-10 justify-between   lg:flex-row px-5 py-32 items-center text-[#414141]'
+      className=' container mx-auto course_overview flex justify-between  space-y-10 flex-col md:flex-row   px-5 py-20 md:px-20 items-center text-[#414141]'
     >
-      <div className=' lg:w-[50%]   text-justify'>
+      <div className='text-justify md:w-6/12 '>
         <h1 className='lg:text-5xl text-3xl  text-rights font-semibold lg:mb-10 mb-5'>
           Course Overview
         </h1>
@@ -93,7 +93,7 @@ export default function CourseOverview() {
           </p>
         </div>
       </div>
-      <div className='lg:px-10 py-5 p-5 ring-2 ring-[#7178D3] rounded-xl h-fit font-medium'>
+      <div className='lg:px-10 py-5 p-5 ring-2 ring-[#7178D3] rounded-xl h-fit w-fit font-medium'>
         <h1 className='text-[32px] pb-5'>Key Highlights</h1>
         <div className='space-y-5'>
           {keyPoints.map((item, i) => (

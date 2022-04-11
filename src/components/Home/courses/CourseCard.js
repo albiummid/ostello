@@ -1,5 +1,6 @@
 import {
   ArrowRightOutlined,
+  CloseCircleOutlined,
   HeartFilled,
   HeartOutlined,
   HeartTwoTone,
@@ -7,17 +8,58 @@ import {
   ShareAltOutlined,
   StarFilled,
 } from '@ant-design/icons'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { constants } from '../../../constants'
 import courseImg from '../../../images/courseImg.png'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import toast from 'react-hot-toast'
+import ModalWrapper from '../../Utils/Modal'
 
 export default function CourseCard() {
+  const [open, setOpen] = useState(false)
+  const [isCopied, setIsCopied] = useState(false)
   const [isActiveHeart, setHeart] = useState(false)
   const { icons } = constants
+
+  const socialLinks = [
+    {
+      title: 'instagram',
+      url: 'https://instagram.com',
+      icon: icons.instaViolet,
+    },
+    {
+      title: 'fb',
+      url: 'https://fb.com',
+      icon: icons.fbViolet,
+    },
+    {
+      title: 'whatsapp',
+      url: 'https://whatsapp.com',
+      icon: icons.whatsappViolet,
+    },
+    {
+      title: 'linkedin',
+      url: 'https://linkedin.com',
+      icon: icons.linkedinViolet,
+    },
+    {
+      title: 'twitter',
+      url: 'https://twitter.com',
+      icon: icons.twitterViolet,
+    },
+  ]
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (isCopied) {
+        setIsCopied(false)
+      }
+    }, 1000)
+
+    return () => clearInterval(timer)
+  }, [isCopied])
   return (
-    <div className='md:w-[400px] max-w-[350px] relative shadow-lg rounded-3xl'>
+    <div className='md:w-[400px] max-w-[400px] relative shadow-[#7ab1dc]/20 shadow-lg rounded-3xl'>
       <div className='relative'>
         <img src={courseImg} className='w-[100%] rounded-2xl  ' alt='' />
         <div className='flex items-center justify-center  space-x-1 px-2 text-md text-white  font-bold bg-yellow-400 rounded-lg md:hidden absolute right-5 bottom-[10px] '>
@@ -54,6 +96,52 @@ export default function CourseCard() {
           >
             <div className='p-2 w-10 h-10   rounded-full bg-white shadow-lg text-[#767676] justify-center items-center flex cursor-pointer '>
               <ShareAltOutlined className='text-2xl mb-1 mr-1' />
+
+              <ModalWrapper open={open} setOpen={setOpen}>
+                <div className='bg-white flex flex-col space-y-5  p-5 max-w-[400px] mx-auto rounded-lg'>
+                  <div className='flex justify-between text-2xl items-center'>
+                    <span className=''>Share</span>
+                    <CloseCircleOutlined
+                      className='cursor-pointer'
+                      onClick={() => setOpen(false)}
+                    />
+                  </div>
+                  <div className='flex justify-between space-x-3'>
+                    {socialLinks.map((item, i) => (
+                      <a
+                        className='block ring-1 ring-gray-400 p-3 rounded-xl'
+                        href={item.url}
+                        key={i}
+                      >
+                        <img className='w-10' src={item.icon} alt='' />
+                      </a>
+                    ))}
+                  </div>
+
+                  <div className=' flex justify-center w-full relative'>
+                    <p
+                      className={`absolute px-3 py-1  -top-10 right-0 bg-gray-300 rounded-lg ${
+                        isCopied ? 'block' : 'hidden'
+                      }`}
+                    >
+                      Copied
+                    </p>
+                    <input
+                      type='text  '
+                      value={'https://ostello.com/digital_marketing_course'}
+                      className='w-full px-2 py-1 ring-1  ring-gray-400 outline-none border-none  active:outline-none active:border-none'
+                    />
+                    <CopyToClipboard
+                      text='https://ostello.com/digital_marketing_course'
+                      onCopy={() => setIsCopied(true)}
+                    >
+                      <button className='bg-[#7D23E0] text-white px-2 ring-1 ring-[#7D23E0] active:opacity-75 rounded-sm rounded-l-none'>
+                        COPY
+                      </button>
+                    </CopyToClipboard>
+                  </div>
+                </div>
+              </ModalWrapper>
             </div>
           </CopyToClipboard>
         </div>

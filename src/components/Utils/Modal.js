@@ -13,7 +13,7 @@ export default function ModalWrapper({ children, open, setOpen, className }) {
   }
 
   return (
-    <div className={`bg-white`}>
+    <div className={`bg-white ${className}`}>
       <Modal
         open={open}
         onClose={() => setOpen(false)}

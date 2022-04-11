@@ -15,6 +15,7 @@ import {
 } from '@ant-design/icons'
 import { Affix } from 'antd'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-scroll/modules'
 import { constants } from '../../constants'
 import logo from '../../images/logo.svg'
@@ -26,6 +27,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState(null)
   const [isActive, setIsActive] = useState(false)
   const iconStyle = `flex items-center text-2xl `
+  const navigate = useNavigate()
 
   const links = [
     {
@@ -59,17 +61,22 @@ export default function Navbar() {
       <Affix offsetTop={0} onChange={(e) => setIsAffixed(e)} className=''>
         <div
           className={
-            isAffixed ? 'py-2 relative bg-white ' : 'py-2 bg-[#7A81DC] relative'
+            isAffixed ? 'py-1 relative bg-white ' : 'py-1 bg-[#7A81DC] relative'
           }
         >
           <>
             <div
-              className={` absolute  inset-0 w-[85%] h-screen rounded-r-2xl px-5 py-10 flex flex-col justify-around bg-[#ffffff]  sm:hidden   z-[999] ease-in-out transition-all duration-300 shadow-2xl  ${
+              className={` absolute  inset-0 w-[85%] h-screen rounded-r-2xl px-5 py-10 flex flex-col justify-around bg-[#ffffff]  md:hidden   z-[999] ease-in-out transition-all duration-300 shadow-2xl  ${
                 isActive ? '-translate-x-0' : '-translate-x-full'
               } `}
             >
               <div className='flex justify-between items-center'>
-                <img className={`w-40 md:hidden `} src={logoWH} alt='' />
+                <img
+                  onClick={() => navigate('/')}
+                  className={`w-40 md:hidden `}
+                  src={logoWH}
+                  alt=''
+                />
                 <CloseOutlined
                   className='text-2xl flex items-center'
                   onClick={() => setIsActive(false)}
@@ -78,6 +85,7 @@ export default function Navbar() {
               <div className='ml-5 '>
                 {links.map((item, i) => (
                   <div
+                    key={i}
                     className={`flex   space-x-5  items-center py-2 cursor-pointer text-lg font-medium my-2  active:text-[#7D23E0] `}
                   >
                     <span
@@ -127,10 +135,11 @@ export default function Navbar() {
 
           <div className={isAffixed ? 'bg-white  ' : 'bg-[#7A81DC]'}>
             <nav
-              className={`relative container mx-auto flex md:space-x-5 items-center justify-between py-2 px-5  md:flex `}
+              className={`relative container mx-auto flex md:space-x-5 items-center justify-between   py-2 px-5 md:px-10   md:flex `}
             >
               <img
-                className={`w-32 md:w-40 xl:w-60 hidden sm:block `}
+                onClick={() => navigate('/')}
+                className={`w-32  md:w-40 xl:w-40 hidden sm:block `}
                 src={isAffixed ? logoWH : logo}
                 alt=''
               />
@@ -141,21 +150,23 @@ export default function Navbar() {
                 }`}
               />
 
-              <div className='sm:flex items-center w-full justify-around  hidden select-none '>
+              <div className='md:flex items-center w-full justify-evenly  hidden select-none '>
                 {links.map((item, i) => (
-                  <div className='flex flex-col justify-center items-center py-2  '>
+                  <div
+                    key={i}
+                    className='flex flex-col justify-center items-center py-2  '
+                  >
                     <Link
                       to={item.title}
                       smooth={true}
                       spy={true}
-                      className={`cursor-pointer text-sm lg:text-xl xl:text-2xl   active:text-[#7D23E0] mx-2 ${
+                      className={`cursor-pointer text-md xl:text-xl   active:text-[#7D23E0] mx-2 ${
                         i === activeSection
                           ? ' text-[#7D23E0]'
                           : isAffixed
                           ? 'text-[#414141]'
                           : 'text-white'
                       }`}
-                      activeClass=''
                       key={i}
                       onSetActive={(e) => {
                         setActiveSection(i)
@@ -176,7 +187,7 @@ export default function Navbar() {
               </div>
 
               <button
-                className={`  font-medium   md:text-2xl md:px-8 px-4 md:py-2 py-1  text-lg rounded-md active:opacity-80 ${
+                className={`  font-medium   lg:text-xl md:px-8 px-4 md:py-2 py-1  md:text-lg rounded-md active:opacity-80 ${
                   isAffixed
                     ? 'bg-[#7D23E0] text-[#ffffff]'
                     : 'text-[#7D23E0] bg-[#ffffff]'

@@ -8,10 +8,10 @@ export default function OfferSection() {
         <div className='offerBG  '>
           <Container
             className={
-              'p-3 text-white flex items-center flex-col justify-center md:gap-5 h-full'
+              'p-3 text-white flex items-center flex-col justify-center lg:gap-5  h-full'
             }
           >
-            <div className='md:text-5xl text-xl font-medium'>
+            <div className='xl:text-3xl text-xl font-medium'>
               <h1 className=' text-white  text-center lg:my-4'>
                 Register early to get
               </h1>
@@ -19,8 +19,8 @@ export default function OfferSection() {
                 Rs. 1000 worth of coupons
               </h1>
             </div>
-            <div className=' ring-2 lg:ring-4 ring-white w-fit mx-auto  rounded-xl my-8 lg:py-12 lg:px-6 px-6 py-2 '>
-              <p className='font-bold mx-auto  md:text-6xl text-2xl   text-center text-white lg:pb-2'>
+            <div className=' ring-2 lg:ring-4 ring-white w-fit mx-auto  rounded-xl my-8 xl:py-8 xl:px-16 px-6 py-2 '>
+              <p className='font-bold mx-auto  md:text-4xl xl:text-5xl text-2xl   text-center text-white lg:pb-2'>
                 12:12:12
               </p>
             </div>

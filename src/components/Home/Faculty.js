@@ -3,6 +3,7 @@ import Container from '../Layout/Container'
 import mahima from '../../images/mahima.jpg'
 import vishal from '../../images/nitiya.jpg'
 import nitiya from '../../images/vishal.jpg'
+import OstelloCarousel from '../UI/OstelloCarousel'
 
 export default function Faculty() {
   const faculties = [
@@ -32,30 +33,28 @@ export default function Faculty() {
     <section name='Faculty' className='md:py-20 py-12'>
       <Container className={''}>
         <h1 className='text-4xl font-bold text-center py-10'>Faculty</h1>
-        <div className='flex  md:justify-center  items-center  py-10 overflow-x-scroll no-scrollbar'>
-          {faculties.map((item, i) => (
-            <div
-              key={i}
-              className='md:p-10 p-5 md:only:py-12 w-[300px] md:w-[376px] lg:mx-10 mx-2 shadow-2xl shrink-0 rounded-2xl '
-            >
-              <div className='mb-2 md:mb-8 text-center '>
-                <img
-                  className='h-[150px] w-[150px] mx-auto rounded-full my-2'
-                  src={item.img}
-                  alt=''
-                />
-                <p className='font-bold text-xl'>{item.name}</p>
-                <p className='text-md text-[#A4A4A4]'>{item.degree}</p>
+        <div>
+          <OstelloCarousel showArrows={false}>
+            {faculties.map((item, i) => (
+              <div className=' mx-2'>
+                <div
+                  key={i}
+                  className=' p-5 md:py-12  lg:w-[350px] lg:mx-5 my-5  shadow-[#7ab1dc]/20 shadow-lg shrink-0 rounded-2xl '
+                >
+                  <div className='mb-2 md:mb-8 text-center '>
+                    <img
+                      className='h-[150px] w-[150px] mx-auto rounded-full my-2'
+                      src={item.img}
+                      alt=''
+                    />
+                    <p className='font-bold text-xl'>{item.name}</p>
+                    <p className='text-md text-[#A4A4A4]'>{item.degree}</p>
+                  </div>
+                  <p className='text-lg text-center'>{item.details}</p>
+                </div>
               </div>
-              <p className='text-lg text-center'>{item.details}</p>
-            </div>
-          ))}
-        </div>
-        <div className='flex space-x-2 justify-center items-center my-10 cursor-pointer '>
-          <div className='bg-[#7D23E0] h-2 w-[80px] rounded-xl'></div>
-          <div className='bg-[#7D23E0] opacity-40 h-2 w-[20px] rounded-xl'></div>
-          <div className='bg-[#7D23E0] opacity-40 h-2 w-[20px] rounded-xl'></div>
-          <div className='bg-[#7D23E0] opacity-40 h-2 w-[20px] rounded-xl'></div>
+            ))}
+          </OstelloCarousel>
         </div>
       </Container>
     </section>

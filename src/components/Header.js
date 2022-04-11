@@ -19,6 +19,14 @@ import offlineIndicator from '../images/icons/offlineIndicator.svg'
 import onlineIndicator from '../images/icons/onlineIndicator.svg'
 import hybridIndicator from '../images/icons/hybridIndicator.svg'
 import ModalWrapper from './Utils/Modal'
+import obj from '../images/objects/obj.png'
+import obj1 from '../images/objects/obj1.png'
+import obj2 from '../images/objects/obj2.png'
+import obj3 from '../images/objects/obj3.png'
+import obj4 from '../images/objects/obj4.png'
+import obj5 from '../images/objects/obj5.png'
+import obj6 from '../images/objects/obj6.png'
+import OstelloCarousel from './UI/OstelloCarousel'
 
 export default function Header() {
   const [isActiveHeart, setHeart] = useState(false)
@@ -67,10 +75,18 @@ export default function Header() {
 
   return (
     <div name='Header' className=' '>
-      <div className='bg-[#7A81DC] lg:px-20'>
-        <div className=' px-3 md:px-0  container mx-auto  text-white lg:flex flex-row-reverse justify-between md:py-20'>
-          <section className=' '>
-            <VideoSection />
+      <div className='bg-[#7A81DC]  '>
+        <div className=' px-3 sm:px-20 container mx-auto  text-white lg:flex flex-row-reverse justify-between md:py-10'>
+          <section className=' mx-3 lg:w-[400px]  pt-5 2xl:w-[500px] '>
+            <OstelloCarousel
+              itemsToShow={1}
+              showArrows={false}
+              isControllerWhite={true}
+            >
+              {[1, 2, 3, 4].map((item, i) => (
+                <VideoSection />
+              ))}
+            </OstelloCarousel>
           </section>
           <div className=''>
             <section className=' my-1 cursor-pointer'>
@@ -96,22 +112,22 @@ export default function Header() {
                   }
                   alt=''
                 />
-                <p className=' uppercase md:text-xl '>{courseMode} Course</p>
+                <p className=' uppercase xl:text-xl '>{courseMode} Course</p>
               </div>
-              <p className=' text-3xl md:text-5xl font-semibold '>
+              <p className=' text-3xl xl:text-5xl lg:text-4xl font-semibold '>
                 The Complete Digital <br /> Marketing Course
               </p>
-              <p className='text-md mt-3 md:text-lg'>
+              <p className='text-md mt-3 xl:text-lg'>
                 Master Digital Marketing Strategy, Social Media <br />
                 Marketing,SEO,YouTube,Email,Facebook Marketing Analytics & More!
               </p>
             </section>
 
-            <section className='statistics mt-10 md:mb-8 mb-4'>
+            <section className='statistics mt-10 xl:mb-8 mb-4'>
               <>
                 <div className='info flex items-center sm:justify-between  space-x-5 '>
                   <div className='flex space-x-2 items-center'>
-                    <div className=' rating flex md:space-x-2 justify-between items-center bg-[#FFD130] px-2 py-1 md:w-[86px] md:text-2xl text-sm rounded-md font-bold'>
+                    <div className=' rating flex xl:space-x-2 justify-between items-center bg-[#FFD130] px-2 py-1  md:text-xl text-sm rounded-md font-bold'>
                       <p className=''>3.0</p>
                       <StarFilled />
                     </div>
@@ -195,7 +211,7 @@ export default function Header() {
             <section className='  md:flex justify-between pb-[100px] '>
               <div className=' flex flex-col gap-2'>
                 <div className='border-b-0 border-l-0 border-r-0 border-2 border-dashed w-full my-2  md:hidden' />
-                <p className='md:text-3xl text-2xl   md:text-left'>
+                <p className='2xl:text-3xl text-2xl   md:text-left'>
                   XYZ Design Academy
                 </p>
                 <div className='flex space-x-2  '>
@@ -215,9 +231,9 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <section className=' xl:max-w-[1347px]  Card flex justify-evenly text-[#414141] p-10 md:p-5 rounded-3xl lg:flex-row flex-col sm:mx-auto  bg-white mx-5   lg:space-x-5  shadow-xl -mt-[80px] mb-10 xl:mx-auto md:mx-10  '>
-        <div className='px-2 py-1 flex flex-col items-center font-medium justify-center  '>
-          <p className='text-xl lg:text-2xl font-bold  mb-3'>1 Month</p>
+      <section className=' xl:max-w-[1100px]  Card flex justify-evenly text-[#414141]  p-10 md:p-5 rounded-3xl lg:flex-row flex-col shadow-[#7ab1dc]/20 shadow-lg bg-white mx-5   lg:space-x-5  -mt-[80px] mb-10 xl:mx-auto md:mx-10'>
+        <div className=' px-2 py-1 flex flex-col items-center font-medium justify-center  '>
+          <p className='text-xl xl:text-2xl font-bold  mb-3'>1 Month</p>
           <div className='flex items-center space-x-1'>
             <img className='w-4' src={time} alt='' />
             <p className='text-lg '>Duration</p>
@@ -227,7 +243,7 @@ export default function Header() {
         <div className=' lg:hidden border-2 my-3 border-[#7A81DC] lg:border-none border-dashed border-t-0 border-l-0 border-r-0  h-2 w-[100%] ' />
 
         <div className='px-2 py-1 flex flex-col items-center text-center font-medium   justify-center '>
-          <p className='text-xl lg:text-2xl font-bold  mb-3'>
+          <p className='text-xl xl:text-2xl font-bold  mb-3'>
             Authorized Certificate
           </p>
           <div className='flex items-center space-x-1'>
@@ -239,7 +255,7 @@ export default function Header() {
         <div className=' lg:hidden border-2 my-3 border-[#7A81DC] lg:border-none border-dashed border-t-0 border-l-0 border-r-0  h-2 w-[100%] ' />
 
         <div className='px-2 py-1 flex font-medium flex-col items-center   justify-center '>
-          <p className='text-xl lg:text-2xl font-bold  mb-3'>Rs.150/month</p>
+          <p className='text-xl xl:text-2xl font-bold  mb-3'>Rs.150/month</p>
           <div className='flex items-center space-x-1'>
             <img className='w-4' src={emi} alt='' />
             <p className='text-lg '>EMI Options</p>
@@ -248,7 +264,7 @@ export default function Header() {
           <div className=' lg:hidden border-2 my-3 border-[#7A81DC] lg:border-none border-dashed border-t-0 border-l-0 border-r-0  h-2 w-[100%]  ' />
         </div>
         <div className='text-center flex items-center flex-col my-auto '>
-          <p className='text-3xl font-bold text-[#414141]'>Rs. 499</p>
+          <p className='text-2xl font-bold text-[#414141]'>Rs. 499</p>
           <del className='text-red-400 text-xl'>Rs.1799</del>
         </div>
         <div className='flex flex-col justify-center my-5'>

@@ -49,7 +49,7 @@ export default function CourseOutlines() {
     },
   ]
   return (
-    <>
+    <div className='bg-[##E5E5E5]'>
       <Container
         onClick={() => console.log('albi')}
         name='Syllabus'
@@ -97,6 +97,6 @@ export default function CourseOutlines() {
           ))}
         </div>
       </Container>
-    </>
+    </div>
   )
 }

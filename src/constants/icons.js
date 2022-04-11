@@ -21,8 +21,10 @@ import fbViolet from '../images/icons/fbViolet.svg'
 import linkedinViolet from '../images/icons/linkedinViolet.svg'
 import twitterViolet from '../images/icons/twitterViolet.svg'
 import instaViolet from '../images/icons/instaViolet.svg'
+import playIcon from '../images/icons/playIcon.svg'
 
 export const icons = {
+  playIcon,
   whatsappViolet,
   fbViolet,
   linkedinViolet,

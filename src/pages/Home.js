@@ -18,18 +18,18 @@ export default function Home() {
     <>
       <PageWrapper>
         <>
-          {/* <Header />
+          <Header />
           <CourseOverview />
           <Objectives />
           <CourseOutlines />
           <Faculty />
-          <OfferSection /> */}
+          <OfferSection />
           <Reviews />
-          {/* <ReferCourse />
+          <ReferCourse />
           <FAQ />
           <Courses />
           <ShareCourse />
-          <Platforms /> */}
+          <Platforms />
         </>
       </PageWrapper>
     </>

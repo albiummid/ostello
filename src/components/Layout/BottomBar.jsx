@@ -9,7 +9,7 @@ import { Affix } from 'antd'
 import React, { useEffect, useState } from 'react'
 
 export default function BottomBar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(true)
   const [activeUrl, setActiveUrl] = useState('/')
   const navIconClasses = `
    text-xl
@@ -62,7 +62,7 @@ export default function BottomBar() {
       icon: (
         <UserOutlined
           className={navIconClasses}
-          onClick={() => setIsLoggedIn(false)}
+          // onClick={() => setIsLoggedIn(false)}
         />
       ),
     },
@@ -72,7 +72,7 @@ export default function BottomBar() {
       icon: (
         <ImportOutlined
           className={navIconClasses}
-          onClick={() => setIsLoggedIn(true)}
+          // onClick={() => setIsLoggedIn(true)}
         />
       ),
     },
