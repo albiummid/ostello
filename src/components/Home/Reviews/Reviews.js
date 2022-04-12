@@ -232,7 +232,7 @@ export default function Reviews() {
               </div>
             </div>
           </div>
-          <div className='md:flex flex-wrap justify-center hidden '>
+          <div className=' md:grid grid-cols-2 place-items-center justify-center hidden '>
             <ReviewCard />
             <ReviewCard />
             <ReviewCard />
