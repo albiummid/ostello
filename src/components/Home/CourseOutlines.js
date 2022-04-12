@@ -68,9 +68,9 @@ export default function CourseOutlines() {
               <div className='bg-[#7A81DC] flex justify-between rounded-md cursor-pointer active:opacity-75 px-3 py-4   '>
                 <div className='flex space-x-2 justify-center items-center ml-2 text-md md:text-xl  '>
                   {activeKey === i ? (
-                    <UpOutlined className='' />
+                    <UpOutlined className='  flex justify-center' />
                   ) : (
-                    <DownOutlined className='' />
+                    <DownOutlined className='  flex justify-center' />
                   )}
                   <p className=''>
                     Part {i + 1} - {item.title}

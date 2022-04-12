@@ -81,7 +81,7 @@ export default function BottomBar() {
   return (
     <div className={`md:hidden ${visibleBar ? '' : 'hidden'}`}>
       <Affix offsetBottom={0} className=' '>
-        <div className='bg-white  flex justify-around py-1'>
+        <div className='bg-white  flex justify-around py-1  rounded-xl rounded-b-none '>
           {bottomNavs.map((item, i) => (
             <div
               onClick={() => setActiveUrl(item.url)}

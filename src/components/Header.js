@@ -19,13 +19,6 @@ import offlineIndicator from '../images/icons/offlineIndicator.svg'
 import onlineIndicator from '../images/icons/onlineIndicator.svg'
 import hybridIndicator from '../images/icons/hybridIndicator.svg'
 import ModalWrapper from './Utils/Modal'
-import obj from '../images/objects/obj.png'
-import obj1 from '../images/objects/obj1.png'
-import obj2 from '../images/objects/obj2.png'
-import obj3 from '../images/objects/obj3.png'
-import obj4 from '../images/objects/obj4.png'
-import obj5 from '../images/objects/obj5.png'
-import obj6 from '../images/objects/obj6.png'
 import OstelloCarousel from './UI/OstelloCarousel'
 
 export default function Header() {
@@ -139,7 +132,7 @@ export default function Header() {
                     {isActiveHeart ? (
                       <HeartFilled
                         onClick={() => setHeart(!isActiveHeart)}
-                        className={`flex text-xl  w-6 h-6 md:h-10 md:w-10 rounded-full shadow-sm  items-center justify-center cursor-pointer  text-red-500 md:ring-2 ring-1 ring-white md:text-2xl `}
+                        className={`flex   w-6 h-6 md:h-10 md:w-10 rounded-full shadow-sm  items-center justify-center cursor-pointer  text-red-500 md:ring-2 ring-1 ring-white text-sm md:text-2xl `}
                       />
                     ) : (
                       <HeartOutlined

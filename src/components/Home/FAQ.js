@@ -112,7 +112,7 @@ export default function FAQ() {
                 }}
               >
                 <div className='md:p-10 p-5  flex items-center justify-between bg-[#7A81DC] rounded-xl text-xl text-white  '>
-                  <p className='md:text-2xl text-xl'>{item.section}</p>
+                  <p className='md:text-2xl text-lg'>{item.section}</p>
                   {activeKey === idx ? (
                     <CloseOutlined className='mr-5 font-bold ' />
                   ) : (
@@ -132,12 +132,9 @@ export default function FAQ() {
                 </div>
               </div>
             ))}
-            <div className=' flex items-center md:space-x-4 md:justify-end justify-center flex-col md:flex-row '>
-              <p className='text-xl'>Or visit our help center to know more</p>
-              <Link
-                to='/'
-                className='font-bold text-[#0026AE] underline text-lg'
-              >
+            <div className=' flex items-center md:space-x-4 md:justify-end justify-center flex-col md:flex-row md:text-xl text-md '>
+              <p className=''>Or visit our help center to know more</p>
+              <Link to='/' className='font-bold text-[#0026AE] underline '>
                 Help Center
               </Link>
             </div>

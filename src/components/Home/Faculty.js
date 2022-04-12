@@ -29,12 +29,18 @@ export default function Faculty() {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown pr",
     },
   ]
+
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2, itemsToScroll: 2 },
+    { width: 1200, itemsToShow: 4 },
+  ]
   return (
     <section name='Faculty' className='md:py-20 py-12'>
       <Container className={''}>
         <h1 className='text-4xl font-bold text-center py-10'>Faculty</h1>
         <div>
-          <OstelloCarousel showArrows={false}>
+          <OstelloCarousel breakPoints={breakPoints} showArrows={false}>
             {faculties.map((item, i) => (
               <div className=' mx-2'>
                 <div

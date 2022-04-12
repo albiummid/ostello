@@ -111,22 +111,24 @@ export default function ReviewCard() {
               </div>
             </div>
           </div>
-          <Rate
-            value={5}
-            disabled
-            className=' md:text-md text-xs hidden md:block'
-          />
+          <div className='flex space-x-5 items-center'>
+            <Rate
+              value={5}
+              disabled
+              className=' md:text-md text-xs hidden md:block'
+            />
 
-          <MoreOption className={'md:hidden'}>
-            <div className='flex space-x-2  items-center  hover:opacity-80 p-2'>
-              <EditOutlined className='text-lg' />
-              <p>Edit</p>
-            </div>
-            <div className='flex space-x-2 items-center  hover:opacity-80 p-2'>
-              <DeleteOutlined />
-              <p>Delete</p>
-            </div>
-          </MoreOption>
+            <MoreOption className={'text-lg'}>
+              <div className='flex space-x-2  items-center  hover:opacity-80 p-2 '>
+                <EditOutlined className='flex items-center' />
+                <p>Edit</p>
+              </div>
+              <div className='flex space-x-2 items-center  hover:opacity-80 p-2'>
+                <DeleteOutlined className='flex items-center' />
+                <p>Delete</p>
+              </div>
+            </MoreOption>
+          </div>
         </div>
 
         <div className='flex flex-col  my-2 text-gray-500 font-medium '>
