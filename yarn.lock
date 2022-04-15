@@ -1725,18 +1725,6 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@splidejs/react-splide@^0.6.20":
-  version "0.6.20"
-  resolved "https://registry.yarnpkg.com/@splidejs/react-splide/-/react-splide-0.6.20.tgz#8056b3fd91aba9ef2ff06d21ccdfb84bae54f876"
-  integrity sha512-Bp1cLIieCiQQrUaszlOTmYAcjPJEvH4Qvd4agVlVW8o7QMtSQ0477JbuQqNmYsz9FFDcD/kFiF2fWjIjbAegTA==
-  dependencies:
-    "@splidejs/splide" "^3.6.12"
-
-"@splidejs/splide@^3.6.12":
-  version "3.6.12"
-  resolved "https://registry.yarnpkg.com/@splidejs/splide/-/splide-3.6.12.tgz#9b6bede5c99140fd06754990c91e474374566c30"
-  integrity sha512-ggOUAuSxjWuxxL0IQEZcux26KByfKWfYM2HYmvDBdxkXc5evVW+xuECO+3iuciyrJpgcbYTr4hn0cHfbNlYIeA==
-
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-2.2.3.tgz#ee34985952ca21558ab0d952f00298ad2190c053"
@@ -4671,11 +4659,6 @@ flatted@^3.1.0:
   version "3.2.5"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.5.tgz#76c8584f4fc843db64702a6bd04ab7a8bd666da3"
   integrity sha512-WIWGi2L3DyTUvUrwRKgGi9TwxQMUEqPOPQBVi71R96jZXJdFskXEmf54BoZaS1kknGODoIGASGEzBUYdyMCBJg==
-
-flexbin@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/flexbin/-/flexbin-0.2.0.tgz#0126306d3d595fcb7dfcb87149b9c9599ff8f4e9"
-  integrity sha1-ASYwbT1ZX8t9/LhxSbnJWZ/49Ok=
 
 follow-redirects@^1.0.0:
   version "1.14.9"

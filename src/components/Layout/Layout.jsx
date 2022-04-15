@@ -9,8 +9,6 @@ export default function Layout({ children }) {
   return (
     <div className='relative '>
       <Toaster position='bottom-center' reverseOrder={false} />
-      <Navbar />
-
       <PageWrapper>{children}</PageWrapper>
       <Footer />
       <BottomBar />

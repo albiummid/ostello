@@ -10,7 +10,7 @@ import React, { useState } from 'react'
 import Carousel from 'react-elastic-carousel'
 import { constants } from '../../../constants'
 import Container from '../../Layout/Container'
-import OstelloCarousel from '../../UI/OstelloCarousel'
+import OstelloCarousel from '../../Utils/OstelloCarousel'
 import Modal from '../../Utils/Modal'
 import ReviewCard from './ReviewCard'
 
@@ -84,13 +84,15 @@ export default function Reviews() {
           Reviews
         </h1>
         <div className=''>
-          <div className='  flex justify-between items-center flex-col lg:flex-row space-y-10 md:space-y-0 lg:mx-10 '>
+          <div className='  flex justify-around items-center flex-col lg:flex-row space-y-10 md:space-y-0 lg:mx-10 '>
             <div className='flex items-center justify-center  gap-2 space-x-1 '>
               <div className='text-center flex md:justify-center items-center flex-col justify-between  my-5 '>
                 <p className='md:text-7xl text-2xl my-0   font-bold '>3.9</p>
                 <Rating
+                  readOnly
+                  precision={0.5}
                   className='text-yellow-300 text-xl md:text-3xl'
-                  value={5}
+                  value={3.9}
                 />
                 <p className='md:text-xl text-md w-[105px] md:w-[150px] font-bold m-0 p-0 '>
                   Course Rating
@@ -116,6 +118,7 @@ export default function Reviews() {
                     />
 
                     <Rating
+                      readOnly
                       className='text-sm md:text-2xl text-yellow-300 flex '
                       value={5 - i}
                     />
@@ -232,7 +235,7 @@ export default function Reviews() {
               </div>
             </div>
           </div>
-          <div className=' md:grid grid-cols-2 place-items-center justify-center hidden '>
+          <div className=' md:grid grid-cols-2  place-items-center hidden '>
             <ReviewCard />
             <ReviewCard />
             <ReviewCard />

@@ -1,33 +1,32 @@
 import React, { useEffect, useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import {
-  ArrowLeftOutlined,
   ArrowRightOutlined,
   CloseCircleOutlined,
   HeartFilled,
   HeartOutlined,
+  PlayCircleFilled,
   ShareAltOutlined,
   StarFilled,
 } from '@ant-design/icons'
-import VideoSection from './VideoSection'
-import time from '../images/icons/time.png'
-import emi from '../images/icons/emi.png'
-import certified from '../images/icons/certified.png'
-import { constants } from '../constants'
-import toast from 'react-hot-toast'
-import offlineIndicator from '../images/icons/offlineIndicator.svg'
-import onlineIndicator from '../images/icons/onlineIndicator.svg'
-import hybridIndicator from '../images/icons/hybridIndicator.svg'
-import ModalWrapper from './Utils/Modal'
-import OstelloCarousel from './UI/OstelloCarousel'
 
-export default function Header() {
+import { constants } from '../../constants'
+import toast from 'react-hot-toast'
+import offlineIndicator from '../../images/icons/offlineIndicator.svg'
+import onlineIndicator from '../../images/icons/onlineIndicator.svg'
+import hybridIndicator from '../../images/icons/hybridIndicator.svg'
+import ModalWrapper from '../Utils/Modal'
+import OstelloCarousel from '../Utils/OstelloCarousel'
+import Carousel from 'react-elastic-carousel'
+import videoImage from '../../images/videoImg.png'
+import { Link, useNavigate } from 'react-router-dom'
+
+export default function InstituteHeader() {
   const [isActiveHeart, setHeart] = useState(false)
   const [courseMode, setCourseMode] = useState('online')
   const [open, setOpen] = useState(false)
   const [isCopied, setIsCopied] = useState(false)
   const { icons } = constants
-
   const socialLinks = [
     {
       title: 'instagram',
@@ -65,25 +64,62 @@ export default function Header() {
 
     return () => clearInterval(timer)
   }, [isCopied])
+  const navigate = useNavigate()
 
   return (
     <div name='Header' className=' '>
-      <div className='bg-[#7A81DC]  '>
-        <div className=' px-3 sm:px-20 container mx-auto  text-white lg:flex flex-row-reverse justify-between md:py-10'>
-          <section className=' mx-3 lg:w-[400px]  pt-5 2xl:w-[500px] '>
-            <OstelloCarousel
+      <div className='bg-[#282828] py-5 md:py-20 '>
+        <div className=' px-3 sm:px-20 container mx-auto  text-white lg:flex items-center flex-row-reverse justify-between'>
+          <section className='lg:w-[400px] 2xl:w-[700px]  '>
+            <Carousel
               itemsToShow={1}
               showArrows={false}
-              isControllerWhite={true}
+              renderPagination={({ pages, activePage, onClick }) => {
+                return (
+                  <div className='flex items-center gap-2 mt-2'>
+                    {pages.map((page) => {
+                      const isActivePage = activePage === page
+                      return (
+                        <div
+                          className={`cursor-pointer  h-2 rounded-lg  ${
+                            isActivePage ? 'bg-white w-28 ' : 'bg-gray-400 w-6'
+                          }`}
+                          key={page}
+                          onClick={() => onClick(page)}
+                          active={isActivePage}
+                        />
+                      )
+                    })}
+                  </div>
+                )
+              }}
             >
               {[1, 2, 3, 4].map((item, i) => (
-                <VideoSection />
+                <div key={i} className='video_container   mx-2'>
+                  <div className='relative'>
+                    <img
+                      src={videoImage}
+                      className=' w-full xl:w-[700px] '
+                      alt=''
+                    />
+                    <PlayCircleFilled className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:text-7xl  text-5xl cursor-pointer active:opacity-75' />
+                    <div className=' group absolute top-5 right-5 md:top-10 md:right-10 p-3 bg-white flex rounded-lg gap-2 transition-all ease-in-out duration-300  cursor-pointer'>
+                      <img src={icons.imgProto} className='' alt='' />
+                      <p
+                        onClick={() => navigate('/details')}
+                        className='text-[#414141] hidden group-hover:block   '
+                      >
+                        See more
+                      </p>
+                    </div>
+                  </div>
+                </div>
               ))}
-            </OstelloCarousel>
+            </Carousel>
           </section>
           <div className=''>
-            <section className=' my-1 cursor-pointer'>
-              <div
+            <section className=' my-1 cursor-pointer  '>
+              {/* <div
                 onClick={() =>
                   setCourseMode((prev) =>
                     prev === 'online'
@@ -106,17 +142,31 @@ export default function Header() {
                   alt=''
                 />
                 <p className=' uppercase xl:text-xl '>{courseMode} Course</p>
+              </div> */}
+              <div className=' text-3xl xl:text-6xl lg:text-4xl flex flex-col  font-semibold md:space-y-5'>
+                <span>Alien Institute For</span>
+                <span> NEET And JEE</span>
               </div>
-              <p className=' text-3xl xl:text-5xl lg:text-4xl font-semibold '>
-                The Complete Digital <br /> Marketing Course
-              </p>
-              <p className='text-md mt-3 xl:text-lg'>
-                Master Digital Marketing Strategy, Social Media <br />
-                Marketing,SEO,YouTube,Email,Facebook Marketing Analytics & More!
+              <p className='text-sm mt-3 xl:text-lg text-[#d8d8d8]'>
+                Hybrid . Offline Timings : 11:30 AM to 9:30 PM{' '}
               </p>
             </section>
+            <div className='border-b-0 border-l-0 border-r-0 border-2 border-dashed w-full my-5 hidden md:block' />
 
-            <section className='statistics mt-10 xl:mb-8 mb-4'>
+            <section className='  md:flex justify-between  text-[#d8d8d8] '>
+              <div className=' flex flex-col gap-2'>
+                <div className='border-b-0 border-l-0 border-r-0 border-2 border-dashed w-full my-2  md:hidden' />
+                <div className='flex space-x-2  '>
+                  <img className=' md:h-8 mt-2' src={icons.location} alt='' />
+                  <p className=' md:text-lg  '>
+                    273/2, Shahabad Mohammadpur, Vasant <br /> Kunj, New
+                    Delhi-110061
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className='statistics mt-10 xl:mb-8 mb-4 '>
               <>
                 <div className='info flex items-center sm:justify-between  space-x-5 '>
                   <div className='flex space-x-2 items-center'>
@@ -124,7 +174,7 @@ export default function Header() {
                       <p className=''>3.0</p>
                       <StarFilled />
                     </div>
-                    <p className='lg:text-xl text-sm'>
+                    <p className=' md:text-lg text-[#d8d8d8]'>
                       669,534 students enrolled
                     </p>
                   </div>
@@ -200,77 +250,9 @@ export default function Header() {
                 </div>
               </>
             </section>
-            <div className='border-b-0 border-l-0 border-r-0 border-2 border-dashed w-full my-5 hidden md:block' />
-            <section className='  md:flex justify-between pb-[100px] '>
-              <div className=' flex flex-col gap-2'>
-                <div className='border-b-0 border-l-0 border-r-0 border-2 border-dashed w-full my-2  md:hidden' />
-                <p className='2xl:text-3xl text-2xl   md:text-left'>
-                  XYZ Design Academy
-                </p>
-                <div className='flex space-x-2  '>
-                  <img className=' h-6 mt-2' src={icons.location} alt='' />
-                  <p className=' text-md sm:text-lg  '>
-                    273/2, Shahabad Mohammadpur,
-                    <br /> Vasant Kunj, New Delhi-110061
-                  </p>
-                </div>
-              </div>
-              <div className=' w-fit  px-3 py-1 border border-white rounded-md flex space-x-2 h-fit justify-center items-center cursor-pointer active:opacity-75 my-5 md'>
-                <p className='text-lg'>View Institute</p>
-
-                <ArrowRightOutlined className='text-md w-[20px] h-[20px] flex justify-center items-center ring-1 ring-white rounded-full' />
-              </div>
-            </section>
           </div>
         </div>
       </div>
-      <section className=' xl:max-w-[1100px]  Card flex justify-evenly text-[#414141]  p-10 md:p-5 rounded-3xl lg:flex-row flex-col shadow-[#7ab1dc]/20 shadow-lg bg-white mx-5   lg:space-x-5  -mt-[80px] mb-10 xl:mx-auto md:mx-10'>
-        <div className=' px-2 py-1 flex flex-col items-center font-medium justify-center  '>
-          <p className='text-xl xl:text-2xl font-bold  mb-3'>1 Month</p>
-          <div className='flex items-center space-x-1'>
-            <img className='w-4' src={time} alt='' />
-            <p className='text-lg '>Duration</p>
-          </div>
-        </div>
-
-        <div className=' lg:hidden border-2 my-3 border-[#7A81DC] lg:border-none border-dashed border-t-0 border-l-0 border-r-0  h-2 w-[100%] ' />
-
-        <div className='px-2 py-1 flex flex-col items-center text-center font-medium   justify-center '>
-          <p className='text-xl xl:text-2xl font-bold  mb-3'>
-            Authorized Certificate
-          </p>
-          <div className='flex items-center space-x-1'>
-            <img className='w-4' src={certified} alt='' />
-            <p className='text-lg  '>Get Certified</p>
-          </div>
-        </div>
-
-        <div className=' lg:hidden border-2 my-3 border-[#7A81DC] lg:border-none border-dashed border-t-0 border-l-0 border-r-0  h-2 w-[100%] ' />
-
-        <div className='px-2 py-1 flex font-medium flex-col items-center   justify-center '>
-          <p className='text-xl xl:text-2xl font-bold  mb-3'>Rs.150/month</p>
-          <div className='flex items-center space-x-1'>
-            <img className='w-4' src={emi} alt='' />
-            <p className='text-lg '>EMI Options</p>
-          </div>
-
-          <div className=' lg:hidden border-2 my-3 border-[#7A81DC] lg:border-none border-dashed border-t-0 border-l-0 border-r-0  h-2 w-[100%]  ' />
-        </div>
-        <div className='text-center flex items-center flex-col my-auto '>
-          <p className='text-2xl font-bold text-[#414141]'>Rs. 499</p>
-          <del className='text-red-400 text-xl'>Rs.1799</del>
-        </div>
-        <div className='flex flex-col justify-center my-5'>
-          <button className=' px-10 py-3 mx-auto bg-[#7D23E0] rounded-md mb-3 text-white active:opacity-80 text-xl lg:text-2xl '>
-            Buy Now
-          </button>
-          <div className='text-md text-center flex md-block justify-center space-x-2 md-text-sm'>
-            <p>
-              <sup>*</sup>15-Day Money-Back Guarantee
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

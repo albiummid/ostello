@@ -27,7 +27,7 @@ export default function Details() {
           ))}
         </div>
         <CloseCircleOutlined
-          onClick={() => navigate('/')}
+          onClick={() => navigate(-1)}
           className='absolute -top-10 right-10  text-xl text-[#7D23E0]'
         />
       </Container>

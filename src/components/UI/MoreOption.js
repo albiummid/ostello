@@ -9,7 +9,7 @@ export default function MoreOption({ children, className }) {
       className={` ${className} cursor-pointer`}
     >
       <div className='relative'>
-        <MoreOutlined className='rounded-full bg-gray-200 h-6 w-6 flex items-center justify-center ' />
+        <MoreOutlined className='rounded-full bg-gray-200 h-8 w-8 flex items-center justify-center  ' />
         <div className=' bg-white absolute right-0 rounded-md divide-y-2 shadow-[#7D23E0]/20 shadow-lg  font-medium '>
           {isVisible && children}
         </div>

@@ -59,7 +59,7 @@ export default function CourseCard() {
     return () => clearInterval(timer)
   }, [isCopied])
   return (
-    <div className='md:w-[400px] max-w-[400px] relative shadow-[#7ab1dc]/20 shadow-lg rounded-3xl'>
+    <div className='md:w-[400px] max-w-[400px] relative shadow-[#7ab1dc]/20 shadow-ostf rounded-3xl'>
       <div className='relative'>
         <img src={courseImg} className='w-[100%] rounded-2xl  ' alt='' />
         <div className='flex items-center justify-center  space-x-1 px-2 text-md text-white  font-bold bg-yellow-400 rounded-lg md:hidden absolute right-5 bottom-[10px] '>
@@ -67,16 +67,16 @@ export default function CourseCard() {
           <StarFilled />
         </div>
       </div>
-      <div className=''>
+      <div className='flex text-xl  w-8 h-8 md:h-12 md:w-12 rounded-full shadow-sm absolute right-5 top-5  items-center justify-center cursor-pointer   ring-2 ring-white md:text-3xl bg-white'>
         {isActiveHeart ? (
           <HeartFilled
             onClick={() => setHeart(!isActiveHeart)}
-            className={`flex text-xl  w-8 h-8 md:h-10 md:w-10 rounded-full shadow-sm absolute right-5 top-5  items-center justify-center cursor-pointer  text-red-500 ring-2 ring-white md:text-2xl `}
+            className={` text-red-500 flex items-center`}
           />
         ) : (
           <HeartOutlined
             onClick={() => setHeart(!isActiveHeart)}
-            className={`flex items-center text-xl  text-white   w-8 h-8 md:h-10 md:w-10 rounded-full shadow-sm absolute right-5 top-5   justify-center cursor-pointer   ring-2 ring-white md:text-2xl`}
+            className={` text-gray-500 flex items-center `}
           />
         )}
       </div>

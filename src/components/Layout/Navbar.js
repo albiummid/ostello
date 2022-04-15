@@ -1,79 +1,38 @@
-import {
-  CloseOutlined,
-  FileOutlined,
-  FormOutlined,
-  HeartOutlined,
-  HomeOutlined,
-  IdcardOutlined,
-  ImportOutlined,
-  MenuOutlined,
-  QuestionCircleOutlined,
-  StarOutlined,
-  UnorderedListOutlined,
-  UserAddOutlined,
-  UserOutlined,
-} from '@ant-design/icons'
+import { CloseOutlined, ImportOutlined, MenuOutlined } from '@ant-design/icons'
 import { Affix } from 'antd'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-scroll/modules'
-import { constants } from '../../constants'
 import logo from '../../images/logo.svg'
 import logoWH from '../../images/logoWhiteBG.svg'
 
-export default function Navbar() {
-  const { icons } = constants
+export default function Navbar({ links, primaryBG = '#7A81DC' }) {
   const [isAffixed, setIsAffixed] = useState(false)
   const [activeSection, setActiveSection] = useState(null)
   const [isActive, setIsActive] = useState(false)
   const iconStyle = `flex items-center text-2xl `
   const navigate = useNavigate()
 
-  const links = [
-    {
-      title: 'Overview',
-      icon: <UnorderedListOutlined className={iconStyle} />,
-    },
-    {
-      title: 'Objectives',
-      icon: <FormOutlined className={iconStyle} />,
-    },
-    {
-      title: 'Syllabus',
-      icon: <FileOutlined className={iconStyle} />,
-    },
-    {
-      title: 'Faculty',
-      icon: <IdcardOutlined className={iconStyle} />,
-    },
-    {
-      title: 'Reviews',
-      icon: <StarOutlined className={iconStyle} />,
-    },
-    {
-      title: 'FAQ',
-      icon: <QuestionCircleOutlined className={iconStyle} />,
-    },
-  ]
-
   return (
     <div className=''>
       <Affix offsetTop={0} onChange={(e) => setIsAffixed(e)} className=''>
         <div
           className={
-            isAffixed ? 'py-1 relative bg-white ' : 'py-1 bg-[#7A81DC] relative'
+            isAffixed
+              ? 'py-1 relative bg-white '
+              : `py-1 bg-[${primaryBG}] relative`
           }
         >
           <>
             <div
-              className={` absolute  inset-0 w-[85%] h-screen rounded-r-2xl px-5 py-10 flex flex-col justify-around bg-[#ffffff]  md:hidden   z-[999] ease-in-out transition-all duration-300 shadow-2xl  ${
-                isActive ? '-translate-x-0' : '-translate-x-full'
+              className={` absolute  inset-0   h-screen rounded-l-2xl px-5 py-10 flex flex-col justify-around bg-[#ffffff]  md:hidden   z-[999] ease-in-out transition-all duration-300 shadow-2xl ml-auto  w-[85%] ${
+                isActive ? '-translate-x-0  ' : 'translate-x-full'
               } `}
             >
               <div className='flex justify-between items-center'>
                 <img
                   onClick={() => navigate('/')}
-                  className={`w-40 md:hidden `}
+                  className={`w-32 md:hidden cursor-pointer `}
                   src={logoWH}
                   alt=''
                 />
@@ -133,13 +92,13 @@ export default function Navbar() {
             </div>
           </>
 
-          <div className={isAffixed ? 'bg-white  ' : 'bg-[#7A81DC]'}>
+          <div className={isAffixed ? 'bg-white  ' : `bg-[${[primaryBG]}]`}>
             <nav
               className={`relative container mx-auto flex md:space-x-5 items-center justify-between   py-2 px-5 md:px-10   md:flex `}
             >
               <img
                 onClick={() => navigate('/')}
-                className={`w-32  md:w-40 xl:w-40 hidden sm:block `}
+                className={`w-32  md:w-40 xl:w-40 `}
                 src={isAffixed ? logoWH : logo}
                 alt=''
               />
@@ -160,7 +119,7 @@ export default function Navbar() {
                       to={item.title}
                       smooth={true}
                       spy={true}
-                      className={`cursor-pointer text-md xl:text-xl   active:text-[#7D23E0] mx-2 ${
+                      className={`w-fit cursor-pointer text-md xl:text-xl   active:text-[#7D23E0] mx-2 ${
                         i === activeSection
                           ? ' text-[#7D23E0]'
                           : isAffixed
@@ -187,7 +146,7 @@ export default function Navbar() {
               </div>
 
               <button
-                className={`  font-medium   lg:text-xl md:px-8 px-4 md:py-2 py-1  md:text-lg rounded-md active:opacity-80 ${
+                className={`  font-medium   lg:text-xl md:px-8 px-4 md:py-2 py-1  md:text-lg rounded-md active:opacity-80 sm:block hidden ${
                   isAffixed
                     ? 'bg-[#7D23E0] text-[#ffffff]'
                     : 'text-[#7D23E0] bg-[#ffffff]'

@@ -3,7 +3,7 @@ import Container from '../Layout/Container'
 import mahima from '../../images/mahima.jpg'
 import vishal from '../../images/nitiya.jpg'
 import nitiya from '../../images/vishal.jpg'
-import OstelloCarousel from '../UI/OstelloCarousel'
+import OstelloCarousel from '../Utils/OstelloCarousel'
 
 export default function Faculty() {
   const faculties = [
@@ -32,20 +32,20 @@ export default function Faculty() {
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-    { width: 1200, itemsToShow: 4 },
+    { width: 550, itemsToShow: 2 },
+    { width: 1200, itemsToShow: 3 },
   ]
   return (
     <section name='Faculty' className='md:py-20 py-12'>
       <Container className={''}>
         <h1 className='text-4xl font-bold text-center py-10'>Faculty</h1>
-        <div>
+        <div className='md:max-w-[1400px] mx-auto'>
           <OstelloCarousel breakPoints={breakPoints} showArrows={false}>
             {faculties.map((item, i) => (
               <div className=' mx-2'>
                 <div
                   key={i}
-                  className=' p-5 md:py-12  lg:w-[350px] lg:mx-5 my-5  shadow-[#7ab1dc]/20 shadow-lg shrink-0 rounded-2xl '
+                  className=' p-5 md:py-12  lg:w-[350px] lg:mx-5 my-5  shadow-[#7ab1dc]/20 shadow-ost shrink-0 rounded-2xl '
                 >
                   <div className='mb-2 md:mb-8 text-center '>
                     <img

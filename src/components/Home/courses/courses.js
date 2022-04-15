@@ -1,10 +1,12 @@
 import { RightOutlined } from '@ant-design/icons'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import CourseCard from './CourseCard'
 
 export default function Courses() {
+  const navigate = useNavigate()
   return (
-    <div className='lg:px-10 px-5 py-20 container  mx-auto'>
+    <div name='Courses' className='lg:px-10 px-5 py-20 container  mx-auto'>
       <div className='mb-20 md:mx-10 '>
         <div className='flex justify-between items-center  mb-2'>
           <h1 className='md:text-4xl text-3xl font-medium'>Similar Courses</h1>
@@ -18,7 +20,10 @@ export default function Courses() {
           <CourseCard />
           <CourseCard />
         </div>
-        <button className='my-10 px-4 py-2 w-[150px] text-xl ring-1  mx-auto flex justify-between items-center ring-[#7D23E0] text-[#7D23E0] rounded-lg active:opacity-75 md:hidden '>
+        <button
+          onClick={() => navigate('/viewMoreCourse')}
+          className='my-10 px-4 py-2 w-[150px] text-xl ring-1  mx-auto flex justify-between items-center ring-[#7D23E0] text-[#7D23E0] rounded-lg active:opacity-75 md:hidden '
+        >
           <p>View more</p>
           <RightOutlined className='text-[#7D23E0] text-lg' />
         </button>
@@ -38,7 +43,10 @@ export default function Courses() {
           <CourseCard />
           <CourseCard />
         </div>
-        <button className='my-10 px-4 py-2 w-[150px] text-xl ring-1  mx-auto flex justify-between items-center ring-[#7D23E0] text-[#7D23E0] rounded-lg active:opacity-75 md:hidden '>
+        <button
+          onClick={() => navigate('/viewMoreCourse')}
+          className='my-10 px-4 py-2 w-[150px] text-xl ring-1  mx-auto flex justify-between items-center ring-[#7D23E0] text-[#7D23E0] rounded-lg active:opacity-75 md:hidden '
+        >
           <p>View more</p>
           <RightOutlined className='text-[#7D23E0] text-lg ' />
         </button>

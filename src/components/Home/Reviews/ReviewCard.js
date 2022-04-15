@@ -7,6 +7,7 @@ import {
   LikeOutlined,
   MoreOutlined,
   ShareAltOutlined,
+  StarFilled,
 } from '@ant-design/icons'
 import { Rate } from 'antd'
 import moment from 'moment'
@@ -27,11 +28,59 @@ import ModalWrapper from '../../Utils/Modal'
 import MoreOption from '../../UI/MoreOption'
 import { Rating } from '@mui/material'
 
-export default function ReviewCard() {
+export default function ReviewCard({
+  review = {
+    quotes:
+      " This course is definitely above expectations so far. I didn't expect to get so much insight into the briefing and the communication between UX Designer and a client.",
+    ratings: 5,
+  },
+}) {
+  const [open, setOpen] = useState(false)
+  const [activeModal, setActiveModal] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isViewComment, setViewComment] = useState(false)
   const [isUpvoted, setIsUpvoted] = useState(false)
+  const [isSelected, setIsSelected] = useState(review.ratings)
   const [activeContent, setActiveContent] = useState({})
+
+  const reviewClassHandler = (item) => {
+    let classes =
+      'shadow-lg px-2  w-fit h-fit  flex items-center space-x-1 justify-center rounded-lg cursor-pointer border border-[#D7D7D7] '
+    if (isSelected === 1 && item === 1) {
+      classes += 'text-white bg-red-500'
+    } else if (isSelected === 2 && item <= 2) {
+      classes += ' bg-red-400 border-red-400'
+      if (item < 2) {
+        classes += ' text-red-400'
+      } else {
+        classes += ' text-white'
+      }
+    } else if (isSelected === 3 && item <= 3) {
+      if (item < 3) {
+        classes += ' text-yellow-400'
+      } else {
+        classes += ' text-white'
+      }
+      classes += ' bg-yellow-400 border-yellow-400'
+    } else if (isSelected === 4 && item <= 4) {
+      if (item < 4) {
+        classes += ' text-green-500'
+      } else {
+        classes += ' text-white'
+      }
+      classes += ' bg-green-500 border-green-500'
+    } else if (isSelected === 5 && item <= 5) {
+      if (item < 5) {
+        classes += ' text-green-600'
+      } else {
+        classes += ' text-white'
+      }
+      classes += ' bg-green-600 border-green-600'
+    } else {
+      return classes
+    }
+    return classes
+  }
   const { icons } = constants
   const contents = [
     {
@@ -86,9 +135,9 @@ export default function ReviewCard() {
     },
   ]
   return (
-    <div className={`relative m-10 `}>
+    <div className={`relative m-10 max-w-[600px] min-w-[300px]`}>
       <div
-        className={`max-w-[600px] min-w-[300px] shadow-[#7ab1dc]/20 shadow-xl px-6 py-4 rounded-lg flex flex-col space-y-5 l  ${
+        className={`  shadow-[#7ab1dc]/20 shadow-xl px-6 py-4 rounded-lg flex flex-col space-y-5 l  ${
           isViewComment && 'rounded-b-none '
         }`}
         // onClick={() => setViewComment(false)}
@@ -118,8 +167,14 @@ export default function ReviewCard() {
               className=' md:text-md text-xs hidden md:block'
             />
 
-            <MoreOption className={'text-lg'}>
-              <div className='flex space-x-2  items-center  hover:opacity-80 p-2 '>
+            <MoreOption className={'text-xl'}>
+              <div
+                onClick={() => {
+                  setOpen(true)
+                  setActiveModal(1)
+                }}
+                className='flex space-x-2  items-center  hover:opacity-80 p-2 '
+              >
                 <EditOutlined className='flex items-center' />
                 <p>Edit</p>
               </div>
@@ -132,11 +187,7 @@ export default function ReviewCard() {
         </div>
 
         <div className='flex flex-col  my-2 text-gray-500 font-medium '>
-          <p className='md:text-xl text-lg'>
-            This course is definitely above expectations so far. I didn't expect
-            to get so much insight into the briefing and the communication
-            between UX Designer and a client.
-          </p>
+          <p className='md:text-xl text-lg'>{review.quotes}</p>
           <p className=' text-[#7D23E0] cursor-pointer  text-lg'>Show More</p>
         </div>
         <div className='flex items-center no-scrollbar space-x-2 overflow-scroll   '>
@@ -254,7 +305,7 @@ export default function ReviewCard() {
       <div className=''>
         {isViewComment && (
           <div
-            className={`pb-5 space-y-5  max-w-[600px] min-w-full shadow-lg shadow-gray-300 px-6  rounded-lg flex flex-col bg-white z-[999] rounded-t-none `}
+            className={`pb-5 space-y-5 w-full shadow-lg shadow-gray-300 px-6  rounded-lg flex flex-col bg-white z-[999] rounded-t-none md:absolute `}
           >
             <p className='sm:text-2xl text-xl'>Comments</p>
             <div className=' overflow-y-scroll no-scrollbar space-y-5 h-[250px]'>
@@ -307,6 +358,77 @@ export default function ReviewCard() {
           </div>
         )}
       </div>
+
+      <ModalWrapper open={open} setOpen={setOpen}>
+        {activeModal === 1 ? (
+          <div className=' bg-white p-4 rounded-lg'>
+            <div className='flex justify-between text-2xl items-center'>
+              <span className=''>Edit Review</span>
+              <CloseCircleOutlined
+                className='cursor-pointer'
+                onClick={() => setOpen(false)}
+              />
+            </div>
+            <div className='flex space-x-2 py-5 text-[#D7D7D7] select-none  justify-center md:justify-start'>
+              {[1, 2, 3, 4, 5].map((item, i) => (
+                <div
+                  key={i}
+                  className={reviewClassHandler(item)}
+                  onClick={() => setIsSelected(item)}
+                >
+                  <p className='text-lg font-bold'>{item}</p>
+                  <StarFilled className='text-lg mb-1' />
+                </div>
+              ))}
+            </div>
+
+            <div className='flex flex-col space-y-2 '>
+              <p>Add Photos/videos</p>
+              <div
+                className='
+                    w-[100%] h-[154px] md:h-[277px] border border-gray-400 flex items-center justify-center rounded-md cursor-pointer
+                    '
+              >
+                <img
+                  className='w-[30px] h-[30px] '
+                  src={icons.imgProto}
+                  alt=''
+                />
+              </div>
+              <div className='flex h-[93px] p-2 space-x-2 border border-gray-400 rounded-md'>
+                <img className='w-[25px] h-[25px] ' src={icons.user} alt='' />
+                <textarea
+                  defaultValue={review.quotes}
+                  onChange={(e) => (review.quotes = e.target.value)}
+                  placeholder='Write your Review'
+                  className='border-none outline-none active:outline-none active:border-none w-full resize-none'
+                />
+              </div>
+              <button
+                onClick={() => setActiveModal(2)}
+                className='font-lg px-2 py-1 ml-auto  text-white bg-[#7D23E0] rounded-sm active:opacity-75'
+              >
+                Update Review
+              </button>
+            </div>
+          </div>
+        ) : activeModal === 2 ? (
+          <div className='bg-white  flex flex-col items-center md:gap-10 space-y-5 md:space-y-0 md:w-[400px] mx-auto  p-8 rounded-xl'>
+            <p className='md:text-2xl text-xl text-center'>
+              <span className='text-[#7D23E0]'>Updating</span> the review done !
+            </p>
+            <button
+              className='bg-[#7D23E0] text-white md:text-xl text-lg rounded-md px-5 py-1'
+              onClick={() => {
+                setOpen(false)
+                setActiveModal(0)
+              }}
+            >
+              Close
+            </button>
+          </div>
+        ) : null}
+      </ModalWrapper>
     </div>
   )
 }

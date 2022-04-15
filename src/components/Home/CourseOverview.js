@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import stats from '../images/icons/statistics.png'
-import connection from '../images/icons/connecion.png'
-import message from '../images/icons/message.svg'
-import poster from '../images/icons/poster.png'
-import like from '../images/icons/like.png'
-import Container from './Layout/Container'
+import stats from '../../images/icons/statistics.png'
+import connection from '../../images/icons/connecion.png'
+import message from '../../images/icons/message.svg'
+import poster from '../../images/icons/poster.png'
+import like from '../../images/icons/like.png'
+import Container from '.././Layout/Container'
 
 export default function CourseOverview() {
   const [readMore, setReadMore] = useState(false)
@@ -33,7 +33,7 @@ export default function CourseOverview() {
   return (
     <Container
       name='Overview'
-      className=' container mx-auto course_overview flex justify-between  space-y-10 flex-col md:flex-row   px-5 py-20 md:px-20 items-center text-[#414141]'
+      className=' container mx-auto course_overview flex justify-between  space-y-10 flex-col lg:flex-row   px-5 py-20 xl:px-20 items-center text-[#414141]'
     >
       <div className='text-justify md:w-6/12 '>
         <h1 className='lg:text-5xl text-3xl  text-rights font-semibold lg:mb-10 mb-5'>
