@@ -8,7 +8,7 @@ import ViewMoreCourse from './pages/ViewMoreCourse'
 
 function App() {
   return (
-    <>
+    <div className='overflow-x-hidden'>
       <BrowserRouter>
         <Layout>
           <Routes>
@@ -19,7 +19,7 @@ function App() {
           </Routes>
         </Layout>
       </BrowserRouter>
-    </>
+    </div>
   )
 }
 

@@ -147,9 +147,9 @@ export default function ReviewCard({
             <img className='w-12 h-12' src={reviewImg} alt='' />
 
             <div className='font-semibold '>
-              <h1 className='md:text-xl text-[#414141]'>Neena Sharma</h1>
+              <h1 className='xl:text-xl text-[#414141]'>Neena Sharma</h1>
               <div>
-                <p className='text-md text-gray-400'>
+                <p className='xl:text-md text-gray-400'>
                   {moment(Date.now()).format('MMMM , YYYY')}
                 </p>
                 <Rating
@@ -187,8 +187,12 @@ export default function ReviewCard({
         </div>
 
         <div className='flex flex-col  my-2 text-gray-500 font-medium '>
-          <p className='md:text-xl text-lg'>{review.quotes}</p>
-          <p className=' text-[#7D23E0] cursor-pointer  text-lg'>Show More</p>
+          <p className='xl:text-xl text-lg'>
+            {review.quotes}{' '}
+            <span className=' text-[#7D23E0] cursor-pointer  text-lg'>
+              Show More
+            </span>
+          </p>
         </div>
         <div className='flex items-center no-scrollbar space-x-2 overflow-scroll   '>
           {contents.slice(0, 5).map((item, i) => (
@@ -281,9 +285,9 @@ export default function ReviewCard({
                 className='flex space-x-2  items-center text-lg cursor-pointer w-[100px]'
               >
                 {isUpvoted ? (
-                  <LikeFilled className='text-2xl flex items-center text-[#7D23E0]' />
+                  <LikeFilled className='xl:text-2xl flex items-center text-[#7D23E0]' />
                 ) : (
-                  <LikeOutlined className='text-2xl flex items-center' />
+                  <LikeOutlined className='xl:text-2xl flex items-center' />
                 )}
                 <span className=''>{isUpvoted ? '120K' : 'Upvote'}</span>
               </div>
@@ -297,7 +301,9 @@ export default function ReviewCard({
               className='  md:flex space-x-2 text-[#7D23E0]  items-center text-lg cursor-pointer '
             >
               <BiCommentDetail className='text-2xl flex items-center' />
-              <span className=''>View Comments</span>
+              <span className=''>
+                <span className='xl:inline hidden'>View </span>Comments
+              </span>
             </div>
           </div>
         </div>
@@ -307,22 +313,22 @@ export default function ReviewCard({
           <div
             className={`pb-5 space-y-5 w-full shadow-lg shadow-gray-300 px-6  rounded-lg flex flex-col bg-white z-[999] rounded-t-none md:absolute `}
           >
-            <p className='sm:text-2xl text-xl'>Comments</p>
+            <p className='xl:text-2xl text-xl'>Comments</p>
             <div className=' overflow-y-scroll no-scrollbar space-y-5 h-[250px]'>
               {comments.map((item, i) => (
                 <div className='space-x-5 flex items-start font-semibold text-[#414141]'>
                   <img
-                    className='sm:w-12 sm:h-12 w-8'
+                    className='xl:w-12 xl:h-12 w-8'
                     src={item.userPic}
                     alt=''
                   />
 
                   <div className='bg-gray-100  px-4 py-2 w-full rounded-lg'>
-                    <h1 className='sm:text-xl text-sm '>{item.userName}</h1>
+                    <h1 className='xl:text-xl text-lg '>{item.userName}</h1>
                     <span className='text-gray-400 sm:text-md text-xs'>
                       {moment(item.date).format('DD MMM YYYY')}
                     </span>
-                    <p className='pt-2 sm:text-lg font-medium text-sm'>
+                    <p className='pt-2 xl:text-lg font-medium text-sm'>
                       {item.comment}
                     </p>
                   </div>
@@ -344,13 +350,13 @@ export default function ReviewCard({
               </div>
               <div className='flex sm:space-x-5 space-x-2 border border-1 border-gray-200 md:px-5 px-2 py-2 rounded-lg text-sm sm:text-md'>
                 <img
-                  className='sm:w-12 sm:h-12 w-5 h-5'
+                  className='xl:w-12 xl:h-12 w-8 h-8'
                   src={comments[0].userPic}
                   alt=''
                 />
                 <input
                   type='text'
-                  className='outline-none border-none focus:outline-none focus:border-none'
+                  className='outline-none border-none focus:outline-none focus:border-none w-full'
                   placeholder='Type your comment..'
                 />
               </div>

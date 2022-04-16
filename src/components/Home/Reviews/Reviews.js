@@ -105,7 +105,7 @@ export default function Reviews() {
                     <Progress
                       strokeColor='#7D23E0'
                       strokeWidth={10}
-                      className='text-xs lg:text-lg w-[400px]   hidden md:block'
+                      className='text-xs lg:text-lg md:w-[200px] xl:w-[400px]   hidden md:block'
                       percent={item.percentage}
                       showInfo={false}
                     />

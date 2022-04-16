@@ -59,7 +59,7 @@ export default function CourseCard() {
     return () => clearInterval(timer)
   }, [isCopied])
   return (
-    <div className='md:w-[400px] max-w-[400px] relative shadow-[#7ab1dc]/20 shadow-ostf rounded-3xl'>
+    <div className=' max-w-[350px] relative shadow-[#7ab1dc]/20 shadow-ostf rounded-3xl '>
       <div className='relative'>
         <img src={courseImg} className='w-[100%] rounded-2xl  ' alt='' />
         <div className='flex items-center justify-center  space-x-1 px-2 text-md text-white  font-bold bg-yellow-400 rounded-lg md:hidden absolute right-5 bottom-[10px] '>
@@ -81,10 +81,10 @@ export default function CourseCard() {
         )}
       </div>
 
-      <div className=' relative p-6 flex flex-col space-y-3 bg-[#fffff]'>
+      <div className=' relative p-5 flex flex-col space-y-3 bg-[#fffff]'>
         <div className=' flex  justify-between '>
           <div>
-            <p className='md:text-2xl text-lg  text-[#767676]'>
+            <p className='xl:text-2xl text-lg  text-[#767676]'>
               XYZ Design Academy
             </p>
             <p className='md:text-lg text-md font-bold'>UX Design Program</p>

@@ -74,13 +74,13 @@ export default function Header() {
     <div name='Header' className=' '>
       <div className='bg-[#7A81DC]  '>
         <div className=' px-3 sm:px-20 container mx-auto  text-white lg:flex flex-row-reverse justify-between md:py-10'>
-          <section className='  pt-5 lg:w-[400px] 2xl:w-[500px]  '>
+          <section className='  py-5 lg:w-[400px] 2xl:w-[500px]  '>
             <Carousel
               itemsToShow={1}
               showArrows={false}
               renderPagination={({ pages, activePage, onClick }) => {
                 return (
-                  <div className='flex items-center gap-2 mt-2'>
+                  <div className='flex items-center space-x-2 mt-2'>
                     {pages.map((page) => {
                       const isActivePage = activePage === page
                       return (
@@ -181,7 +181,7 @@ export default function Header() {
                     )}
                     <BiShareAlt
                       onClick={() => setOpen(true)}
-                      className='active:opacity-80 flex items-center text-sm  text-white   w-6 h-6 md:h-10 md:w-10 rounded-full shadow-sm justify-center cursor-pointer   md:ring-2 ring-1 ring-white md:text-2xl p-2'
+                      className='active:opacity-80 flex items-center text-sm  text-white   w-6 h-6 md:h-10 md:w-10 rounded-full shadow-sm justify-center cursor-pointer   md:ring-2 ring-1 ring-white md:text-2xl p-1'
                     />
 
                     <ModalWrapper open={open} setOpen={setOpen}>

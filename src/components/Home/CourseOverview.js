@@ -36,7 +36,7 @@ export default function CourseOverview() {
       className=' container mx-auto course_overview flex justify-between  space-y-10 flex-col lg:flex-row   px-5 py-20 xl:px-20 items-center text-[#414141]'
     >
       <div className='text-justify md:w-6/12 '>
-        <h1 className='lg:text-5xl text-3xl  text-rights font-semibold lg:mb-10 mb-5'>
+        <h1 className='lg:text-5xl text-3xl  text-rights font-semibold lg:mb-10'>
           Course Overview
         </h1>
         <div className={'text-xl  text-justify lg:block hidden '}>
@@ -61,7 +61,7 @@ export default function CourseOverview() {
             cost effective.
           </p>
         </div>
-        <div className='text-lg font-medium lg:hidden my-10'>
+        <div className='text-lg lg:hidden my-10'>
           <p>
             With over 20 hours of training, quizzes and practical steps you can
             follow - this is one of the most comprehensive digital marketing

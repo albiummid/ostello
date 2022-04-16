@@ -39,7 +39,7 @@ export default function Achievements() {
               ref={carouselRef}
               renderPagination={({ pages, activePage, onClick }) => {
                 return (
-                  <div className='flex items-center gap-2'>
+                  <div className='flex items-center space-x-2'>
                     <LeftOutlined
                       onClick={() => carouselRef.current.slidePrev()}
                       className='text-[#7A81DC] text-xl bg-white flex items-center justify-center h-10 w-10 rounded-full cursor-pointer mr-2 md:hidden'

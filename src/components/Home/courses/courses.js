@@ -7,7 +7,10 @@ import CourseCard from './CourseCard'
 export default function Courses() {
   const navigate = useNavigate()
   return (
-    <div name='Courses' className='lg:px-10 px-5 py-20 container  mx-auto'>
+    <div
+      name='Courses'
+      className='xl:px-10 px-5 sm:px-0 py-20 container  mx-auto'
+    >
       <div className='mb-20 md:mx-10 '>
         <div className='flex justify-between items-center  mb-2'>
           <h1 className='md:text-4xl text-3xl font-medium'>Similar Courses</h1>
@@ -21,15 +24,17 @@ export default function Courses() {
           <CourseCard />
           <CourseCard />
         </div>
-        <OstelloCarousel
-          showArrows={false}
-          itemsToShow={1}
-          className='md:hidden'
-        >
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-        </OstelloCarousel>
+        <div className='md:hidden'>
+          <OstelloCarousel
+            showArrows={false}
+            itemsToShow={1}
+            className='md:hidden'
+          >
+            <CourseCard />
+            <CourseCard />
+            <CourseCard />
+          </OstelloCarousel>
+        </div>
         <button
           onClick={() => navigate('/viewMoreCourse')}
           className='my-10 px-4 py-2 w-[150px] text-xl ring-1  mx-auto flex justify-between items-center ring-[#7D23E0] text-[#7D23E0] rounded-lg active:opacity-75 md:hidden '
@@ -53,15 +58,17 @@ export default function Courses() {
           <CourseCard />
           <CourseCard />
         </div>
-        <OstelloCarousel
-          showArrows={false}
-          itemsToShow={1}
-          className='md:hidden'
-        >
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-        </OstelloCarousel>
+        <div className='md:hidden'>
+          <OstelloCarousel
+            showArrows={false}
+            itemsToShow={1}
+            className='md:hidden'
+          >
+            <CourseCard />
+            <CourseCard />
+            <CourseCard />
+          </OstelloCarousel>
+        </div>
         <button
           onClick={() => navigate('/viewMoreCourse')}
           className='my-10 px-4 py-2 w-[150px] text-xl ring-1  mx-auto flex justify-between items-center ring-[#7D23E0] text-[#7D23E0] rounded-lg active:opacity-75 md:hidden '

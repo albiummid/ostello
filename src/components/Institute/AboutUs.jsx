@@ -62,7 +62,7 @@ export default function AboutUs() {
         <div className='md:w-6/12 mx-5'>
           <h1 className='text-4xl font-bold mb-10'>About Us</h1>
           <div className='md:hidden'>
-            <p>
+            <p className='text-lg'>
               With over 20 hours of training, quizzes and practical steps you
               can follow - this is one of the most comprehensive digital
               marketing courses available.{' '}
@@ -116,8 +116,10 @@ export default function AboutUs() {
           ))}
         </div>
       </div>
-      <div name='Categories' className='mx-5  py-20'>
-        <h1 className='text-center mb-10 text-4xl py-10'>We specialize in</h1>
+      <div name='Categories' className='mx-5  py-10'>
+        <h1 className='text-center mb-10 text-4xl py-10 font-bold'>
+          We specialize in
+        </h1>
         <div className='grid lg:grid-cols-3 grid-cols-2 place-items-center md:gap-10 gap-8'>
           {platforms.map((item, i) => (
             <div

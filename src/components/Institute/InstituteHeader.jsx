@@ -76,7 +76,7 @@ export default function InstituteHeader() {
               showArrows={false}
               renderPagination={({ pages, activePage, onClick }) => {
                 return (
-                  <div className='flex items-center gap-2 mt-2'>
+                  <div className='flex items-center space-x-2 mt-2'>
                     {pages.map((page) => {
                       const isActivePage = activePage === page
                       return (

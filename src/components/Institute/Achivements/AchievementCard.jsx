@@ -56,7 +56,7 @@ export default function AchievementCard() {
     <div className='py-5'>
       <div className='max-w-[1200px] lg:mx-auto text-[#424242]  bg-white flex flex-wrap lg:flex-nowrap rounded-2xl s justify-center my-5 mx-5 relative'>
         <img
-          className='md:w-5/12 hidden lg:block rounded-2xl  object-cover '
+          className='lg:w-5/12 hidden lg:block rounded-2xl  object-cover '
           src={cardData.coverImg}
           alt=''
         />
@@ -72,19 +72,19 @@ export default function AchievementCard() {
         <div>
           <div className='px-5 py-3 font-medium space-y-2 lg:mr-20'>
             <div className=' '>
-              <h1 className=' text-3xl'>{cardData.instituteName}</h1>
-              <p className='text-md  text-gray-400'>{cardData.date}</p>
+              <h1 className=' xl:text-3xl text-xl'>{cardData.instituteName}</h1>
+              <p className='xl:text-md  text-gray-400'>{cardData.date}</p>
             </div>
-            <p className='sm:text-lg'>{cardData.postText}</p>
+            <p className='xl:text-lg'>{cardData.postText}</p>
           </div>
-          <div className='px-5 lg:mr-20'>
+          <div className='px-5 xl:mr-20 mr-10'>
             <Divider type='horizontal' className=' bg-gray-200' />
           </div>
           <div>
             <div
               className={`pb-5 space-y-5 w-full  px-6  rounded-lg flex flex-col bg-white z-[999] rounded-t-none  `}
             >
-              <p className=' md:text-xl font-bold'>
+              <p className=' xl:text-xl font-bold'>
                 Comments{' '}
                 <span className='lg:hidden'>({cardData.comments.length})</span>
                 <span className=' float-right lg:hidden'>view all</span>
@@ -94,13 +94,13 @@ export default function AchievementCard() {
                 {cardData.comments.map((item, i) => (
                   <div className='space-x-5 flex items-start font-semibold text-[#414141] '>
                     <img
-                      className='sm:w-12 sm:h-12 w-8 '
+                      className='xl:w-12 xl:h-12 w-8 '
                       src={item.userImg}
                       alt=''
                     />
 
                     <div className='bg-gray-100 py-2  px-4  w-full rounded-lg'>
-                      <h1 className='sm:text-lg text-sm '>{item.userName}</h1>
+                      <h1 className='xl:text-lg text-sm '>{item.userName}</h1>
                       <span className='text-gray-400 sm:text-md text-xs'>
                         {moment(item.date).format('DD MMM YYYY')}
                       </span>
@@ -116,10 +116,10 @@ export default function AchievementCard() {
                       <div className='w-6 h-6 flex items-center justify-center bg-white rounded-full '>
                         <IoIosRocket className='text-[#7D23E0]' />
                       </div>
-                      <span>120</span>
+                      <span className='text-sm'>120</span>
                     </div>
                     <div className='flex items-center justify-center space-x-2'>
-                      <BiComment className='text-xl' />
+                      <BiComment className='xl:text-xl' />
                       <span>{cardData.comments.length}</span>
                     </div>
                   </div>
@@ -127,7 +127,7 @@ export default function AchievementCard() {
                 </div>
                 <div className='flex sm:space-x-5 space-x-2 border border-1 border-gray-200 md:px-5 px-2 py-3  rounded-lg text-sm sm:text-md'>
                   <img
-                    className='sm:w-12 sm:h-12 w-8 h-8'
+                    className='xl:w-12 xl:h-12 w-8 h-8'
                     src={cardData.comments[0].userImg}
                     alt=''
                   />
