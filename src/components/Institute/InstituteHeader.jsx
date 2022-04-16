@@ -81,7 +81,7 @@ export default function InstituteHeader() {
                       const isActivePage = activePage === page
                       return (
                         <div
-                          className={`cursor-pointer  h-2 rounded-lg  ${
+                          className={`cursor-pointer  h-2 rounded-lg my-5 ${
                             isActivePage ? 'bg-white w-28 ' : 'bg-gray-400 w-6'
                           }`}
                           key={page}
