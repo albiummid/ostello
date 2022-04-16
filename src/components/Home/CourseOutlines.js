@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Container from '../Layout/Container'
 
 export default function CourseOutlines() {
-  const [activeKey, setActiveKey] = useState(0)
+  const [activeKey, setActiveKey] = useState(null)
   const outlines = [
     {
       title: 'Course introduction',

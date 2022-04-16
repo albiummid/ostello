@@ -1,6 +1,7 @@
 import { RightOutlined } from '@ant-design/icons'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import OstelloCarousel from '../../Utils/OstelloCarousel'
 import CourseCard from './CourseCard'
 
 export default function Courses() {
@@ -15,11 +16,20 @@ export default function Courses() {
             <RightOutlined className='text-[#7D23E0] text-lg' />
           </button>
         </div>
-        <div className='flex  md:justify-between  my-16 lg:my-20 flex-col justify-center items-center lg:flex-row space-y-5 lg:space-y-0 lg:space-x-12'>
+        <div className='md:flex  md:justify-between  my-16 lg:my-20 flex-col justify-center items-center lg:flex-row space-y-5 lg:space-y-0 lg:space-x-12 hidden'>
           <CourseCard />
           <CourseCard />
           <CourseCard />
         </div>
+        <OstelloCarousel
+          showArrows={false}
+          itemsToShow={1}
+          className='md:hidden'
+        >
+          <CourseCard />
+          <CourseCard />
+          <CourseCard />
+        </OstelloCarousel>
         <button
           onClick={() => navigate('/viewMoreCourse')}
           className='my-10 px-4 py-2 w-[150px] text-xl ring-1  mx-auto flex justify-between items-center ring-[#7D23E0] text-[#7D23E0] rounded-lg active:opacity-75 md:hidden '
@@ -38,11 +48,20 @@ export default function Courses() {
             <RightOutlined className='text-[#7D23E0] text-lg' />
           </button>
         </div>
-        <div className='flex  md:justify-between  my-16 lg:my-20 flex-col justify-center items-center lg:flex-row space-y-5 lg:space-y-0 lg:space-x-12'>
+        <div className='md:flex  md:justify-between  my-16 lg:my-20 flex-col justify-center items-center lg:flex-row space-y-5 lg:space-y-0 lg:space-x-12 hidden'>
           <CourseCard />
           <CourseCard />
           <CourseCard />
         </div>
+        <OstelloCarousel
+          showArrows={false}
+          itemsToShow={1}
+          className='md:hidden'
+        >
+          <CourseCard />
+          <CourseCard />
+          <CourseCard />
+        </OstelloCarousel>
         <button
           onClick={() => navigate('/viewMoreCourse')}
           className='my-10 px-4 py-2 w-[150px] text-xl ring-1  mx-auto flex justify-between items-center ring-[#7D23E0] text-[#7D23E0] rounded-lg active:opacity-75 md:hidden '
