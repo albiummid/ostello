@@ -52,7 +52,7 @@ export default function Home() {
   ]
   return (
     <>
-      <Navbar links={links} />
+      <Navbar primaryBG='#6E3DA5' links={links} />
       <PageWrapper>
         <>
           <Header />

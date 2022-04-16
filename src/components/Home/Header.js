@@ -72,7 +72,7 @@ export default function Header() {
 
   return (
     <div name='Header' className=' '>
-      <div className='bg-[#7A81DC]  '>
+      <div className='bg-[#6E3DA5]  '>
         <div className=' px-3 sm:px-20 container mx-auto  text-white lg:flex flex-row-reverse justify-between md:py-10'>
           <section className='  py-5 lg:w-[400px] 2xl:w-[500px]  '>
             <Carousel
@@ -100,7 +100,7 @@ export default function Header() {
             >
               {[1, 2, 3, 4].map((item, i) => (
                 <div key={i} className='video_container   mx-2'>
-                  <div className='relative  bg-[#7A81DC]  '>
+                  <div className='relative  bg-[#6E3DA5]  '>
                     <img src={videoImage} className=' w-full ' alt='' />
                     <PlayCircleFilled className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:text-7xl  text-5xl cursor-pointer active:opacity-75' />
                     <div className=' group absolute top-5 right-5 md:top-10 md:right-10 p-3 bg-white flex rounded-lg gap-2 transition-all ease-in-out duration-300  cursor-pointer'>

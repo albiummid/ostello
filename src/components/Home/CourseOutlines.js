@@ -65,7 +65,7 @@ export default function CourseOutlines() {
               className='lg:w-[1000px] my-2 text-white mx-auto '
               onClick={() => setActiveKey(i === activeKey ? null : i)}
             >
-              <div className='bg-[#7A81DC] flex justify-between rounded-md cursor-pointer active:opacity-75 px-3 py-4   '>
+              <div className='bg-[#6E3DA5] flex justify-between rounded-md cursor-pointer active:opacity-75 px-3 py-4   '>
                 <div className='flex space-x-2 justify-center items-center ml-2 text-md md:text-xl  '>
                   {activeKey === i ? (
                     <UpOutlined className='  flex justify-center' />

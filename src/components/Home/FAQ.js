@@ -111,7 +111,7 @@ export default function FAQ() {
                   // executeScroll()
                 }}
               >
-                <div className='md:p-10 p-5  flex items-center justify-between bg-[#7A81DC] rounded-xl text-xl text-white  '>
+                <div className='md:p-10 p-5  flex items-center justify-between bg-[#6E3DA5] rounded-xl text-xl text-white  '>
                   <p className='md:text-2xl text-lg'>{item.section}</p>
                   {activeKey === idx ? (
                     <CloseOutlined className='mr-5 font-bold ' />

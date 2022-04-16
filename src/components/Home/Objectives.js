@@ -31,7 +31,7 @@ export default function Objectives() {
           </h1>
         </div>
         <Container>
-          <div className=' grid grid-cols-2 md:flex justify-center place-items-center   md:justify-center  mx-5  -mt-20 xl:gap-20 gap-10  '>
+          <div className=' grid grid-cols-2 md:flex justify-center place-items-center   md:justify-center  mx-5  -mt-20 xl:gap-20 gap-10  sm:gap-0  '>
             {objectives.map((item, i) => (
               <div
                 key={i}
